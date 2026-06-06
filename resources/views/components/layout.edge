@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AdonisJS - A fully featured web framework for Node.js</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="{{
+        description ||
+        'Découvrez le portfolio de Valdes OMBILINGO, développeur web et spécialiste en marketing digital basé à Kinshasa. Explorez ses compétences, projets et réalisations digitales.'
+      }}"
+    />
+    <title>{{ title || 'Valdes OMBILINGO | Développeur Web & Marketing Digital' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('dumper')
   </head>
+
   <body>
     @include('partials/header')
-    <main>
-      @include('partials/flash_alerts')
-      {{{ await $slots.main() }}}
-    </main>
+    <main>{{{ await $slots.main() }}}</main>
+    @include('partials/footer')
   </body>
 </html>
