@@ -1,37 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap');
+
 @import 'tailwindcss';
-@source "../views";
 
 @theme {
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Polices de caractères */
+  --font-heading: 'Fraunces', sans-serif;
+  --font-body: 'Manrope', sans-serif;
   --font-quote: 'Caveat', cursive;
-}
 
-/* Mode clair */
-:root {
-  /* Background */
-  --color-white: #f5eee4;
+  /* Couleurs personnalisées (Mode Clair) */
+  --color-bg-main: #fdfcfc;
   --color-light-beige: #faf7f5;
 
-  /* Neutral */
+  /* Couleurs Neutres */
   --color-very-light-gray: #eeeeee;
-  --color-gray: #c7c7c7;
+  --color-gray-custom: #c7c7c7;
   --color-dark-gray: #93908c;
   --color-dark: #4c4c4c;
 
-  /* Brand */
+  /* Couleurs de Marque (Brand) */
   --color-brown: #c3a882;
-  --color-green: #33a370;
+  --color-green-custom: #33a370;
   --color-dark-green: #278e5d;
-  --color-blue: #4d8ca0;
+  --color-blue-custom: #4d8ca0;
 
-  /* Utility */
-  --color-transparent: transparent;
-
-  /* Utility */
-  --color-transparent: transparent;
-
-  /* Screen very small */
+  /* Typographie et Breakpoints */
+  --text-base: 0.9375rem;
   --breakpoint-xs: 480px;
 }

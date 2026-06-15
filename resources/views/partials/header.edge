@@ -1,2 +1,52 @@
-{{-- =========================== HEADER =========================== --}}
-<header></header>
+@let(navLinks = [
+  { route: 'home', label: 'Accueil' },
+  { route: 'experience', label: 'Parcours' },
+  { route: 'projects', label: 'Projets' },
+])
+
+<header id="site-header" class="sticky top-0 z-50 mx-12 pt-4 pb-0 transition-all duration-300">
+  <div
+    id="header-container"
+    class="
+      max-w-4xl
+      mx-auto
+      flex
+      justify-between
+      items-center
+      px-6
+      py-2
+      transition-all
+      duration-300
+      "
+  >
+    {{-- LOGO VALDES OMBILINGO --}}
+    <div class="font-body font-bold text-lg text-brown w-1/4">
+      <a href="{{ route('home') }}">Portfolio</a>
+    </div>
+    {{-- NAVIGATION --}}
+    <nav class="flex-1">
+      <ul class="flex space-x-4 items-center justify-center">
+        @each(link in navLinks)
+          <li>
+            @link({ route: link.route })
+              {{ link.label }}
+            @end
+          </li>
+        @end
+
+        <li>
+          <button
+            id="open-contact"
+            class="px-4 py-[0.45rem] font-body font-medium text-sm tracking-wide text-dark transition-colors duration-200 cursor-pointer  border-0"
+          >
+            Contact
+          </button>
+        </li>
+      </ul>
+    </nav>
+    {{-- ICONES DES RESEAUX SOCIAUX --}}
+    <div class="social-icons w-1/4 flex justify-end items-center gap-4">
+      @include('partials/social-icon')
+    </div>
+  </div>
+</header>
