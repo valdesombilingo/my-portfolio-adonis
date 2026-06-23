@@ -1,27 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=M+PLUS+1+Code:wght@100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker+Sans:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&family=Unbounded:wght@200..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
   /* Polices de caractères */
-  --font-heading: 'Fraunces', sans-serif;
-  --font-body: 'Manrope', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Syne', sans-serif;
   --font-quote: 'Caveat', cursive;
+  --font-code: 'M PLUS Code', monospace;
 
   /* Couleurs personnalisées (Mode Clair) */
-  --color-bg-main: #fdfcfc;
+  --color-white-custom: #fdfcfc;
   --color-light-beige: #faf7f5;
 
   /* Couleurs Neutres */
   --color-very-light-gray: #eeeeee;
-  --color-gray-custom: #c7c7c7;
-  --color-dark-gray: #93908c;
+  --color-light-gray: #c7c7c7;
+  --color-gray-custom: #93908c;
+  --color-dark-gray: #83807c;
+  /* 93908c */
   --color-dark: #4c4c4c;
 
   /* Couleurs de Marque (Brand) */
   --color-brown: #c3a882;
   --color-green-custom: #33a370;
-  --color-dark-green: #278e5d;
+  /* 278e5d */
+  --color-dark-green: #309a6a;
   --color-blue-custom: #4d8ca0;
 
   /* Typographie et Breakpoints */
