@@ -13,16 +13,15 @@
   --font-code: 'M PLUS Code', monospace;
 
   /* Couleurs personnalisées (Mode Clair) */
-  --color-white-custom: #fdfcfc;
-  --color-light-beige: #faf7f5;
+  --color-white-custom: #fdfbf7;
+  --color-light-beige: #f8f3ee;
 
   /* Couleurs Neutres */
-  --color-very-light-gray: #eeeeee;
-  --color-light-gray: #c7c7c7;
-  --color-gray-custom: #93908c;
-  --color-dark-gray: #83807c;
-  /* 93908c */
-  --color-dark: #4c4c4c;
+  --color-very-light-gray: #f0eae1; /* Un gris-beige très clair pour les bordures/diviseurs */
+  --color-light-gray: #d7cfc4; /* Pour les états survolés (hover) ou icônes secondaires */
+  --color-gray-custom: #76726c; /* Modifié : Plus sombre pour le texte secondaire (Norme AA) */
+  --color-dark-gray: #5a5753; /* Modifié : Idéal pour les paragraphes principaux */
+  --color-dark: #2c2b29;
 
   /* Couleurs de Marque (Brand) */
   --color-brown: #c3a882;
