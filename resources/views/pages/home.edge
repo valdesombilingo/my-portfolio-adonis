@@ -1,13 +1,13 @@
 @layout()
-  <section id="home-hero" class="relative overflow-hidden px-5 text-dark sm:px-8 lg:px-10">
+  <section id="home-hero" class="relative overflow-hidden px-5 text-dark sm:px-12 lg:px-14">
     <div
       class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 pt-16 lg:gap-20 lg:pt-20"
     >
       {{-- Titre principal --}}
-      <h1 class="font-heading text-center text-5xl leading-none text-dark sm:text-6xl lg:text-5xl">
+      <h1 class="font-heading text-center text-5xl leading-none text-dark sm:text-lg lg:text-5xl">
         {{-- Commentaire fixe avec texte dynamique --}}
         <span
-          class="mb-2 block text-left font-code text-base font-normal tracking-normal text-gray-custom opacity-90 sm:text-lg"
+          class="mb-2 block text-left font-code text-base font-normal tracking-normal text-gray-custom"
         >
           //
           <span id="welcome-text"></span>
@@ -28,18 +28,18 @@
             ></div>
 
             <figure
-              class="relative overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-sm"
+              class="relative mx-auto w-full max-w-md overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-sm sm:max-w-xl lg:max-w-[560px]"
             >
               <img
                 src="/images/photo-profil-valdes-ombilingo.webp"
                 alt="Portrait de Valdes Ombilingo"
                 width="560"
                 height="700"
-                class="aspect-4/5 w-full object-cover object-top"
+                class="h-[320px] w-full object-cover object-center lg:object-top sm:h-[420px] lg:h-auto lg:aspect-[4/5]"
                 fetchpriority="high"
               />
 
-              <figcaption class="border-t border-very-light-gray px-5 py-5">
+              <figcaption class="border-t border-very-light-gray px-5 py-5 sm:px-8 sm:py-6">
                 <blockquote class="font-quote text-xl leading-snug text-dark">
                   “Ce que nous savons est une goutte d’eau ; ce que nous ignorons est un océan.”
                 </blockquote>
@@ -76,7 +76,7 @@
             </a>
             <a
               href="{{ route('projects') }}"
-              class="inline-flex min-h-11 items-center justify-center rounded-full border border-light-gray bg-white/80 px-6 py-3 font-body text-sm font-medium text-dark backdrop-blur-sm transition duration-200 lg:hover:-translate-y-0.5 lg:hover:bg-white lg:hover:shadow-sm lg:hover:shadow-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray"
+              class="inline-flex min-h-11 items-center justify-center rounded-full border border-light-gray bg-white/80 px-6 py-3 font-body text-sm font-medium text-dark backdrop-blur-sm transition duration-200 lg:hover:-translate-y-0.5 lg:hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray"
             >
               Mes projets
             </a>
@@ -98,7 +98,7 @@
         </h2>
 
         <p class="mt-6 font-body font-medium leading-6 text-dark-gray sm:leading-8">
-          Chaque projet commence par une question simple : quel problème faut-il résoudre, pour qui, et comment créer une solution adaptée ?
+          Chaque projet commence par une question simple : quel problème résoudre, pour qui, et comment y apporter une solution adaptée ?
         </p>
         <p class="mt-6 font-body font-medium leading-6 text-dark-gray sm:leading-8">
           Mes projets reflètent cette approche entre développement web et marketing digital. Je peux créer des sites et applications web fullstack, de l’interface à la base de données, mais aussi construire une stratégie digitale, travailler la visibilité en ligne, gérer des campagnes digitales et analyser les performances pour améliorer les résultats.
@@ -113,10 +113,10 @@
           class="group relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20"
         >
           <img
-            src="/public/images/projects/x-background.webp"
+            src="/images/projects/x-background.webp"
             alt="Aperçu mobile (Iphone 14 Pro Max) de l'interface utilisateur du réseau social X Clone avec le fil d'actualité en mode sombre"
             aria-hidden="true"
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out lg:group-hover:scale-110"
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out lg:group-hover:scale-105"
             loading="lazy"
           />
 
@@ -134,7 +134,17 @@
             <span class="inline-flex items-center gap-1 text-sm font-medium text-dark">
               
               
+              
+              
+              
+              
+               
               En savoir plus
+
+
+
+
+
 
 
               <svg
@@ -158,10 +168,10 @@
           class="group relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20"
         >
           <img
-            src="/public/images/projects/king-mayo-background.webp"
+            src="/images/projects/king-mayo-background.webp"
             alt="Vue desktop du menu moderne et chaleureux du restaurant King Mayo"
             aria-hidden="true"
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out lg:group-hover:scale-110"
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out lg:group-hover:scale-105"
             loading="lazy"
           />
 
@@ -180,7 +190,17 @@
               
               
               
+              
+              
+              
+              
               En savoir plus
+
+
+
+
+
+
 
 
 
@@ -258,6 +278,33 @@
           </div>
         </div>
       </article>
+    </div>
+  </section>
+  {{-- SECTION CONTACT CTA --}}
+  <section id="home-contact" class="relative overflow-hidden px-5 text-dark sm:px-8">
+    <div class="mx-auto w-full max-w-5xl">
+      <div
+        class="mx-auto flex max-w-4xl flex-col items-center px-2 py-16 text-center sm:px-10 sm:py-20 lg:px-16"
+      >
+        <h2
+          class="font-heading text-3xl leading-tight font-bold text-brown sm:text-4xl lg:text-5xl"
+        >
+          Et si nous construisions quelque chose ensemble ?
+        </h2>
+
+        <p
+          class="mt-6 max-w-2xl font-body text-base font-medium leading-7 text-dark-gray sm:text-lg sm:leading-8"
+        >
+          Que ce soit pour un stage, une expérience professionnelle, une opportunité ou un projet digital, je suis ouvert à de nouveaux défis. Parlons-en.
+        </p>
+
+        <a
+          href="#"
+          class="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-7 py-3 font-body text-sm font-semibold text-white transition duration-200 lg:hover:-translate-y-0.5 lg:hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom"
+        >
+          Me contacter
+        </a>
+      </div>
     </div>
   </section>
 @end
