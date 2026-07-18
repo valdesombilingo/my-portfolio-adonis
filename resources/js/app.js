@@ -1,5 +1,7 @@
 import { initWelcomeText } from './welcome-text.js'
 import { initStickyNav } from './sticky-nav.js'
+import { initKadeaVideo } from './kadea-video.js'
+
 import Alpine from 'alpinejs'
 
 Alpine.data('alert', function () {
@@ -30,4 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Déclenchement sécurisé dès que le navigateur a chargé le HTML
 document.addEventListener('DOMContentLoaded', () => {
   initWelcomeText()
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  initKadeaVideo()
 })
