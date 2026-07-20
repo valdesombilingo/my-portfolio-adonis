@@ -1,22 +1,17 @@
 @layout()
-  <section id="home-hero" class="relative overflow-hidden px-5 text-dark sm:px-12 lg:px-14">
+  {{-- SECTION HERO --}}
+  {{-- 1. Suppression de overflow-hidden pour laisser l'ombre de la photo visible --}}
+  <section id="home-hero" class="relative px-5 text-dark sm:px-8 lg:px-10">
     <div
-      class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 pt-16 lg:gap-20 lg:pt-20"
+      class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 pb-16 pt-16 sm:pb-20 sm:pt-20 lg:gap-16 lg:pb-24 lg:pt-24"
     >
       {{-- Titre principal --}}
-      <h1 class="font-heading text-center text-5xl leading-none text-dark sm:text-lg lg:text-5xl">
-        {{-- Commentaire fixe avec texte dynamique --}}
-        <span
-          class="mb-2 block text-left font-code text-base font-normal tracking-normal text-gray-custom"
-        >
-          //
-          <span id="welcome-text"></span>
-        </span>
-        <span class="block font-bold">C'est <span class="font-bold text-brown">Valdes.</span></span>
+      <h1 class="text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl">
+        <span class="block">C'est <span class="text-brown">Valdes.</span></span>
       </h1>
       {{-- Image et texte --}}
       <div
-        class="mx-auto grid w-full max-w-4xl items-center gap-12 pb-16 sm:pb-20 lg:grid-cols-[280px_minmax(0,560px)] lg:justify-center lg:gap-20 lg:pb-24"
+        class="mx-auto grid w-full max-w-4xl items-center gap-12 lg:grid-cols-[280px_minmax(0,560px)] lg:justify-center lg:gap-20"
       >
         {{-- Partie image --}}
         <div class="flex w-full justify-center">
@@ -28,14 +23,14 @@
             ></div>
 
             <figure
-              class="relative mx-auto w-full max-w-md overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-sm sm:max-w-xl lg:max-w-[560px]"
+              class="relative mx-auto w-full max-w-md overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-xs sm:max-w-xl lg:max-w-[560px]"
             >
               <img
                 src="/images/photo-profil-valdes-ombilingo.webp"
-                alt="Portrait de Valdes Ombilingo"
+                alt="Portrait de Valdes Ombilingo sur un fond bleu clair, portant une chemise blanche"
                 width="560"
                 height="700"
-                class="h-[320px] w-full object-cover object-center lg:object-top sm:h-[420px] lg:h-auto lg:aspect-[4/5]"
+                class="h-[320px] w-full object-cover object-center sm:h-[420px] lg:aspect-[4/5] lg:h-auto lg:object-top"
                 fetchpriority="high"
               />
 
@@ -51,7 +46,7 @@
         </div>
         {{-- Partie texte --}}
         <div class="mx-auto flex w-full max-w-[560px] flex-col lg:mx-0">
-          <h2 class="font-heading text-2xl leading-tight font-semibold text-brown sm:text-3xl">
+          <h2 class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl">
             Développeur web et spécialiste en marketing digital.
           </h2>
 
@@ -70,13 +65,13 @@
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="{{ route('experience') }}"
-              class="inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-6 py-3 font-body text-sm font-semibold text-white transition duration-200 lg:hover:-translate-y-0.5 lg:hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom"
+              class="inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-6 py-3 font-body text-sm font-semibold text-white transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom lg:hover:-translate-y-0.5 lg:hover:shadow-md"
             >
               Découvrir mon parcours
             </a>
             <a
               href="{{ route('projects') }}"
-              class="inline-flex min-h-11 items-center justify-center rounded-full border border-light-gray bg-white/80 px-6 py-3 font-body text-sm font-medium text-dark backdrop-blur-sm transition duration-200 lg:hover:-translate-y-0.5 lg:hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray"
+              class="inline-flex min-h-11 items-center justify-center rounded-full border border-light-gray bg-white/80 px-6 py-3 font-body text-sm font-medium text-dark backdrop-blur-sm transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray lg:hover:-translate-y-0.5 lg:hover:bg-white"
             >
               Mes projets
             </a>
@@ -93,7 +88,7 @@
     <div class="flex flex-col gap-16 lg:gap-20">
       {{-- Texte --}}
       <div class="mx-auto flex max-w-3xl flex-col lg:px-6">
-        <h2 class="font-heading text-2xl leading-tight font-semibold text-brown sm:text-3xl">
+        <h2 class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl">
           Du concept à l’écran, j'interviens sur plusieurs dimensions d’un projet digital.
         </h2>
 
@@ -137,11 +132,7 @@
               
               
               
-              
-               
               En savoir plus
-
-
 
 
 
@@ -192,13 +183,7 @@
               
               
               
-              
-              
               En savoir plus
-
-
-
-
 
 
 
@@ -287,7 +272,7 @@
         class="mx-auto flex max-w-4xl flex-col items-center px-2 py-16 text-center sm:px-10 sm:py-20 lg:px-16"
       >
         <h2
-          class="font-heading text-3xl leading-tight font-bold text-brown sm:text-4xl lg:text-5xl"
+          class="font-heading text-3xl font-bold leading-tight text-brown sm:text-4xl lg:text-5xl"
         >
           Et si nous construisions quelque chose ensemble ?
         </h2>
@@ -300,7 +285,7 @@
 
         <a
           href="#"
-          class="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-7 py-3 font-body text-sm font-semibold text-white transition duration-200 lg:hover:-translate-y-0.5 lg:hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom"
+          class="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-7 py-3 font-body text-sm font-semibold text-white transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom lg:hover:-translate-y-0.5 lg:hover:shadow-md"
         >
           Me contacter
         </a>
