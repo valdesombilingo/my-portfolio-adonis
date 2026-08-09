@@ -1,19 +1,22 @@
-// Rend le header sticky et ajoute un effet de flou et de transparence lorsque l'utilisateur fait défiler la page.
+// Rend le header sticky et ajoute un effet de flou
+// et de transparence lorsque l'utilisateur fait défiler la page.
 
 export function initStickyNav() {
-  const headerContainer = document.querySelector('#header-container')
+  up.compiler('#header-container', function (headerContainer) {
+    function updateStickyNav() {
+      const hasScrolled = window.scrollY > 0
 
-  if (!headerContainer) return
-
-  function updateStickyNav() {
-    if (window.scrollY > 0) {
-      headerContainer.classList.add('bg-white/85', 'backdrop-blur-sm', 'rounded-full')
-    } else {
-      headerContainer.classList.remove('bg-white/85', 'backdrop-blur-sm', 'rounded-full')
+      headerContainer.classList.toggle('bg-white/85', hasScrolled)
+      headerContainer.classList.toggle('backdrop-blur-sm', hasScrolled)
+      headerContainer.classList.toggle('rounded-full', hasScrolled)
     }
-  }
 
-  updateStickyNav()
+    updateStickyNav()
 
-  window.addEventListener('scroll', updateStickyNav)
+    window.addEventListener('scroll', updateStickyNav, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', updateStickyNav)
+    }
+  })
 }

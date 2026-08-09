@@ -7,16 +7,19 @@ export type ScannedRoutes = {
     'home': { paramsTuple?: []; params?: {} }
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
+    'projects.king_mayo': { paramsTuple?: []; params?: {} }
   }
   GET: {
     'home': { paramsTuple?: []; params?: {} }
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
+    'projects.king_mayo': { paramsTuple?: []; params?: {} }
   }
   HEAD: {
     'home': { paramsTuple?: []; params?: {} }
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
+    'projects.king_mayo': { paramsTuple?: []; params?: {} }
   }
 }
 declare module '@adonisjs/core/types/http' {

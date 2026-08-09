@@ -9,7 +9,12 @@ export default class PagesController {
     return view.render('pages/experience')
   }
 
+  // Pages des projets
   async projects({ view }: HttpContext) {
     return view.render('pages/projects')
+  }
+
+  async kingMayo({ view }: HttpContext) {
+    return view.render('pages/projects/king-mayo')
   }
 }

@@ -1,0 +1,29 @@
+<div class="sticky top-4 z-40 px-5 sm:px-8 lg:px-10">
+  <div class="mx-auto w-full max-w-5xl">
+    <div
+      id="back-nav-container"
+      class="inline-flex rounded-full transition-colors duration-200 ease-in-out"
+    >
+      <a
+        href="{{ href || route('projects') }}"
+        up-back
+        class="group inline-flex items-center gap-2 px-5 py-3 font-body text-sm font-medium text-gray-custom transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
+        aria-label="Bouton de retour"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 512"
+          fill="currentColor"
+          aria-hidden="true"
+          class="size-3"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          />
+        </svg>
+
+        <span>{{ label || 'Retour' }}</span>
+      </a>
+    </div>
+  </div>
+</div>
