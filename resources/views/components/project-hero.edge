@@ -1,0 +1,108 @@
+@let(title = $props.get('title'))
+@let(year = $props.get('year'))
+@let(type = $props.get('type'))
+@let(role = $props.get('role'))
+@let(participants = $props.get('participants') || [])
+@let(skills = $props.get('skills') || [])
+@let(image = $props.get('image'))
+@let(imageAlt = $props.get('imageAlt') || title)
+@let(visibleParticipants = participants.slice(0, 4))
+@let(remainingParticipants = Math.max(participants.length - 4, 0))
+@let(remainingParticipantsLabel =
+  remainingParticipants === 1
+    ? '1 participant supplémentaire'
+    : `${remainingParticipants} participants supplémentaires`)
+
+<section id="project-hero" class="relative px-5 text-dark sm:px-8 lg:px-10">
+  <div
+    class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 pb-16 pt-16 sm:gap-10 sm:pb-20 sm:pt-20 lg:gap-12 lg:pb-24 lg:pt-24"
+  >
+    {{-- TITRE PRINCIPAL --}}
+    <h1 class="text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl">
+      <span class="block text-brown">{{ title }}.</span>
+    </h1>
+    {{-- INFORMATIONS CLÉS --}}
+    <dl
+      class="grid w-full max-w-3xl grid-cols-1 gap-y-6 py-6 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4"
+    >
+      {{-- ANNÉE --}}
+      <div>
+        <dt class="font-body text-sm text-dark-gray">Année</dt>
+
+        <dd class="mt-1 font-body text-base font-medium text-dark">{{ year }}</dd>
+      </div>
+      {{-- PARTICIPANTS --}}
+      <div>
+        <dt class="font-body text-sm text-dark-gray">Participants</dt>
+
+        <dd class="mt-2">
+          <div class="flex items-center">
+            @each((participant, index) in visibleParticipants)
+              <div
+                class="group relative"
+                style="z-index: {{ 40 - index }}; margin-left: {{ index === 0 ? '0' : '-0.5rem' }}"
+              >
+                <img
+                  src="{{ participant.image }}"
+                  alt="{{ participant.name }}"
+                  class="size-10 rounded-full border-2 border-light-beige object-cover"
+                />
+                {{-- Nom au survol sur desktop --}}
+                <span
+                  class="pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 translate-y-2 whitespace-nowrap rounded-lg bg-brown px-2.5 py-1.5 font-body text-xs font-medium text-white-custom opacity-0 transition-[opacity,transform] duration-300 ease-out lg:block lg:group-hover:translate-y-0 lg:group-hover:opacity-100"
+                >
+                  {{ participant.name }}
+                </span>
+              </div>
+            @end
+            {{-- PARTICIPANTS SUPPLÉMENTAIRES --}}
+            @if(remainingParticipants > 0)
+              <span
+                class="-ml-2 flex size-10 items-center justify-center rounded-full border-2 border-light-beige bg-white-custom font-body text-base font-medium text-brown"
+                aria-label="{{ remainingParticipantsLabel }}"
+              >
+                +{{ remainingParticipants }}
+              </span>
+            @end
+          </div>
+        </dd>
+      </div>
+      {{-- TYPE --}}
+      <div>
+        <dt class="font-body text-sm text-dark-gray">Type</dt>
+
+        <dd class="mt-1 font-body text-base font-medium text-dark">{{ type }}</dd>
+      </div>
+      {{-- RÔLE --}}
+      <div>
+        <dt class="font-body text-sm text-dark-gray">Rôle</dt>
+
+        <dd class="mt-1 font-body text-base font-medium leading-6 text-dark">{{ role }}</dd>
+      </div>
+    </dl>
+    {{-- OUTILS & COMPÉTENCES --}}
+    @if(skills.length > 0)
+      <div
+        class="flex max-w-3xl flex-wrap items-center justify-center gap-2"
+        aria-label="Outils et compétences utilisés"
+      >
+        @each(skill in skills)
+          <span
+            class="rounded-full bg-brown/10 px-3 py-1 font-body text-[11px] font-semibold text-dark"
+          >
+            {{ skill }}
+          </span>
+        @end
+      </div>
+    @end
+    {{-- IMAGE PRINCIPALE --}}
+    <figure class="w-full overflow-hidden rounded-xl">
+      <img
+        src="{{ image }}"
+        alt="{{ imageAlt }}"
+        class="aspect-16/8 w-full object-cover"
+        fetchpriority="high"
+      />
+    </figure>
+  </div>
+</section>
