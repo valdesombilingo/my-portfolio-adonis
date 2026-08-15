@@ -2,7 +2,9 @@
   {{-- RETOUR AUX PROJETS --}}
   @backNav()
   @end
+  {{-- ========================================================= --}}
   {{-- PROJET HERO --}}
+  {{-- ========================================================= --}}
   @projectHero({
     title: 'King Mayo',
     year: '2026',
@@ -31,4 +33,523 @@
     ],
   })
   @end
+  {{-- ========================================================= --}}
+  {{-- 1. LE DÉFI --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-challenge"
+    aria-labelledby="project-challenge-title"
+    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="mx-auto max-w-3xl lg:px-6">
+        <h2
+          id="project-challenge-title"
+          class="mt-3 font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+        >
+          Transformer un plat populaire en une marque pensée pour le digital.
+        </h2>
+
+        <div class="mt-6 space-y-5 font-medium font-body leading-7 text-dark-gray sm:leading-8">
+          <p>
+            King Mayo est né autour d’un produit emblématique de la culture culinaire kinoise : le poulet mayo. L’objectif était de dépasser l’image de la restauration informelle pour construire une marque identifiable, rassurante et capable de proposer une expérience cohérente, aussi bien en ligne que sur le terrain.
+          </p>
+
+          <p>
+            J’ai développé ce projet dans le cadre de mon projet de fin d’études en marketing digital à la Kadea Academy, avec une approche de consultant. J’ai travaillé sur l’ensemble de la stratégie de lancement : recherche utilisateur, positionnement, identité de marque, offre produit, site web, acquisition et analyse des performances.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 2. RECHERCHE UTILISATEUR --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-research"
+    aria-labelledby="project-research-title"
+    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="mx-auto max-w-3xl lg:px-6">
+        <h2
+          id="project-research-title"
+          class="mt-3 font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+        >
+          Comprendre avant de construire.
+        </h2>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          J’ai mené une étude auprès de 53 consommateurs à Kinshasa afin de comprendre leurs habitudes, leurs attentes et les principaux freins liés à la consommation de poulet mayo.
+        </p>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          L’échantillon était relativement équilibré entre hommes et femmes, majoritairement composé de jeunes adultes de 25 à 34 ans, avec une forte représentation des individus travaillant ou résidant dans les communes telles que Gombe, Ngaliema et Lingwala.
+        </p>
+      </div>
+      {{-- Données principales --}}
+      <div class="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-3 sm:mt-14">
+        <article class="rounded-2xl bg-white-custom px-6 py-7">
+          <p class="font-heading text-3xl font-bold text-brown">58,5 %</p>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            des sondés disent être freinés par le manque d'hygiène.
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white-custom px-6 py-7">
+          <p class="font-heading text-3xl font-bold text-brown">62,5 %</p>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            Des répondants déplorent l'attente dépassant les 45 minutes.
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white-custom px-6 py-7">
+          <p class="font-heading text-3xl font-bold text-brown">39,6 %</p>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            Évoquent une qualité irrégulière comme frein à l’achat.
+          </p>
+        </article>
+      </div>
+      {{-- Personas --}}
+      <div class="mx-auto mt-16 max-w-4xl">
+        <h3 class="text-center font-heading text-2xl font-semibold leading-tight text-dark">
+          Trois profils pour représenter les besoins prioritaires.
+        </h3>
+
+        <div class="mt-16 grid gap-10 sm:grid-cols-3 sm:gap-8">
+          {{-- Patrick --}}
+          <article class="flex flex-col items-center px-4 text-center sm:px-2 lg:px-6">
+            <img
+              src="/images/projects/king-mayo/patrick-mulaya-persona.webp"
+              alt="Persona Patrick Mulaya"
+              width="180"
+              height="180"
+              class="size-30 rounded-full object-cover shadow-sm sm:size-36"
+              loading="lazy"
+            />
+
+            <h4 class="mt-5 font-heading text-xl font-semibold text-dark">Patrick Mulaya</h4>
+
+            <p class="mt-2 max-w-xs font-body text-base leading-6 text-dark-gray">
+              Cadre actif exigeant rapidité, ponctualité et fiabilité pour ses commandes.
+            </p>
+          </article>
+          {{-- Exaucé --}}
+          <article class="flex flex-col items-center px-4 text-center sm:px-2 lg:px-6">
+            <img
+              src="/images/projects/king-mayo/exaucee-kekapi-persona.webp"
+              alt="Persona Exaucé Kekapi"
+              width="180"
+              height="180"
+              class="size-30 rounded-full object-cover shadow-sm sm:size-36"
+              loading="lazy"
+            />
+
+            <h4 class="mt-5 font-heading text-xl font-semibold text-dark">Exaucé Kekapi</h4>
+
+            <p class="mt-2 max-w-xs font-body text-base leading-6 text-dark-gray">
+              jeune connecté attiré par des produits généreux, visuels et faciles à partager.
+            </p>
+          </article>
+          {{-- Sarah --}}
+          <article class="flex flex-col items-center px-4 text-center sm:px-2 lg:px-6">
+            <img
+              src="/images/projects/king-mayo/maman-sarah-lupita-persona.webp"
+              alt="Persona Maman Sarah Lupita"
+              width="180"
+              height="180"
+              class="size-30 rounded-full object-cover shadow-sm sm:size-36"
+              loading="lazy"
+            />
+
+            <h4 class="mt-5 font-heading text-xl font-semibold text-dark">Maman Sarah</h4>
+
+            <p class="mt-2 max-w-xs font-body text-base leading-6 text-dark-gray">
+              Mère active priorisant une bonne hygiène, la fiabilité et les formats familiaux.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 3. DIRECTION STRATÉGIQUE --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-strategy"
+    aria-labelledby="project-strategy-title"
+    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="mx-auto max-w-3xl lg:px-6">
+        <h2
+          id="project-strategy-title"
+          class="mt-3 font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+        >
+          Garder le goût de la rue, apporter la confiance d’une vraie marque.
+        </h2>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          La recherche a révélé un espace clair entre le plaisir associé au poulet mayo et les frustrations liées à l’expérience informelle. La stratégie de King Mayo s’est donc construite autour de trois priorités.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-3 sm:mt-14">
+        <article class="px-6 py-7">
+          <span class="font-heading text-3xl font-bold text-brown">01</span>
+
+          <h3 class="mt-5 font-heading text-xl font-semibold text-dark">Rassurer</h3>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            Faire de l’hygiène, de la qualité et de la transparence des éléments visibles de l’expérience.
+          </p>
+        </article>
+
+        <article class="px-6 py-7">
+          <span class="font-heading text-3xl font-bold text-brown">02</span>
+
+          <h3 class="mt-5 font-heading text-xl font-semibold text-dark">Simplifier</h3>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            Réduire les frictions grâce à une commande digitale claire, rapide et adaptée au mobile.
+          </p>
+        </article>
+
+        <article class="px-6 py-7">
+          <span class="font-heading text-3xl font-bold text-brown">03</span>
+
+          <h3 class="mt-5 font-heading text-xl font-semibold text-dark">Donner envie</h3>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            Construire une marque reconnaissable et une présentation produit suffisamment attractive pour déclencher l’achat.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 4. IDENTITÉ DE MARQUE --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-brand"
+    aria-labelledby="project-brand-title"
+    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="mx-auto max-w-3xl lg:px-6">
+        <h2
+          id="project-brand-title"
+          class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+        >
+          Donner à King Mayo une identité populaire, énergique et identifiable.
+        </h2>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          L’identité visuelle devait conserver l’énergie du produit tout en renforçant la perception de professionnalisme. Le logo incliné évoque le mouvement et la rapidité, tandis que le rouge profond et le jaune ambré apportent chaleur et gourmandise, complétés par une touche de vert associée à la fraîcheur.</p>
+        </p>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          La hiérarchie typographique combine des caractères forts pour les titres et une typographie plus sobre pour les textes afin de préserver impact et lisibilité.</p>
+        </p>
+      </div>
+      {{-- Identité visuelle --}}
+<div class="mx-auto mt-12 grid w-full max-w-4xl gap-6 sm:mt-14 md:grid-cols-[1.2fr_0.8fr]">
+  {{-- Logo --}}
+  <figure
+    class="flex items-center justify-center overflow-hidden rounded-xl"
+  >
+    <img
+      src="/images/projects/king-mayo/king-mayo-logo.webp"
+      alt="Logo de King Mayo"
+      class="w-full object-contain"
+      loading="lazy"
+    />
+  </figure>
+
+  {{-- Couleurs principales --}}
+  <div class="flex flex-col items-center justify-center text-center">
+
+    <div
+      class="mt-4 flex items-center justify-center gap-5 rounded-3xl bg-white-custom px-6 py-4 sm:px-8"
+    >
+      {{-- Rouge --}}
+      <div class="flex flex-col items-center gap-2">
+        <span
+          aria-hidden="true"
+          class="size-14 rounded-full bg-[#A5141A] shadow-sm"
+        ></span>
+
+        <span class="font-body text-xs text-dark-gray">
+          #A5141A
+        </span>
+      </div>
+
+      {{-- Jaune --}}
+      <div class="flex flex-col items-center gap-2">
+        <span
+          aria-hidden="true"
+          class="size-14 rounded-full bg-[#FFB91A] shadow-sm"
+        ></span>
+
+        <span class="font-body text-xs text-dark-gray">
+          #FFB91A
+        </span>
+      </div>
+
+      {{-- Vert --}}
+      <div class="flex flex-col items-center gap-2">
+        <span
+          aria-hidden="true"
+          class="size-14 rounded-full bg-[#32A94F] shadow-sm"
+        ></span>
+
+        <span class="font-body text-xs text-dark-gray">
+          #32A94F
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 5. OFFRE PRODUIT --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-products"
+    aria-labelledby="project-products-title"
+    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="mx-auto max-w-3xl lg:px-6">
+        <h2
+          id="project-products-title"
+          class="mt-3 font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+        >
+          Construire des plats autour des usages, pas seulement autour du poulet.
+        </h2>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          La gamme a été élargie avec des produits signatures tel que le Shawarmayo et des combos pensés pour différents contextes de consommation : déjeuner rapide, repas généreux entre amis, formules à partager ou commande familiale. L’objectif était de proposer une offre plus flexible, plus lisible et plus facilement valorisable sur les canaux digitaux.
+        </p>
+      </div>
+      {{-- Galerie plats --}}
+{{-- Visuel produit --}}
+<figure class="mx-auto mt-10 w-full max-w-sm overflow-hidden rounded-xl sm:mt-12">
+  <img
+    src="/images/projects/king-mayo/shawarmayo.webp"
+    alt="Shawarmayo de King Mayo"
+    class="aspect-square w-full object-cover"
+    loading="lazy"
+  />
+</figure>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 6. ÉCOSYSTÈME DIGITAL --}}
+  {{-- ========================================================= --}}
+  <section
+  id="project-digital-acquisition"
+  aria-labelledby="project-digital-acquisition-title"
+  class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+>
+  <div class="mx-auto w-full max-w-5xl">
+
+    {{-- INTRODUCTION --}}
+    <div class="mx-auto max-w-3xl lg:px-6">
+      <h2
+        id="project-digital-acquisition-title"
+        class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+      >
+        Relier visibilité, expérience et conversion.
+      </h2>
+
+      <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+        Le site WordPress et WooCommerce est devenu le point central de l’écosystème King Mayo. L’expérience a été pensée mobile-first avec un menu restaurant dynamique, un panier interactif et un parcours de commande conçu pour limiter les frictions et faciliter le passage de la découverte du produit à la commande.
+      </p>
+    </div>
+
+    {{-- ÉCOSYSTÈME DIGITAL --}}
+    <div class="mx-auto mt-12 max-w-4xl sm:mt-14">
+      <div class="mt-6 grid gap-10 sm:grid-cols-2">
+        <article class="rounded-2xl bg-white-custom px-6 py-7 sm:px-8">
+          <h4 class="font-heading text-xl font-semibold text-dark">
+            Commande en ligne
+          </h4>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            WordPress, WooCommerce et Orderable Pro permettent de gérer le menu, les options produit, le panier et le parcours de commande.
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white-custom px-6 py-7 sm:px-8">
+          <h4 class="font-heading text-xl font-semibold text-dark">
+            Mobile-first
+          </h4>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            L’interface a été pensée en priorité pour le mobile afin de faciliter la consultation du menu et la commande depuis un smartphone.
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white-custom px-6 py-7 sm:px-8">
+          <h4 class="font-heading text-xl font-semibold text-dark">
+            Tracking
+          </h4>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            GA4 et Meta Pixel ont été intégrés pour mesurer le trafic, les comportements et les conversions.
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white-custom px-6 py-7 sm:px-8">
+          <h4 class="font-heading text-xl font-semibold text-dark">
+            Suivi des commandes
+          </h4>
+
+          <p class="mt-3 font-body text-base leading-6 text-dark-gray">
+            Des statuts personnalisés permettent de suivre la commande depuis son acceptation jusqu’à la livraison ou au retrait.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    {{-- ACQUISITION --}}
+    <div class="mx-auto mt-10 max-w-3xl space-y-5 lg:px-6">
+      <p class="font-body leading-7 text-dark-gray sm:leading-8">
+        La stratégie d’acquisition combinait SEO local, social media et SEA afin de capter l’intention à différents moments du parcours. Le référencement local s’appuyait notamment sur les fiches Google Business Profile de Bandal, Kintambo et Lingwala pour renforcer la visibilité de proximité et orienter les utilisateurs vers le menu.
+      </p>
+
+      <p class="font-body leading-7 text-dark-gray sm:leading-8">
+        En parallèle, j’ai structuré un dispositif publicitaire associant Meta Ads et Google Ads : campagnes géolocalisées, créatives orientées offre et conversion, recherches à forte intention, budget et KPI de pilotage. L’objectif était de transformer progressivement la visibilité en trafic qualifié, puis en commandes.
+      </p>
+    </div>
+
+  </div>
+</section>
+  {{-- ========================================================= --}}
+  {{-- 8. RÉSULTATS --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-results"
+    aria-labelledby="project-results-title"
+    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="mx-auto max-w-3xl lg:px-6">
+
+        <h2
+          id="project-results-title"
+          class="mt-3 font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
+        >
+          Quand un projet académique commence à attirer de vrais clients.
+        </h2>
+
+        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+          Sans campagne publicitaire active, la phase pilote a généré ses premières commandes et plusieurs prises de contact organiques. Ces signaux ont permis de confronter la stratégie à de véritables comportements utilisateurs.
+        </p>
+      </div>
+      {{-- KPI --}}
+      <div class="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-3 sm:mt-14">
+        <article class="rounded-xl bg-brown px-6 py-8 text-white-custom">
+          <p class="font-heading text-3xl font-bold">128 500 FC</p>
+
+          <p class="mt-3 font-body text-sm leading-6 text-white-custom/80">
+            de chiffre d’affaires généré pendant la phase pilote.
+          </p>
+        </article>
+
+        <article class="rounded-xl bg-brown px-6 py-8 text-white-custom">
+          <p class="font-heading text-3xl font-bold">0 $</p>
+
+          <p class="mt-3 font-body text-sm leading-6 text-white-custom/80">
+            investi en publicité pendant cette phase de validation organique.
+          </p>
+        </article>
+
+        <article class="rounded-xl bg-brown px-6 py-8 text-white-custom">
+          <p class="font-heading text-3xl font-bold">+27,9 %</p>
+
+          <p class="mt-3 font-body text-sm leading-6 text-white-custom/80">
+            de progression des vues de la présence local mesurée pendant la période.
+          </p>
+        </article>
+      </div>
+
+{{-- Preuves réelles --}}
+<div class="mx-auto mt-16 max-w-5xl">
+  {{-- Commandes réelles --}}
+  <div class="mx-auto mt-6 max-w-3xl lg:px-6">
+    <p class="font-body leading-7 text-dark-gray sm:leading-8">
+      Les premières commandes reçues pendant la phase pilote ont permis de confirmer qu’un projet initialement académique pouvait générer de véritables conversions, sans campagne publicitaire active.
+    </p>
+  </div>
+
+  <figure class="mx-auto mt-8 w-full max-w-5xl  shadow-lg overflow-hidden rounded-xl">
+    <img
+      src="/images/projects/king-mayo/live-orders-king-mayo.webp"
+      alt="Capture de commandes réelles reçues par King Mayo"
+      class="h-auto w-full object-contain"
+      loading="lazy"
+    />
+  </figure>
+
+  {{-- WhatsApp --}}
+  <div class="mx-auto mt-12 max-w-3xl lg:px-6">
+    <p class="font-body leading-7 text-dark-gray sm:leading-8">
+      En parallèle, plusieurs personnes ont contacté King Mayo directement sur WhatsApp pour demander des informations sur le menu, la localisation ou la possibilité de commander. Ces échanges montrent que la marque commençait également à susciter un intérêt spontané en dehors du cadre du projet.
+    </p>
+  </div>
+
+  <figure class="mx-auto mt-8 w-full max-w-[220px] overflow-hidden rounded-xl">
+    <img
+      src="/images/projects/king-mayo/whatsapp-customers-king-mayo.webp"
+      alt="Messages WhatsApp reçus de clients intéressés par King Mayo"
+      class="h-auto w-full object-contain"
+      loading="lazy"
+    />
+  </figure>
+</div>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 9. CTA FINAL / CONCLUSION / APPRENTISSAGES --}}
+  {{-- ========================================================= --}}
+  <section id="experience-contact" class="relative overflow-hidden px-5 text-dark sm:px-8">
+    <div class="mx-auto w-full max-w-5xl">
+      <div
+        class="mx-auto flex max-w-4xl flex-col items-center px-2 py-16 text-center sm:px-10 sm:py-20 lg:px-16"
+      >
+        <h2
+          class="font-heading text-3xl font-bold leading-tight text-brown sm:text-4xl lg:text-5xl"
+        >
+          Ce que ce projet m’a appris
+        </h2>
+
+        <p class="mt-6 max-w-2xl font-body text-base font-medium leading-7 text-dark-gray sm:text-lg sm:leading-8">
+            King Mayo m’a permis de travailler un projet digital dans son ensemble, de l’étude du marché jusqu’à la mise en ligne du parcours de conversion et à l’analyse des premiers résultats. Cette expérience m’a surtout appris à confronter une stratégie au terrain, aux comportements réels et aux données pour pouvoir l’améliorer.
+          </p>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="{{ route('projects') }}"
+            class="inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-7 py-3 font-body text-sm font-semibold text-white transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom lg:hover:-translate-y-0.5 lg:hover:shadow-md"
+          >
+            Découvrir le site King Mayo
+          </a>
+          <a
+            href="#"
+            download="CV_Valdes.pdf"
+            class="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-light-gray bg-white/80 px-7 py-3 font-body text-sm font-medium text-dark transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray sm:w-auto lg:hover:-translate-y-0.5 lg:hover:bg-white"
+          >
+            Voir les livrables
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 @end
