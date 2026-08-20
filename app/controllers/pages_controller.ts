@@ -9,6 +9,10 @@ export default class PagesController {
     return view.render('pages/experience')
   }
 
+  async contact({ view }: HttpContext) {
+    return view.render('pages/contact')
+  }
+
   // Pages des projets
   async projects({ view }: HttpContext) {
     return view.render('pages/projects')

@@ -1,23 +1,23 @@
-@let(linkTextFromSlot = await $slots.main())
-@let(linkText = linkTextFromSlot?.trim() || $props.get('text') || 'Lien')
+@let(linkText = $props.get('text') || 'Lien')
+@let(routeName = $props.get('route'))
+@let(routeParams = $props.get('routeParams'))
+@let(routeOptions = $props.get('routeOptions'))
+@let(customClasses = $props.get('class') || '')
 @let(linkHref =
-  $props.get('href') ||
-  ($props.get('route')
-    ? urlFor($props.get('route'), $props.get('routeParams'), $props.get('routeOptions'))
-    : '#'))
+  $props.get('href') || (routeName ? urlFor(routeName, routeParams, routeOptions) : '#'))
 @let(isActive = request.url() === linkHref)
 @let(baseClasses =
-  'px-4 py-2 text-sm font-body font-medium transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray rounded-md')
+  'rounded-md px-4 py-2 font-body text-xl md:text-[0.938rem] font-semibold md:font-medium transition duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray lg:hover:text-dark')
 @let(stateClasses = isActive ? 'text-dark' : 'text-gray-custom')
 
 <a
   href="{{ linkHref }}"
   up-follow
-  class="{{ baseClasses }} {{ stateClasses }}"
+  class="{{ baseClasses }} {{ stateClasses }} {{ customClasses }}"
   aria-current="{{ isActive ? 'page' : null }}"
   {{
     $props
-      .except(['href', 'text', 'route', 'routeParams', 'routeOptions'])
+      .except(['href', 'text', 'route', 'routeParams', 'routeOptions', 'class'])
       .toAttrs()
   }}
 >

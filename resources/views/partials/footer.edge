@@ -1,4 +1,7 @@
-<footer id="site-footer" class="bg-light-beige px-5 py-16 text-dark sm:px-8 lg:px-10 lg:py-24">
+<footer
+  id="site-footer"
+  class="bg-light-beige px-4 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+>
   <div
     id="footer-container"
     class="mx-auto grid w-full max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] lg:gap-12"
@@ -7,22 +10,18 @@
     <div
       class="order-last flex flex-col justify-end sm:col-span-2 lg:order-first lg:col-span-1 lg:justify-start"
     >
-      <p class="font-body text-base text-gray-custom">
-        ©
-        {{ new Date().getFullYear() }}
-        Valdes Ombilingo.
-      </p>
+      <p class="font-body text-gray-custom">© {{ new Date().getFullYear() }} Valdes Ombilingo.</p>
     </div>
     {{-- Réseaux sociaux --}}
     <nav aria-label="Réseaux sociaux" class="flex flex-col">
       <h3 class="mb-6 font-heading text-base font-bold tracking-wide text-dark-gray">Suivez-moi</h3>
-      <ul class="space-y-6 font-body text-sm font-medium text-gray-custom">
+      <ul class="space-y-6 font-body font-medium text-gray-custom">
         <li>
           <a
             href="https://linkedin.com/in/ton-profil"
             target="_blank"
             rel="noopener noreferrer"
-            class="transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
+            class="transition duration-200 ease-in-out lg:hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
           >
             LinkedIn
           </a>
@@ -32,7 +31,7 @@
             href="https://github.com/ton-profil"
             target="_blank"
             rel="noopener noreferrer"
-            class="transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
+            class="transition duration-200 ease-in-out lg:hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
           >
             GitHub
           </a>
@@ -42,7 +41,7 @@
             href="https://instagram.com/ton-profil"
             target="_blank"
             rel="noopener noreferrer"
-            class="transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
+            class="transition duration-200 ease-in-out lg:hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
           >
             Instagram
           </a>
@@ -52,14 +51,14 @@
     {{-- Téléchargement --}}
     <nav aria-label="Téléchargements" class="flex flex-col">
       <h3 class="mb-6 font-heading text-base font-bold tracking-wide text-dark-gray">
-        Téléchargement
+        Téléchargez
       </h3>
-      <ul class="space-y-4 font-body text-sm font-medium text-gray-custom">
+      <ul class="space-y-6 font-body font-medium text-gray-custom">
         <li>
           <a
             href="/documents/cv-valdes-ombilingo.pdf"
             download
-            class="transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
+            class="transition duration-200 ease-in-out lg:hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
           >
             Mon CV
           </a>
@@ -68,12 +67,14 @@
     </nav>
     {{-- Contact --}}
     <nav aria-label="Contact" class="flex flex-col">
-      <h3 class="mb-6 font-heading text-base font-bold tracking-wide text-dark-gray">Contact</h3>
-      <ul class="space-y-4 font-body text-sm font-medium text-gray-custom">
+      <h3 class="mb-6 font-heading text-base font-bold tracking-wide text-dark-gray">
+        Contactez-moi
+      </h3>
+      <ul class="space-y-6 font-body font-medium text-gray-custom">
         <li>
           <a
             href="mailto:tonadresse@email.com"
-            class="transition duration-200 ease-in-out hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
+            class="transition duration-200 ease-in-out lg:hover:text-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray"
           >
             Email
           </a>

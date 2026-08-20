@@ -1,76 +1,75 @@
 @let(title = 'Mon Parcours | Valdes OMBILINGO, Développeur Web & Marketing Digital')
 @let(description =
   'Découvrez le parcours de Valdes OMBILINGO à Kinshasa, du studio à la Kadea Academy, un profil hybride mêlant Développement Web, Marketing digital & Gestion de projet.')
-{{-- CONTENU --}}
 @layout()
-  {{-- HERO PARCOURS --}}
-  <section id="experience-hero" class="relative overflow-hidden px-5 text-dark sm:px-8 lg:px-10">
-    <div class="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 pt-16 sm:pt-20 lg:pt-24">
-      <h1 class="text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl">
-        Mon
+  {{--
+    =====================================================
+    HERO PARCOURS
+    =====================================================
+  --}}
+  <section id="experience-hero" class="relative overflow-hidden px-4 text-dark sm:px-8 lg:px-10">
+    <div
+      class="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 pb-6 pt-20 sm:gap-8 sm:pb-8 sm:pt-24 lg:pb-10 lg:pt-28"
+    >
+      <h1
+        class="px-4 text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl"
+      >
+        <span class="hidden sm:inline">Mon</span>
         <span class="text-brown">parcours.</span>
       </h1>
 
-      <p
-        class="max-w-2xl text-center font-body text-base font-medium leading-7 text-dark-gray sm:text-lg sm:leading-8"
-      >
-        On me demande parfois comment on passe des consoles de mixage aux bases de données, aux interfaces web et aux tunnels de conversion. Pour moi, le lien est simple : la curiosité, l’envie d’apprendre et le besoin de proposer des solutions utiles à partir de problèmes concrets.
-      </p>
+      <p class="hero-subtitle">De la musique au digital.</p>
     </div>
   </section>
-  {{-- HISTOIRE DU PARCOURS --}}
+  {{--
+    =====================================================
+    HISTOIRE DU PARCOURS
+    =====================================================
+  --}}
   <section
     id="experience-story"
     aria-labelledby="experience-story-title"
-    class="relative overflow-hidden px-5 pb-16 pt-12 text-dark sm:px-8 sm:pb-20 sm:pt-16 lg:px-10 lg:pb-24 lg:pt-20"
+    class="relative overflow-hidden px-4 pb-12 pt-8 text-dark sm:px-8 sm:pb-16 sm:pt-10 lg:px-10 lg:pb-20 lg:pt-10"
   >
     <div class="mx-auto w-full max-w-5xl">
       {{-- Introduction --}}
-      <div class="mx-auto max-w-3xl lg:px-6">
-        {{-- Le contenu de ton histoire ici --}}
-        <h2
-          id="experience-story-title"
-          class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
-        >
+      <div class="content-column flex flex-col">
+        <h2 id="experience-story-title" class="h2-brown">
           Les étapes qui ont construit mon profil et forgé mon caractère.
         </h2>
 
-        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+        <p class="top-paragraph">
           Mon parcours ne suit pas une ligne toute tracée. Chaque étape m’a permis de grandir, aussi bien personnellement que professionnellement.
         </p>
       </div>
       {{-- Étapes du parcours --}}
-      <div class="mx-auto mt-14 flex max-w-3xl flex-col gap-16 sm:mt-16 lg:px-6">
+      <div class="content-column mt-12 flex flex-col gap-14 sm:mt-14 sm:gap-16">
         {{-- Le studio --}}
         <section aria-labelledby="studio-title">
-          <h3 id="studio-title" class="font-heading text-2xl font-semibold leading-tight text-dark">
-            Le studio : là où tout a commencé
-          </h3>
+          <h3 id="studio-title" class="experience-step-title">Le studio : là où tout a commencé</h3>
 
-          <div class="mt-6 space-y-5 font-body leading-8 text-dark-gray">
-            <p>
+          <div>
+            <p class="top-paragraph">
               Bien avant de taper ma première ligne de code ou de penser stratégie digitale à la Kadea Academy, mon quotidien se passait en studio. Passionnés de musique, mon meilleur ami et moi avions monté notre propre studio d’enregistrement. Autodidacte passionné, j’ai passé plusieurs années sur FL Studio à apprendre le mixage, le mastering et la création sonore.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               Mais dans une petite équipe, on ne fait jamais une seule chose. En plus de la musique, je participais à la gestion des clients, aux échanges commerciaux, à l’organisation des plannings et à la mise en valeur de notre travail.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               Sans vraiment le savoir, je développais déjà des compétences proches de la gestion de projet : écouter un besoin, proposer une solution, respecter une attente et soigner l’expérience finale.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               C’est aussi là qu’est né mon intérêt pour le digital. Pour faire grandir notre studio, il ne suffisait pas d’être bons techniquement : il fallait être visibles, communiquer et donner envie.
             </p>
           </div>
           {{-- Photo du studio --}}
-          <figure
-            class="mt-10 lg:mb-4 overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-sm sm:mt-12"
-          >
+          <figure class="experience-figure mt-10 sm:mt-12">
             <img
               src="/images/experience/valdes-ombilingo-et-herjus-matutezulua-au-studio-enregistrement.webp"
-              alt="Valdes Ombilingo dans son studio d’enregistrement"
+              alt="Valdes Ombilingo dans son studio d’enregistrement avec son meilleur ami Herjus Matutezulua"
               width="1200"
               height="900"
               class="aspect-[4/3] w-full object-cover"
@@ -88,70 +87,64 @@
         </section>
         {{-- Le développement web --}}
         <section aria-labelledby="web-title">
-          <h3 id="web-title" class="font-heading text-2xl font-semibold leading-tight text-dark">
+          <h3 id="web-title" class="experience-step-title">
             Le déclic : comprendre comment le web fonctionne
           </h3>
 
-          <div class="mt-6 space-y-5 font-body leading-8 text-dark-gray">
-            <p>
+          <div>
+            <p class="top-paragraph">
               En 2023, je découvre la création de sites avec WordPress. C’est une révélation : je comprends qu’un site peut devenir un véritable outil de visibilité, de communication et de développement.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               Mais très vite, je ressens les limites des solutions clés en main. Je ne voulais pas seulement assembler des pages. Je voulais comprendre comment un site fonctionne, comment une interface se construit et comment une idée devient une application web.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               À l’issue d’un processus de sélection, je rejoins la Kadea Academy en janvier 2025 pour approfondir le développement web. J’y apprends à concevoir des sites et des applications web de A à Z avec HTML, CSS, JavaScript, TypeScript, AdonisJS, Tailwind CSS et PostgreSQL.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               J’y découvre surtout un état d’esprit et une autre façon de voir le code : coder ne consiste pas seulement à écrire des lignes techniques, mais à traduire un besoin en solution claire, structurée et utilisable.
             </p>
           </div>
         </section>
-        {{-- Le marketing digital --}}
+        {{-- Marketing digital --}}
         <section aria-labelledby="marketing-title">
-          <h3
-            id="marketing-title"
-            class="font-heading text-2xl font-semibold leading-tight text-dark"
-          >
+          <h3 id="marketing-title" class="experience-step-title">
             L’alignement : relier le produit au marché
           </h3>
 
-          <div class="mt-6 space-y-5 font-body leading-8 text-dark-gray">
-            <p>
+          <div>
+            <p class="top-paragraph">
               Parce qu’un bon site ou une bonne application web ne suffit pas si personne ne les comprend, ne les trouve ou ne les utilise, j’ai voulu compléter mon profil avec le marketing digital.
             </p>
 
-            <p>
-              En juillet 2025, grâce à une bourse Digital Africa, j’intègre en parallèle un bootcamp en marketing digital. Cette formation me permet de travailler l’étude de marché, les personas, le copywriting, la création de contenu, le SEO, le SEA, les campagnes digitales, les KPI et l’analyse de performance.
+            <p class="next-paragraph">
+              En juillet 2025, grâce à une bourse Digital Africa, j’intègre en parallèle un bootcamp en marketing digital. J’y apprends à analyser un marché, construire une stratégie digitale, créer du contenu, développer l’acquisition et mesurer les performances. Des projets concrets me permettent ensuite de mettre ces connaissances en pratique, de l’analyse SWOT et PESTEL à SOSTAC, jusqu’aux tunnels de conversion et au suivi des KPI.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               C’est à ce moment que mon profil commence réellement à s’aligner : développement web, stratégie digitale, compréhension des utilisateurs et logique projet.
             </p>
           </div>
         </section>
         {{-- Résilience et ambition --}}
         <section aria-labelledby="resilience-title">
-          <h3
-            id="resilience-title"
-            class="font-heading text-2xl font-semibold leading-tight text-dark"
-          >
+          <h3 id="resilience-title" class="experience-step-title">
             Une année de résilience et des objectifs atteints
           </h3>
 
-          <div class="mt-6 space-y-5 font-body leading-8 text-dark-gray">
-            <p>
+          <div>
+            <p class="top-paragraph">
               L’année 2025 a été intense. J’ai mené deux formations exigeantes en parallèle, tout en traversant des épreuves personnelles importantes. Cette période m’a appris la discipline, la patience et la résilience.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               Malgré les difficultés, j’ai continué à avancer. J’ai renforcé mes compétences en développement web et en marketing digital, travaillé sur des projets concrets comme X Clone et King Mayo, et confirmé mon envie de relier la technique, la stratégie et la gestion de projet digital.
             </p>
 
-            <p>
+            <p class="next-paragraph">
               Aujourd’hui, mon objectif est clair : continuer à apprendre, contribuer à des projets utiles et construire progressivement un profil de chef de projet digital, capable de comprendre les besoins, de coordonner les idées et de transformer une vision en solution concrète.
             </p>
           </div>
@@ -159,30 +152,32 @@
       </div>
     </div>
   </section>
-  {{-- VIDÉO ET COLLATION --}}
+  {{--
+    =====================================================
+    VIDÉO ET COLLATION
+    =====================================================
+  --}}
   <section
     id="experience-video"
     aria-labelledby="experience-video-title"
-    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
   >
     <div class="mx-auto w-full max-w-5xl">
-      <div class="mx-auto max-w-3xl lg:px-6">
-        <h2
-          id="experience-video-title"
-          class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
-        >
+      {{-- Introduction --}}
+      <div class="content-column flex flex-col">
+        <h2 id="experience-video-title" class="h2-brown">
           Un moment fort de mon parcours à la Kadea Academy.
         </h2>
 
-        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
-          Cette cérémonie d’accueil de la chohorte 2026 et de remise des certificats de la chohorte 2025 a réuni les apprenants, les équipes de Kadea Academy ainsi que plusieurs partenaires tels que: La Rawbank, Vodacom, GIZ, etc. Elle marque l’aboutissement d’une étape importante pour moi.
+        <p class="top-paragraph">
+          Cette cérémonie d’accueil de la cohorte 2026 et de remise des certificats de la cohorte 2025 a réuni les apprenants, les équipes de Kadea Academy ainsi que plusieurs partenaires tels que la Rawbank, Vodacom, GIZ, etc. Elle marque l’aboutissement d’une étape importante pour moi.
         </p>
       </div>
-
-      <div class="mx-auto mt-12 w-full max-w-4xl sm:mt-14">
+      {{-- Vidéo --}}
+      <div class="experience-media mt-12 sm:mt-14">
         <div
           id="kadea-video"
-          class="group relative aspect-video overflow-hidden rounded-4xl bg-black shadow-sm"
+          class="group relative aspect-video overflow-hidden rounded-3xl bg-black shadow-sm sm:rounded-4xl"
         >
           <button
             id="kadea-video-button"
@@ -191,7 +186,7 @@
             class="absolute inset-0 z-10 h-full w-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown"
           >
             <img
-              src="/public/images/experience/ceremonie-accueil-cohorte-2026-et-remise-certificats-cohorte-2025-kadea-academy.webp"
+              src="/images/experience/ceremonie-accueil-cohorte-2026-et-remise-certificats-cohorte-2025-kadea-academy.webp"
               alt=""
               width="1280"
               height="720"
@@ -216,6 +211,7 @@
                   viewBox="0 0 448 512"
                   class="size-6"
                   fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     d="M91.2 36.9c-12.4-6.8-27.4-6.5-39.6 .7S32 57.9 32 72l0 368c0 14.1 7.5 27.2 19.6 34.4s27.2 7.5 39.6 .7l336-184c12.8-7 20.8-20.5 20.8-35.1s-8-28.1-20.8-35.1l-336-184z"
@@ -228,81 +224,59 @@
       </div>
     </div>
   </section>
-  {{-- CE QUE CE PARCOURS M’A APPRIS --}}
+  {{--
+    =====================================================
+    CE QUE CE PARCOURS M’A APPRIS
+    =====================================================
+  --}}
   <section
     id="experience-learnings"
     aria-labelledby="experience-learnings-title"
-    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
   >
-    <div class="mx-auto flex w-full max-w-5xl flex-col gap-14 lg:gap-16">
-      <div class="mx-auto flex max-w-3xl flex-col lg:px-6">
-        <h2
-          id="experience-learnings-title"
-          class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl"
-        >
+    <div class="mx-auto flex w-full max-w-5xl flex-col gap-12 sm:gap-14 lg:gap-16">
+      {{-- Introduction --}}
+      <div class="content-column flex flex-col">
+        <h2 id="experience-learnings-title" class="h2-brown">
           Ce que ces expériences m’ont appris.
         </h2>
 
-        <p class="mt-6 font-body font-medium leading-7 text-dark-gray sm:leading-8">
+        <p class="top-paragraph">
           Au-delà des outils et des formations, ces expériences ont construit ma manière d’apprendre, de travailler avec les autres et d’aborder un projet.
         </p>
       </div>
-
+      {{-- Apprentissages --}}
       <div class="mx-auto w-full max-w-4xl">
-        <ul class="flex flex-col gap-4 sm:gap-5">
+        <ul class="flex flex-col gap-4 sm:gap-5 lg:gap-6">
           {{-- Comprendre --}}
-          <li
-            class="mx-auto w-full rounded-[2rem] bg-brown px-6 py-5 sm:w-full sm:max-w-2xl sm:rounded-full sm:px-8 lg:w-fit lg:ml-0 lg:mr-auto"
-          >
-            <h3
-              class="font-heading text-lg font-semibold leading-tight text-white-custom sm:text-xl"
-            >
-              Comprendre avant d’agir
-            </h3>
+          <li class="learning-card mx-auto lg:ml-0 lg:mr-auto lg:w-fit">
+            <h3 class="learning-title">Comprendre avant d’agir</h3>
 
-            <p class="mt-2 font-body text-sm leading-6 text-white-custom/80">
+            <p class="learning-description">
               Écouter, analyser le contexte et identifier le besoin réel avant de proposer une solution.
             </p>
           </li>
           {{-- Vision d’ensemble --}}
-          <li
-            class="mx-auto w-full rounded-[2rem] bg-brown px-6 py-5 sm:w-full sm:max-w-2xl sm:rounded-full sm:px-8 lg:w-fit lg:ml-auto lg:mr-0"
-          >
-            <h3
-              class="font-heading text-lg font-semibold leading-tight text-white-custom sm:text-xl"
-            >
-              Garder une vision d’ensemble
-            </h3>
+          <li class="learning-card mx-auto lg:ml-auto lg:mr-0 lg:w-fit">
+            <h3 class="learning-title">Garder une vision d’ensemble</h3>
 
-            <p class="mt-2 font-body text-sm leading-6 text-white-custom/80">
+            <p class="learning-description">
               Relier la technique, la stratégie et la performance pour maintenir une direction cohérente.
             </p>
           </li>
           {{-- Adaptation --}}
-          <li
-            class="mx-auto w-full rounded-[2rem] bg-brown px-6 py-5 sm:w-full sm:max-w-2xl sm:rounded-full sm:px-8 lg:w-fit lg:ml-10 lg:mr-auto"
-          >
-            <h3
-              class="font-heading text-lg font-semibold leading-tight text-white-custom sm:text-xl"
-            >
-              Apprendre en s’adaptant
-            </h3>
+          <li class="learning-card mx-auto lg:ml-16 lg:mr-auto lg:w-fit">
+            <h3 class="learning-title">Apprendre en s’adaptant</h3>
 
-            <p class="mt-2 font-body text-sm leading-6 text-white-custom/80">
+            <p class="learning-description">
               Rester curieux, progresser avec autonomie, s’adapter aux nouveaux outils, contraintes et imprévus.
             </p>
           </li>
           {{-- Collaboration --}}
-          <li
-            class="mx-auto w-full rounded-[2rem] bg-brown px-6 py-5 sm:w-full sm:max-w-2xl sm:rounded-full sm:px-8 lg:w-fit lg:ml-auto lg:mr-10"
-          >
-            <h3
-              class="font-heading text-lg font-semibold leading-tight text-white-custom sm:text-xl"
-            >
-              Collaborer et communiquer
-            </h3>
+          <li class="learning-card mx-auto lg:ml-auto lg:mr-16 lg:w-fit">
+            <h3 class="learning-title">Collaborer et communiquer</h3>
 
-            <p class="mt-2 font-body text-sm leading-6 text-white-custom/80">
+            <p class="learning-description">
               Partager ses idées, recevoir des feedbacks et contribuer efficacement au travail d’équipe.
             </p>
           </li>
@@ -310,35 +284,30 @@
       </div>
     </div>
   </section>
-  {{-- CTA FINAL --}}
-  <section id="experience-contact" class="relative overflow-hidden px-5 text-dark sm:px-8">
+  {{--
+    =====================================================
+    CTA FINAL
+    =====================================================
+  --}}
+  <section id="experience-contact" class="relative overflow-hidden px-4 text-dark sm:px-8">
     <div class="mx-auto w-full max-w-5xl">
       <div
-        class="mx-auto flex max-w-4xl flex-col items-center px-2 py-16 text-center sm:px-10 sm:py-20 lg:px-16"
+        class="mx-auto flex w-full max-w-[560px] flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
       >
-        <h2
-          class="font-heading text-3xl font-bold leading-tight text-brown sm:text-4xl lg:text-5xl"
-        >
-          La suite de mon histoire reste à écrire.
-        </h2>
+        <h2 class="h2-cta-brown">La suite de mon histoire reste à écrire.</h2>
 
-        <p
-          class="mt-6 max-w-2xl font-body text-base font-medium leading-7 text-dark-gray sm:text-lg sm:leading-8"
-        >
+        <p class="cta-paragraph">
           Je souhaite continuer à apprendre sur le terrain, contribuer à des projets concrets et évoluer progressivement vers un profil de chef de projet digital.
         </p>
 
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="{{ route('projects') }}"
-            class="inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-7 py-3 font-body text-sm font-semibold text-white transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom lg:hover:-translate-y-0.5 lg:hover:shadow-md"
-          >
+        <div class="mt-12 flex w-full flex-col gap-4 sm:mt-8 sm:w-auto sm:flex-row sm:gap-3">
+          <a href="{{ route('projects') }}" class="btn btn-responsive btn-primary w-full sm:w-auto">
             Découvrir mes projets
           </a>
           <a
             href="#"
             download="CV_Valdes.pdf"
-            class="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-light-gray bg-white/80 px-7 py-3 font-body text-sm font-medium text-dark transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray sm:w-auto lg:hover:-translate-y-0.5 lg:hover:bg-white"
+            class="btn btn-responsive btn-secondary w-full sm:w-auto"
           >
             Mon CV
           </a>

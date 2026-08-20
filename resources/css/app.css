@@ -20,20 +20,246 @@
   --color-ligth-brown: #e8ddcf; */
 
   /* Couleurs Neutres */
-  --color-very-light-gray: #f0eae1; /* Un gris-beige très clair pour les bordures/diviseurs */
-  --color-light-gray: #d7cfc4; /* Pour les états survolés (hover) ou icônes secondaires */
-  --color-gray-custom: #76726c; /* Modifié : Plus sombre pour le texte secondaire (Norme AA) */
-  --color-dark-gray: #5a5753; /* Modifié : Idéal pour les paragraphes principaux */
+  --color-very-light-gray: #f0eae1;
+  --color-light-gray: #d7cfc4;
+  --color-gray-custom: #76726c;
+  --color-dark-gray: #5a5753;
   --color-dark: #2c2b29;
 
   /* Couleurs de Marque (Brand) */
   --color-brown: #c3a882;
+  /* bb9d72 */
+  /* c3a882 */
   --color-green-custom: #33a370;
   /* 278e5d */
   --color-dark-green: #309a6a;
   --color-blue-custom: #4d8ca0;
 
   /* Typographie et Breakpoints */
-  --text-base: 0.9375rem;
+  /* --text-base: 0.9375rem; */
   --breakpoint-xs: 480px;
+}
+
+/* =========================================================
+   TITRES & TEXTES
+   ========================================================= */
+
+.h2-brown {
+  @apply font-heading text-4xl font-semibold leading-tight text-brown;
+}
+
+.h2-cta-brown {
+  @apply font-heading text-3xl font-bold leading-tight text-brown sm:text-4xl lg:text-5xl;
+}
+
+.hero-subtitle {
+  @apply max-w-2xl text-center font-body text-lg font-medium leading-7 text-dark-gray sm:leading-8;
+}
+
+.top-paragraph {
+  @apply mt-4 font-body text-lg font-medium leading-7 text-dark-gray sm:mt-6 sm:text-base sm:leading-8;
+}
+
+.next-paragraph {
+  @apply mt-4 font-body text-lg font-medium leading-7 text-dark-gray sm:text-base sm:leading-8;
+}
+
+.cta-paragraph {
+  @apply mt-4 max-w-2xl font-body text-lg font-medium leading-7 text-dark-gray sm:mt-6 sm:leading-8;
+}
+
+/* =========================================================
+   CONTENEURS
+   ========================================================= */
+
+.content-column {
+  @apply mx-auto w-full max-w-[560px] px-4 sm:px-0 lg:max-w-3xl lg:px-6;
+}
+
+.hero-copy {
+  @apply mx-auto flex w-full max-w-[560px] flex-col px-4 sm:px-0 lg:mx-0;
+}
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full border px-6 py-3 font-body font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 lg:hover:-translate-y-0.5;
+}
+
+.btn-responsive {
+  @apply min-h-16 text-lg sm:min-h-11 sm:text-sm;
+}
+
+.btn-primary {
+  @apply border-green-custom bg-green-custom text-white focus-visible:outline-green-custom lg:hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply border-light-gray bg-white/80 font-medium text-dark backdrop-blur-sm focus-visible:outline-light-gray lg:hover:bg-white;
+}
+
+/* =========================================================
+   CLASSES GÉNÉRIQUES POUR CARTES
+   ========================================================= */
+
+.info-card {
+  @apply rounded-3xl bg-white-custom px-6 py-7 sm:px-8;
+}
+
+.card-highlight {
+  @apply font-heading text-3xl font-bold text-brown;
+}
+
+.card-description {
+  @apply mt-3 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-6;
+}
+
+/* =========================================================
+   PROJETS HOME
+   ========================================================= */
+
+.project-card {
+  @apply relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20;
+}
+
+.project-card-image {
+  @apply absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out;
+}
+
+.project-card-title {
+  @apply mb-2 font-heading text-2xl font-bold;
+}
+
+.project-card-description {
+  @apply max-w-md font-body text-sm leading-6 text-dark-gray;
+}
+
+/* =========================================================
+   COMPÉTENCES
+   ========================================================= */
+
+.skill-item {
+  @apply p-2 sm:p-4 lg:p-6;
+}
+
+.skill-number {
+  @apply font-body text-4xl font-semibold text-brown/70;
+}
+
+.skill-title {
+  @apply mt-4 font-heading text-xl font-semibold leading-tight text-dark sm:mt-6;
+}
+
+.skill-description {
+  @apply mt-4 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-8;
+}
+
+/* =========================================================
+   PARCOURS
+   ========================================================= */
+
+.experience-step-title {
+  @apply font-heading text-2xl font-semibold leading-tight text-dark;
+}
+
+.experience-media {
+  @apply mx-auto w-full max-w-4xl;
+}
+
+.experience-figure {
+  @apply overflow-hidden rounded-3xl border border-very-light-gray bg-light-beige shadow-sm sm:rounded-4xl;
+}
+
+.learning-card {
+  @apply w-full rounded-4xl bg-brown px-6 py-5 sm:max-w-2xl sm:rounded-full sm:px-8;
+}
+
+.learning-title {
+  @apply font-heading text-lg font-semibold leading-tight text-white-custom sm:text-xl;
+}
+
+.learning-description {
+  @apply mt-2 font-body text-lg leading-6 text-white-custom/80 sm:text-base;
+}
+
+/* =========================================================
+   PAGE PROJETS
+   ========================================================= */
+
+.project-list-card {
+  @apply flex flex-col overflow-hidden rounded-3xl border border-very-light-gray bg-white-custom shadow-xs transition duration-300 lg:hover:-translate-y-1 lg:hover:shadow-xl lg:hover:shadow-black/10;
+}
+
+.project-list-link {
+  @apply flex h-full flex-col focus-visible:outline-2 focus-visible:outline-offset-4;
+}
+
+.project-list-content {
+  @apply flex flex-1 flex-col px-6 py-7 sm:px-8 sm:py-8;
+}
+
+.project-type {
+  @apply font-body text-xs font-semibold uppercase tracking-[0.12em];
+}
+
+.project-list-title {
+  @apply mt-2 font-heading text-2xl font-bold leading-tight text-dark sm:text-3xl;
+}
+
+.project-list-description {
+  @apply mt-4 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-6;
+}
+
+.project-tags {
+  @apply mt-5 flex flex-wrap gap-2;
+}
+
+.project-tag {
+  @apply rounded-full px-3 py-1 font-body text-xs font-semibold text-dark;
+}
+
+.project-category-icon {
+  @apply flex size-10 shrink-0 items-center justify-center rounded-full;
+}
+
+/* =========================================================
+   MÉTHODE
+   ========================================================= */
+
+.method-item {
+  @apply px-4 py-4 sm:px-6 sm:py-6;
+}
+
+.method-title {
+  @apply mt-5 font-heading text-xl font-semibold text-dark;
+}
+
+/* =========================================================
+   PAGE PROJET DÉTAILLÉE
+   ========================================================= */
+
+.project-feature-title {
+  @apply font-heading text-xl font-semibold leading-tight text-dark;
+}
+
+.project-kpi-card {
+  @apply rounded-3xl bg-brown px-6 py-8 text-white-custom;
+}
+
+.project-kpi-value {
+  @apply font-heading text-3xl font-bold;
+}
+
+.project-kpi-description {
+  @apply mt-3 font-body text-lg leading-7 text-white-custom/80 sm:text-sm sm:leading-6;
+}
+
+.project-subtitle {
+  @apply font-heading text-2xl font-semibold leading-tight text-dark;
+}
+
+.project-media {
+  @apply overflow-hidden rounded-3xl sm:rounded-4xl;
 }

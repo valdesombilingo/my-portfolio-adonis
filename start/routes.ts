@@ -16,4 +16,5 @@ router.group(() => {
   router.get('/experience', [PagesController, 'experience']).as('experience')
   router.get('/projects', [PagesController, 'projects']).as('projects')
   router.get('/projects/king-mayo', [PagesController, 'kingMayo']).as('projects.king_mayo')
+  router.get('/contact', [PagesController, 'contact']).as('contact')
 })

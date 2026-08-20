@@ -3,7 +3,7 @@ import 'unpoly/unpoly.css'
 
 import '../css/app.css'
 
-import { initStickyNav } from './sticky-nav.js'
+import { initHeaderNav } from './header-nav.js'
 import { initBackNav } from './back-nav.js'
 import { initKadeaVideo } from './kadea-video.js'
 
@@ -32,5 +32,5 @@ Alpine.data('alert', function () {
 Alpine.start()
 
 initBackNav()
-initStickyNav()
+initHeaderNav()
 initKadeaVideo()

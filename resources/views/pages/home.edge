@@ -1,21 +1,27 @@
 @layout()
-  {{-- SECTION HERO --}}
-  {{-- 1. Suppression de overflow-hidden pour laisser l'ombre de la photo visible --}}
-  <section id="home-hero" class="relative px-5 text-dark sm:px-8 lg:px-10">
+  {{--
+    =====================================================
+    SECTION HERO
+    =====================================================
+  --}}
+  <section id="home-hero" class="relative px-4 text-dark sm:px-8 lg:px-10">
     <div
-      class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 pb-16 pt-16 sm:pb-20 sm:pt-20 lg:gap-16 lg:pb-24 lg:pt-24"
+      class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 pb-8 pt-20 sm:gap-12 sm:pb-10 sm:pt-24 lg:gap-16 lg:pb-20 lg:pt-28"
     >
       {{-- Titre principal --}}
-      <h1 class="text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl">
-        <span class="block">C'est <span class="text-brown">Valdes.</span></span>
+      <h1
+        class="px-4 text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl"
+      >
+        <span class="hidden sm:inline">C'est</span>
+        <span class="text-brown">Valdes.</span>
       </h1>
       {{-- Image et texte --}}
       <div
         class="mx-auto grid w-full max-w-4xl items-center gap-12 lg:grid-cols-[280px_minmax(0,560px)] lg:justify-center lg:gap-20"
       >
         {{-- Partie image --}}
-        <div class="flex w-full justify-center">
-          <div class="relative w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[280px]">
+        <div class="flex w-full justify-center px-4 sm:px-0">
+          <div class="relative w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[500px]">
             {{-- Décoration derrière l’image --}}
             <div
               aria-hidden="true"
@@ -23,18 +29,20 @@
             ></div>
 
             <figure
-              class="relative mx-auto w-full max-w-md overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-xs sm:max-w-xl lg:max-w-[560px]"
+              class="relative overflow-hidden rounded-4xl border border-very-light-gray bg-light-beige shadow-xs"
             >
               <img
                 src="/images/photo-profil-valdes-ombilingo.webp"
                 alt="Portrait de Valdes Ombilingo sur un fond bleu clair, portant une chemise blanche"
                 width="560"
                 height="700"
-                class="h-[320px] w-full object-cover object-center sm:h-[420px] lg:aspect-[4/5] lg:h-auto lg:object-top"
+                class="aspect-[4/5] w-full object-cover object-top"
                 fetchpriority="high"
               />
 
-              <figcaption class="border-t border-very-light-gray px-5 py-5 sm:px-8 sm:py-6">
+              <figcaption
+                class="hidden border-t border-very-light-gray px-6 py-5 sm:block sm:px-8 sm:py-6"
+              >
                 <blockquote class="font-quote text-xl leading-snug text-dark">
                   “Ce que nous savons est une goutte d’eau ; ce que nous ignorons est un océan.”
                 </blockquote>
@@ -45,33 +53,33 @@
           </div>
         </div>
         {{-- Partie texte --}}
-        <div class="mx-auto flex w-full max-w-[560px] flex-col lg:mx-0">
-          <h2 class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl">
-            Développeur web et spécialiste en marketing digital.
-          </h2>
+        <div class="hero-copy">
+          <h2 class="h2-brown">Développeur web et spécialiste en marketing digital.</h2>
 
-          <h3 class="mt-2 font-heading text-base font-medium leading-6 text-dark sm:text-lg">
+          <h3
+            class="mt-2 font-heading text-xl font-medium leading-7 text-dark sm:text-lg sm:leading-8"
+          >
             Basé à Kinshasa (RDC), la ville la plus animée d'Afrique.
           </h3>
 
-          <p class="mt-6 font-body text-base font-medium leading-6 text-dark-gray sm:leading-8">
+          <p class="top-paragraph">
             Je transforme les idées en solutions digitales utiles grâce au développement web et au marketing digital. À travers des projets concrets, je conçois des sites web et des applications web performants et responsives, en associant stratégie digitale et compréhension des besoins réels des utilisateurs.
           </p>
           {{-- Disponibilité --}}
-          <p class="mt-4 font-body text-base font-medium leading-6 text-dark-gray sm:leading-8">
+          <p class="next-paragraph">
             Disponible pour un stage, une expérience professionnelle ou de nouvelles opportunités dans le développement web et le marketing digital.
           </p>
           {{-- Boutons --}}
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div class="mt-12 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:gap-3">
             <a
               href="{{ route('experience') }}"
-              class="inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-6 py-3 font-body text-sm font-semibold text-white transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom lg:hover:-translate-y-0.5 lg:hover:shadow-md"
+              class="btn btn-responsive btn-primary w-full sm:w-auto"
             >
               Découvrir mon parcours
             </a>
             <a
               href="{{ route('projects') }}"
-              class="inline-flex min-h-11 items-center justify-center rounded-full border border-light-gray bg-white/80 px-6 py-3 font-body text-sm font-medium text-dark backdrop-blur-sm transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-gray lg:hover:-translate-y-0.5 lg:hover:bg-white"
+              class="btn btn-responsive btn-secondary w-full sm:w-auto"
             >
               Mes projets
             </a>
@@ -80,86 +88,52 @@
       </div>
     </div>
   </section>
-  {{-- SECTION PROJETS --}}
+  {{--
+    =====================================================
+    SECTION PROJETS
+    =====================================================
+  --}}
   <section
     id="home-projects"
-    class="relative overflow-hidden px-5 py-16 text-dark sm:px-8 lg:px-10"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
   >
-    <div class="flex flex-col gap-16 lg:gap-20">
+    <div class="flex flex-col gap-12 sm:gap-14 lg:gap-16">
       {{-- Texte --}}
-      <div class="mx-auto flex max-w-3xl flex-col lg:px-6">
-        <h2 class="font-heading text-2xl font-semibold leading-tight text-brown sm:text-3xl">
+      <div class="content-column flex flex-col">
+        <h2 class="h2-brown">
           Du concept à l’écran, j'interviens sur plusieurs dimensions d’un projet digital.
         </h2>
 
-        <p class="mt-6 font-body font-medium leading-6 text-dark-gray sm:leading-8">
+        <p class="top-paragraph">
           Chaque projet commence par une question simple : quel problème résoudre, pour qui, et comment y apporter une solution adaptée ?
         </p>
-        <p class="mt-6 font-body font-medium leading-6 text-dark-gray sm:leading-8">
+
+        <p class="next-paragraph">
           Mes projets reflètent cette approche entre développement web et marketing digital. Je peux créer des sites et applications web fullstack, de l’interface à la base de données, mais aussi construire une stratégie digitale, travailler la visibilité en ligne, gérer des campagnes digitales et analyser les performances pour améliorer les résultats.
         </p>
       </div>
       {{-- Cards projets --}}
-      <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+      <div
+        class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-12"
+      >
         {{-- Projet 1 --}}
-        <a
-          href="#"
-          aria-label="Voir le projet X Clone"
-          class="group relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20"
-        >
+        <a href="#" aria-label="Voir le projet X Clone" class="project-card group">
           <img
             src="/images/projects/x-clone/x-background.webp"
             alt="Aperçu mobile (Iphone 14 Pro Max) de l'interface utilisateur du réseau social X Clone avec le fil d'actualité en mode sombre"
             aria-hidden="true"
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out lg:group-hover:scale-105"
+            class="project-card-image lg:group-hover:scale-105"
             loading="lazy"
           />
 
           <div class="absolute" aria-hidden="true"></div>
 
           <div class="relative z-10 w-full text-dark">
-            <h3 class="mb-2 font-heading text-2xl font-bold">X Clone</h3>
+            <h3 class="project-card-title">X Clone</h3>
 
-            <p class="max-w-md font-body text-sm leading-6 text-dark-gray">
+            <p class="project-card-description">
               Application web fullstack inspirée du réseau social X.
             </p>
-          </div>
-
-          <div class="relative z-10 w-full">
-            <span class="inline-flex items-center gap-1 text-sm font-medium text-dark">
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              En savoir plus
-
-
-
-
-
-
-
-
-
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-                class="size-3.5 pt-1 transition-transform duration-200 lg:group-hover:translate-x-1"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M566.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L466.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l434.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </span>
           </div>
         </a>
         {{-- Projet 2 --}}
@@ -167,118 +141,79 @@
           href="{{ route('projects.king_mayo') }}"
           up-follow
           aria-label="Voir le projet King Mayo"
-          class="group relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20"
+          class="project-card group"
         >
           <img
             src="/images/projects/king-mayo/king-mayo-background.webp"
             alt="Vue desktop du menu moderne et chaleureux du restaurant King Mayo"
             aria-hidden="true"
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out lg:group-hover:scale-105"
+            class="project-card-image lg:group-hover:scale-105"
             loading="lazy"
           />
 
           <div class="absolute inset-0" aria-hidden="true"></div>
 
           <div class="relative z-10 w-full text-dark">
-            <h3 class="mb-2 font-heading text-2xl font-bold">King Mayo</h3>
+            <h3 class="project-card-title">King Mayo</h3>
 
-            <p class="max-w-md font-body text-sm leading-6 text-dark-gray">
+            <p class="project-card-description">
               Fast-food à Kinshasa spécialisé dans le poulet mayo.
             </p>
-          </div>
-
-          <div class="relative z-10 w-full">
-            <span class="inline-flex items-center gap-1 text-sm font-medium text-dark">
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              En savoir plus
-
-
-
-
-
-
-
-
-
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-                class="size-3.5 pt-1 transition-transform duration-200 lg:group-hover:translate-x-1"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M566.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L466.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l434.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </span>
           </div>
         </a>
       </div>
     </div>
   </section>
-  {{-- SECTION COMPÉTENCES --}}
+  {{--
+    =====================================================
+    SECTION COMPÉTENCES
+    =====================================================
+  --}}
   <section
     id="home-skills"
-    class="relative overflow-hidden px-5 py-20 text-dark sm:px-8 lg:px-10 lg:py-24"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
   >
-    <div class="mx-auto flex w-full max-w-5xl flex-col gap-14 lg:gap-18">
+    <div class="mx-auto flex w-full max-w-6xl flex-col gap-12 sm:gap-14 lg:gap-16">
       {{-- Texte --}}
-      <div class="mx-auto flex max-w-3xl flex-col lg:px-6">
-        <h2 class="font-heading text-2xl leading-tight font-semibold text-brown sm:text-3xl">
-          Des compétences pour construire des solutions utiles.
-        </h2>
+      <div class="content-column flex flex-col">
+        <h2 class="h2-brown">Des compétences pour construire des solutions utiles.</h2>
 
-        <p class="mt-6 font-body font-medium leading-6 text-dark-gray sm:leading-8">
+        <p class="top-paragraph">
           Je ne crée pas seulement des interfaces jolies ou des beaux visuels. Je cherche à construire des solutions qui ont du sens. Chaque compétence intervient à une étape différente : comprendre le besoin, transformer les idées en livrables, développer une solution, la rendre visible, puis l’améliorer avec méthode.
         </p>
       </div>
       {{-- Grande card compétences --}}
-      <article class="mx-auto w-full overflow-hidden rounded-4xl bg-white-custom">
-        <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-3 lg:gap-1 lg:p-12">
+      <article
+        class="-mx-4 w-[calc(100%+2rem)] overflow-hidden rounded-none bg-white-custom sm:mx-auto sm:w-full sm:max-w-3xl sm:rounded-4xl lg:max-w-6xl"
+      >
+        <div class="grid gap-8 px-6 py-10 sm:p-8 lg:grid-cols-3 lg:gap-4 lg:p-12">
           {{-- Compétence 1 --}}
-          <div class="p-2 sm:p-4 lg:p-6">
-            <span class="font-body text-4xl font-semibold text-brown/70">01</span>
+          <div class="skill-item">
+            <span class="skill-number">01</span>
 
-            <h3 class="mt-6 font-heading text-xl leading-tight font-semibold text-dark">
-              Développement web
-            </h3>
+            <h3 class="skill-title">Développement web</h3>
 
-            <p class="mt-5 font-body leading-8 text-dark-gray">
-              Je conçois des sites web et applications web responsives, de l’interface à la base de données. J’utilise Figma, HTML, CSS, JavaScript, TypeScript, AdonisJS, Tailwind CSS et PostgreSQL pour créer des interfaces claires, ergonomiques et agréables à utiliser. J’utilise aussi Git et GitHub pour organiser les projets, versionner le code et collaborer.
+            <p class="skill-description">
+              Je conçois des sites web et applications web responsives, de l’interface à la base de données. J’utilise HTML, CSS, JavaScript, TypeScript, AdonisJS, Tailwind CSS et PostgreSQL pour créer des interfaces claires, ergonomiques et agréables à utiliser. J’utilise aussi Git et GitHub pour organiser les projets, versionner le code et collaborer.
             </p>
           </div>
           {{-- Compétence 2 --}}
-          <div class="p-2 sm:p-4 lg:p-6">
-            <span class="font-body text-4xl font-semibold text-brown/70">02</span>
+          <div class="skill-item">
+            <span class="skill-number">02</span>
 
-            <h3 class="mt-6 font-heading text-xl leading-tight font-semibold text-dark">
-              Marketing digital
-            </h3>
+            <h3 class="skill-title">Marketing digital</h3>
 
-            <p class="mt-5 font-body leading-8 text-dark-gray">
+            <p class="skill-description">
               J’aide les projets à atteindre leurs objectifs digitaux et à améliorer leurs résultats. J'interviens de l'étude de marché au déploiement opérationnel : SEO, SEA, création de contenu et campagnes digitales. Je travaille avec WordPress, les outils Google (Analytics, Search Console, Ads, etc.), Meta Ads, Mailchimp, ainsi que Canva et CapCut pour les réseaux sociaux.
             </p>
           </div>
           {{-- Compétence 3 --}}
-          <div class="p-2 sm:p-4 lg:p-6">
-            <span class="font-body text-4xl font-semibold text-brown/70">03</span>
+          <div class="skill-item">
+            <span class="skill-number">03</span>
 
-            <h3 class="mt-6 font-heading text-xl leading-tight font-semibold text-dark">
-              Gestion de projet
-            </h3>
+            <h3 class="skill-title">Gestion de projet</h3>
 
-            <p class="mt-5 font-body leading-8 text-dark-gray">
+            <p class="skill-description">
               J’apprends à m'organiser avec une méthodologie agile pour mieux cadrer les besoins, suivre l’avancement et prioriser les actions. Je peux collaborer avec une équipe, présenter mes idées clairement. J'utilise Notion, Trello, Canva, Slack, Google Docs et Gmail pour structurer mes livrables, fluidifier la communication et travailler plus efficacement.
             </p>
           </div>
@@ -286,27 +221,25 @@
       </article>
     </div>
   </section>
-  {{-- SECTION CONTACT CTA --}}
-  <section id="home-contact" class="relative overflow-hidden px-5 text-dark sm:px-8">
+  {{--
+    =====================================================
+    SECTION CONTACT CTA
+    =====================================================
+  --}}
+  <section id="home-contact" class="relative overflow-hidden px-4 text-dark sm:px-8">
     <div class="mx-auto w-full max-w-5xl">
       <div
-        class="mx-auto flex max-w-4xl flex-col items-center px-2 py-16 text-center sm:px-10 sm:py-20 lg:px-16"
+        class="mx-auto flex w-full max-w-[560px] flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
       >
-        <h2
-          class="font-heading text-3xl font-bold leading-tight text-brown sm:text-4xl lg:text-5xl"
-        >
-          Et si nous construisions quelque chose ensemble ?
-        </h2>
+        <h2 class="h2-cta-brown">Et si nous construisions quelque chose ensemble ?</h2>
 
-        <p
-          class="mt-6 max-w-2xl font-body text-base font-medium leading-7 text-dark-gray sm:text-lg sm:leading-8"
-        >
+        <p class="cta-paragraph">
           Que ce soit pour un stage, une expérience professionnelle, une opportunité ou un projet digital, je suis ouvert à de nouveaux défis. Parlons-en.
         </p>
 
         <a
           href="#"
-          class="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-green-custom bg-green-custom px-7 py-3 font-body text-sm font-semibold text-white transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-custom lg:hover:-translate-y-0.5 lg:hover:shadow-md"
+          class="btn btn-responsive btn-primary mt-12 w-full px-9 sm:mt-8 sm:w-auto sm:px-6"
         >
           Me contacter
         </a>

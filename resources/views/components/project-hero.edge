@@ -6,6 +6,8 @@
 @let(skills = $props.get('skills') || [])
 @let(image = $props.get('image'))
 @let(imageAlt = $props.get('imageAlt') || title)
+@let(projectUrl = $props.get('projectUrl'))
+@let(ctaProject = $props.get('ctaProject') || 'Voir le projet')
 @let(visibleParticipants = participants.slice(0, 4))
 @let(remainingParticipants = Math.max(participants.length - 4, 0))
 @let(remainingParticipantsLabel =
@@ -13,23 +15,31 @@
     ? '1 participant supplémentaire'
     : `${remainingParticipants} participants supplémentaires`)
 
-<section id="project-hero" class="relative px-5 text-dark sm:px-8 lg:px-10">
+<section id="project-hero" class="relative overflow-hidden px-4 text-dark sm:px-8 lg:px-10">
   <div
-    class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 pb-16 pt-16 sm:gap-10 sm:pb-20 sm:pt-20 lg:gap-12 lg:pb-24 lg:pt-24"
+    class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 pb-10 pt-24 sm:gap-10 sm:pb-12 sm:pt-28 lg:gap-12 lg:pb-14 lg:pt-32"
   >
-    {{-- TITRE PRINCIPAL --}}
-    <h1 class="text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl">
+    {{--
+      =====================================================
+      TITRE PRINCIPAL
+      =====================================================
+    --}}
+    <h1 class="px-4 text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl">
       <span class="block text-brown">{{ title }}.</span>
     </h1>
-    {{-- INFORMATIONS CLÉS --}}
+    {{--
+      =====================================================
+      INFORMATIONS CLÉS
+      =====================================================
+    --}}
     <dl
-      class="grid w-full max-w-3xl grid-cols-1 gap-y-6 py-6 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4"
+      class="grid w-full max-w-3xl grid-cols-1 gap-y-6 py-4 sm:grid-cols-2 sm:gap-x-8 sm:py-6 lg:grid-cols-4"
     >
       {{-- ANNÉE --}}
       <div>
         <dt class="font-body text-sm text-dark-gray">Année</dt>
 
-        <dd class="mt-1 font-body text-base font-medium text-dark">{{ year }}</dd>
+        <dd class="mt-1 font-body text-[15px] font-medium text-dark">{{ year }}</dd>
       </div>
       {{-- PARTICIPANTS --}}
       <div>
@@ -58,7 +68,7 @@
             {{-- PARTICIPANTS SUPPLÉMENTAIRES --}}
             @if(remainingParticipants > 0)
               <span
-                class="-ml-2 flex size-10 items-center justify-center rounded-full border-2 border-light-beige bg-white-custom font-body text-base font-medium text-brown"
+                class="-ml-2 flex size-10 items-center justify-center rounded-full border-2 border-light-beige bg-white-custom font-body text-[15px] font-medium text-brown"
                 aria-label="{{ remainingParticipantsLabel }}"
               >
                 +{{ remainingParticipants }}
@@ -71,38 +81,59 @@
       <div>
         <dt class="font-body text-sm text-dark-gray">Type</dt>
 
-        <dd class="mt-1 font-body text-base font-medium text-dark">{{ type }}</dd>
+        <dd class="mt-1 font-body text-[15px] font-medium text-dark">{{ type }}</dd>
       </div>
       {{-- RÔLE --}}
       <div>
         <dt class="font-body text-sm text-dark-gray">Rôle</dt>
 
-        <dd class="mt-1 font-body text-base font-medium leading-6 text-dark">{{ role }}</dd>
+        <dd class="mt-1 font-body text-[15px] font-medium leading-6 text-dark">{{ role }}</dd>
       </div>
     </dl>
-    {{-- OUTILS & COMPÉTENCES --}}
+    {{--
+      =====================================================
+      OUTILS & COMPÉTENCES
+      =====================================================
+    --}}
     @if(skills.length > 0)
       <div
         class="flex max-w-3xl flex-wrap items-center justify-center gap-2"
         aria-label="Outils et compétences utilisés"
       >
         @each(skill in skills)
-          <span
-            class="rounded-full bg-brown/10 px-3 py-1 font-body text-xs font-semibold text-dark"
-          >
-            {{ skill }}
-          </span>
+          <span class="project-tag bg-brown/10">{{ skill }}</span>
         @end
       </div>
     @end
-    {{-- IMAGE PRINCIPALE --}}
-    <figure class="w-full overflow-hidden rounded-2xl">
+    {{--
+      =====================================================
+      IMAGE PRINCIPALE
+      =====================================================
+    --}}
+    <figure class="project-media w-full">
       <img
         src="{{ image }}"
         alt="{{ imageAlt }}"
-        class="aspect-16/8 w-full object-cover"
+        class="aspect-[2/1] w-full object-cover"
         fetchpriority="high"
       />
     </figure>
+    {{--
+      =====================================================
+      CTA PROJET
+      =====================================================
+    --}}
+    @if(projectUrl)
+      <div class="flex w-full justify-center">
+        <a
+          href="{{ projectUrl }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-responsive btn-primary w-full px-7 sm:w-auto"
+        >
+          {{ ctaProject }}
+        </a>
+      </div>
+    @end
   </div>
 </section>
