@@ -8,6 +8,7 @@
 */
 
 const PagesController = () => import('#controllers/pages_controller')
+const ContactController = () => import('#controllers/contact_controller')
 
 import router from '@adonisjs/core/services/router'
 
@@ -18,3 +19,5 @@ router.group(() => {
   router.get('/projects/king-mayo', [PagesController, 'kingMayo']).as('projects.king_mayo')
   router.get('/contact', [PagesController, 'contact']).as('contact')
 })
+
+router.post('/contact', [ContactController, 'submit']).as('contact.submit')

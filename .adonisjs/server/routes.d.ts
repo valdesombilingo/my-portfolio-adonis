@@ -9,6 +9,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
+    'contact.submit': { paramsTuple?: []; params?: {} }
   }
   GET: {
     'home': { paramsTuple?: []; params?: {} }
@@ -23,6 +24,9 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
+  }
+  POST: {
+    'contact.submit': { paramsTuple?: []; params?: {} }
   }
 }
 declare module '@adonisjs/core/types/http' {

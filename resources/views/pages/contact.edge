@@ -1,5 +1,194 @@
 @layout()
-  <section class="contact-hero">
-    <h1>Contact</h1>
+  {{--
+    =========================================================
+    HERO CONTACT
+    =========================================================
+  --}}
+  <section id="contact-hero" class="relative overflow-hidden px-4 text-dark sm:px-8 lg:px-10">
+    <div
+      class="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 pb-6 pt-20 sm:gap-8 sm:pb-8 sm:pt-24 lg:pb-10 lg:pt-28"
+    >
+      <h1
+        class="px-4 text-center font-heading text-5xl font-bold leading-none text-dark sm:text-6xl"
+      >
+        <span class="hidden sm:inline">Me</span>
+        <span class="text-brown">contacter.</span>
+      </h1>
+
+      <p class="hero-subtitle">Une idée, une opportunité ou simplement envie d’échanger ?</p>
+    </div>
+  </section>
+  {{--
+    =========================================================
+    CONTACT
+    =========================================================
+  --}}
+  <section
+    id="contact-content"
+    aria-labelledby="contact-content-title"
+    class="relative overflow-hidden px-4 pb-12 pt-8 text-dark sm:px-8 sm:pb-16 sm:pt-10 lg:px-10 lg:pb-20 lg:pt-10"
+  >
+    <div class="mx-auto flex w-full max-w-5xl flex-col gap-12 sm:gap-14 lg:gap-16">
+      {{-- Introduction --}}
+      <div class="content-column flex flex-col">
+        <h2 id="contact-content-title" class="h2-brown">
+          Parlons de ce que nous pourrions construire ensemble.
+        </h2>
+
+        <p class="top-paragraph">
+          Vous pouvez me contacter directement via le formulaire ci-dessous ou me laisser un message sur
+          <a
+            href="https://www.linkedin.com/in/ton-profil"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-brown underline-offset-2 transition-colors duration-200 lg:hover:underline"
+          >
+            LinkedIn
+          </a>. Je vous répondrai dans les meilleurs délais. Au plaisir de vous lire et d’échanger avec vous.
+        </p>
+      </div>
+      {{--
+        =====================================================
+        FORMULAIRE
+        =====================================================
+      --}}
+      <div
+        class="mx-auto w-full max-w-2xl rounded-3xl bg-white-custom px-6 py-8 sm:px-8 sm:py-10 lg:px-10"
+      >
+        <h2 class="font-heading text-2xl font-semibold text-dark sm:text-3xl">
+          Envoyez-moi un message
+        </h2>
+
+        <p class="mt-4 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-8">
+          Quelques lignes suffisent pour me présenter votre besoin ou votre projet.
+        </p>
+        @form({
+          route: 'contact.submit',
+          method: 'POST',
+          novalidate: true,
+          class: 'mt-8 flex flex-col gap-6',
+        })
+          {{--
+            =====================================================
+            NOM
+            =====================================================
+          --}}
+          @field.root({ name: 'name' })
+            <div class="flex flex-col gap-2">
+              @!field.label({
+                text: 'Prénom et nom',
+                class: 'font-body text-sm font-semibold text-dark',
+              })
+              @!input.control({
+                type: 'text',
+                autocomplete: 'name',
+                placeholder: 'John Doe',
+                class:
+                  'min-h-12 rounded-2xl border border-very-light-gray bg-light-beige px-4 font-body text-base text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
+              })
+              @!field.error({
+                class: 'font-body text-sm leading-5 text-red-500',
+              })
+            </div>
+          @end
+          {{--
+            =====================================================
+            EMAIL
+            =====================================================
+          --}}
+          @field.root({ name: 'email' })
+            <div class="flex flex-col gap-2">
+              @!field.label({
+                text: 'Email',
+                class: 'font-body text-sm font-semibold text-dark',
+              })
+              @!input.control({
+                type: 'email',
+                autocomplete: 'email',
+                placeholder: 'johndoe@email.com',
+                class:
+                  'min-h-12 rounded-2xl border border-very-light-gray bg-light-beige px-4 font-body text-base text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
+              })
+              @!field.error({
+                class: 'font-body text-sm leading-5 text-red-500',
+              })
+            </div>
+          @end
+          {{--
+            =====================================================
+            SUJET
+            =====================================================
+          --}}
+          @field.root({ name: 'subject' })
+            <div class="flex flex-col gap-2">
+              @!field.label({
+                text: 'Sujet',
+                class: 'font-body text-sm font-semibold text-dark',
+              })
+              @!input.control({
+                type: 'text',
+                placeholder: 'Stage, opportunité, projet...',
+                class:
+                  'min-h-12 rounded-2xl border border-very-light-gray bg-light-beige px-4 font-body text-base text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
+              })
+              @!field.error({
+                class: 'font-body text-sm leading-5 text-red-500',
+              })
+            </div>
+          @end
+          {{--
+            =====================================================
+            MESSAGE
+            =====================================================
+          --}}
+          @field.root({ name: 'message' })
+            <div class="flex flex-col gap-2">
+              @!field.label({
+                text: 'Message',
+                class: 'font-body text-sm font-semibold text-dark',
+              })
+              @!textarea.control({
+                rows: 6,
+                placeholder: 'Parlez-moi de votre besoin...',
+                class:
+                  'resize-none rounded-2xl border border-very-light-gray bg-light-beige px-4 py-3 font-body text-base leading-7 text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
+              })
+              @!field.error({
+                class: 'font-body text-sm leading-5 text-red-500',
+              })
+            </div>
+          @end
+          {{--
+            =====================================================
+            BOUTON
+            =====================================================
+          --}}
+          <button
+            type="submit"
+            class="btn btn-responsive btn-primary mt-2 w-full sm:w-auto sm:self-start"
+          >
+            Envoyer le message
+          </button>
+        @end
+      </div>
+    </div>
+  </section>
+  {{--
+    =========================================================
+    CTA FINAL
+    =========================================================
+  --}}
+  <section id="contact-availability" class="relative overflow-hidden px-4 text-dark sm:px-8">
+    <div class="mx-auto w-full max-w-5xl">
+      <div
+        class="mx-auto flex w-full max-w-[560px] flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
+      >
+        <h2 class="h2-cta-brown">Une conversation peut être le début d’un beau projet.</h2>
+
+        <p class="cta-paragraph">
+          Je suis toujours ouvert à découvrir de nouvelles idées, de nouveaux environnements et de nouvelles façons de contribuer.
+        </p>
+      </div>
+    </div>
   </section>
 @end

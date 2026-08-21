@@ -2,19 +2,26 @@
 
 export function initBackNav() {
   up.compiler('#back-nav-container', function (backContainer) {
-    function updateBackNav() {
+    function updateBackNavAppearance() {
       const hasScrolled = window.scrollY > 0
 
       backContainer.classList.toggle('bg-white/85', hasScrolled)
       backContainer.classList.toggle('backdrop-blur-sm', hasScrolled)
+      backContainer.classList.toggle('rounded-full', hasScrolled)
     }
 
-    updateBackNav()
+    function handleScroll() {
+      updateBackNavAppearance()
+    }
 
-    window.addEventListener('scroll', updateBackNav, { passive: true })
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+    })
+
+    updateBackNavAppearance()
 
     return () => {
-      window.removeEventListener('scroll', updateBackNav)
+      window.removeEventListener('scroll', handleScroll)
     }
   })
 }

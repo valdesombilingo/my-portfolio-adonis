@@ -85,7 +85,7 @@
    ========================================================= */
 
 .btn {
-  @apply inline-flex items-center justify-center rounded-full border px-6 py-3 font-body font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 lg:hover:-translate-y-0.5;
+  @apply inline-flex items-center justify-center rounded-full border px-6 py-3 font-body font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98] md:active:scale-100 lg:hover:-translate-y-0.5;
 }
 
 .btn-responsive {
@@ -121,7 +121,7 @@
    ========================================================= */
 
 .project-card {
-  @apply relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20;
+  @apply relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20 active:scale-[0.98] md:active:scale-100;
 }
 
 .project-card-image {
@@ -189,7 +189,7 @@
    ========================================================= */
 
 .project-list-card {
-  @apply flex flex-col overflow-hidden rounded-3xl border border-very-light-gray bg-white-custom shadow-xs transition duration-300 lg:hover:-translate-y-1 lg:hover:shadow-xl lg:hover:shadow-black/10;
+  @apply flex flex-col overflow-hidden rounded-3xl border border-very-light-gray bg-white-custom shadow-xs transition duration-300 lg:hover:-translate-y-1 lg:hover:shadow-xl lg:hover:shadow-black/10 active:scale-[0.98] md:active:scale-100;
 }
 
 .project-list-link {
