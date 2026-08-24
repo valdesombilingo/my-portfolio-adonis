@@ -29,7 +29,11 @@
     class="relative overflow-hidden px-4 pb-12 pt-8 text-dark sm:px-8 sm:pb-16 sm:pt-10 lg:px-10 lg:pb-20 lg:pt-10"
   >
     <div class="mx-auto flex w-full max-w-5xl flex-col gap-12 sm:gap-14 lg:gap-16">
-      {{-- Introduction --}}
+      {{--
+        =====================================================
+        INTRODUCTION
+        =====================================================
+      --}}
       <div class="content-column flex flex-col">
         <h2 id="contact-content-title" class="h2-brown">
           Parlons de ce que nous pourrions construire ensemble.
@@ -53,6 +57,7 @@
         =====================================================
       --}}
       <div
+        id="contact-form-card"
         class="mx-auto w-full max-w-2xl rounded-3xl bg-white-custom px-6 py-8 sm:px-8 sm:py-10 lg:px-10"
       >
         <h2 class="font-heading text-2xl font-semibold text-dark sm:text-3xl">
@@ -62,10 +67,104 @@
         <p class="mt-4 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-8">
           Quelques lignes suffisent pour me présenter votre besoin ou votre projet.
         </p>
+        {{--
+          =====================================================
+          MESSAGE DE SUCCÈS
+          =====================================================
+        --}}
+        @if(flashMessages.has('success'))
+          @alert.root({
+            variant: 'success',
+            autoDismiss: true,
+            class:
+              'mt-6 rounded-2xl border border-green-custom/20 bg-green-custom/10 px-4 py-4',
+          })
+            <div class="flex items-start gap-3">
+              <span
+                aria-hidden="true"
+                class="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-green-custom/15 text-green-custom"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                  fill="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    d="M64 112c0-26.5 21.5-48 48-48l416 0c26.5 0 48 21.5 48 48l0 81.4c-24.4-11.2-51.4-17.4-80-17.4-87.7 0-161.7 58.8-184.7 139.2-7.1-1.3-14.1-4.2-20.1-8.8l-208-156C71.1 141.3 64 127.1 64 112zM304 368c0 28.6 6.2 55.6 17.4 80L128 448c-35.3 0-64-28.7-64-64l0-188 198.4 148.8c12.6 9.4 26.9 15.4 41.7 17.9 0 1.8-.1 3.5-.1 5.3zm48 0a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm201.4-60.9c-7.1-5.2-17.2-3.6-22.4 3.5l-53 72.9-26.8-26.8c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l40 40c3.3 3.3 7.9 5 12.6 4.6s8.9-2.8 11.7-6.5l64-88c5.2-7.1 3.6-17.2-3.5-22.3z"
+                  />
+                </svg>
+              </span>
+
+              <div>
+                @!alert.title({
+                  text: 'Message envoyé',
+                  class: 'font-body text-base font-semibold text-dark',
+                })
+                @!alert.description({
+                  text: flashMessages.get('success'),
+                  class:
+                    'mt-1 font-body text-lg leading-6 text-dark-gray sm:text-base',
+                })
+              </div>
+            </div>
+          @end
+        @end
+        {{--
+          =====================================================
+          MESSAGE D'ERREUR GLOBAL
+          =====================================================
+        --}}
+        @if(flashMessages.has('error'))
+          @alert.root({
+            variant: 'error',
+            autoDismiss: true,
+            class: 'mt-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-4',
+          })
+            <div class="flex items-start gap-3">
+              <span
+                aria-hidden="true"
+                class="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  fill="currentColor"
+                  class="size-3"
+                >
+                  <path
+                    d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zm0-192a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm0-192c-18.2 0-32.7 15.5-31.4 33.7l7.4 104c.9 12.6 11.4 22.3 23.9 22.3 12.6 0 23-9.7 23.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z"
+                  />
+                </svg>
+              </span>
+
+              <div>
+                @!alert.title({
+                  text: 'Envoi impossible',
+                  class: 'font-body text-base font-semibold text-dark',
+                })
+                @!alert.description({
+                  text: flashMessages.get('error'),
+                  class:
+                    'mt-1 font-body text-lg leading-6 text-dark-gray sm:text-base',
+                })
+              </div>
+            </div>
+          @end
+        @end
+        {{--
+          =====================================================
+          FORM
+          =====================================================
+        --}}
         @form({
           route: 'contact.submit',
           method: 'POST',
           novalidate: true,
+          'up-submit': true,
+          'up-target': '#contact-form-card',
+          'up-history': false,
+          'up-disable': 'button[type="submit"]',
           class: 'mt-8 flex flex-col gap-6',
         })
           {{--
@@ -105,7 +204,7 @@
               @!input.control({
                 type: 'email',
                 autocomplete: 'email',
-                placeholder: 'johndoe@email.com',
+                placeholder: 'johndoe@gmail.com',
                 class:
                   'min-h-12 rounded-2xl border border-very-light-gray bg-light-beige px-4 font-body text-base text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
               })
@@ -151,7 +250,7 @@
                 rows: 6,
                 placeholder: 'Parlez-moi de votre besoin...',
                 class:
-                  'resize-none rounded-2xl border border-very-light-gray bg-light-beige px-4 py-3 font-body text-base leading-7 text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
+                  'contact-textarea resize-none overflow-hidden rounded-2xl border border-very-light-gray bg-light-beige px-4 py-3 font-body text-base leading-7 text-dark outline-none transition-colors duration-200 focus:border-brown data-[invalid=true]:border-red-400',
               })
               @!field.error({
                 class: 'font-body text-sm leading-5 text-red-500',
@@ -160,12 +259,22 @@
           @end
           {{--
             =====================================================
+            HONEYPOT : Sécurité anti-spam
+            =====================================================
+          --}}
+          <div class="absolute -left-2499.75 top-auto h-px w-px overflow-hidden" aria-hidden="true">
+            <label for="website">Site web</label>
+
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          {{--
+            =====================================================
             BOUTON
             =====================================================
           --}}
           <button
             type="submit"
-            class="btn btn-responsive btn-primary mt-2 w-full sm:w-auto sm:self-start"
+            class="btn btn-responsive btn-primary mt-2 w-full cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:self-start"
           >
             Envoyer le message
           </button>
