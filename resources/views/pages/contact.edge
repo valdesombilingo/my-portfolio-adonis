@@ -278,6 +278,21 @@
           >
             Envoyer le message
           </button>
+          {{--
+            =====================================================
+            POLITIQUE
+            =====================================================
+          --}}
+          <p class="font-body text-xs leading-5 text-dark-gray">
+            Les informations transmises via ce formulaire sont utilisées uniquement pour répondre à votre demande.
+            <a
+              href="{{ route('privacy') }}"
+              up-follow
+              class="font-semibold text-brown underline-offset-2 transition-colors duration-200 lg:hover:underline"
+            >
+              Politique de confidentialité
+            </a>
+          </p>
         @end
       </div>
     </div>

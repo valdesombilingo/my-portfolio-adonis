@@ -13,6 +13,10 @@ export default class PagesController {
     return view.render('pages/contact')
   }
 
+  async privacy({ view }: HttpContext) {
+    return view.render('pages/privacy')
+  }
+
   // Pages des projets
   async projects({ view }: HttpContext) {
     return view.render('pages/projects')

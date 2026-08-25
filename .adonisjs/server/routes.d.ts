@@ -9,6 +9,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
+    'privacy': { paramsTuple?: []; params?: {} }
     'contact.submit': { paramsTuple?: []; params?: {} }
   }
   GET: {
@@ -17,6 +18,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
+    'privacy': { paramsTuple?: []; params?: {} }
   }
   HEAD: {
     'home': { paramsTuple?: []; params?: {} }
@@ -24,6 +26,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
+    'privacy': { paramsTuple?: []; params?: {} }
   }
   POST: {
     'contact.submit': { paramsTuple?: []; params?: {} }

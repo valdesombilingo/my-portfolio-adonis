@@ -18,6 +18,7 @@ router.group(() => {
   router.get('/projects', [PagesController, 'projects']).as('projects')
   router.get('/projects/king-mayo', [PagesController, 'kingMayo']).as('projects.king_mayo')
   router.get('/contact', [PagesController, 'contact']).as('contact')
+  router.get('/confidentialite', [PagesController, 'privacy']).as('privacy')
 })
 
 router.post('/contact', [ContactController, 'submit']).as('contact.submit')
