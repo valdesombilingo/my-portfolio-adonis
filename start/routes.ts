@@ -15,8 +15,13 @@ import router from '@adonisjs/core/services/router'
 router.group(() => {
   router.get('/', [PagesController, 'home']).as('home')
   router.get('/experience', [PagesController, 'experience']).as('experience')
+
   router.get('/projects', [PagesController, 'projects']).as('projects')
   router.get('/projects/king-mayo', [PagesController, 'kingMayo']).as('projects.king_mayo')
+  router
+    .get('/projets/orange-max-data', [PagesController, 'orangeMaxData'])
+    .as('projects.orangeMaxData')
+
   router.get('/contact', [PagesController, 'contact']).as('contact')
   router.get('/confidentialite', [PagesController, 'privacy']).as('privacy')
 })

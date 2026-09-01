@@ -1,0 +1,505 @@
+@projectLayout()
+  {{-- RETOUR AUX PROJETS --}}
+  @!backNav()
+  {{-- ========================================================= --}}
+  {{-- HERO PROJET --}}
+  {{-- ========================================================= --}}
+  @!projectHero({
+    title: 'Orange Max Data',
+    year: '2025',
+    type: 'Projet pédagogique',
+    role: 'Chef de projet, Analyste marché',
+
+    image: '/images/projects/orange-max-data/orange-max-data-project.webp',
+    imageAlt: 'Présentation du projet Orange Max Data',
+
+    projectUrl: 'https://canva.link/orange-max-data',
+    ctaProject: 'Voir le livrable',
+
+    participants: [
+      {
+        name: 'Valdes Ombilingo',
+        image: '/images/projects/participants/valdes-ombilingo-avatar.webp',
+      },
+      {
+        name: 'Anifa Kalombola',
+        image: '/images/projects/participants/anifa-kalombola-avatar.webp',
+      },
+      {
+        name: 'Nathan Ngangeli',
+        image: '/images/projects/participants/nathan-ngangeli-avatar.webp',
+      },
+      {
+        name: 'Noella Kayinda',
+        image: '/images/projects/participants/noella-kayinda-avatar.webp',
+      },
+      {
+        name: 'Chrispine Bitiri',
+      },
+    ],
+
+    skills: [
+      'Gestion de projet',
+      'Étude de marché',
+      'Benchmark',
+      'personas',
+      'Stratégie digitale',
+      'SOSTAC',
+      'Analyse de performance',
+    ],
+  })
+  {{-- ========================================================= --}}
+  {{-- 1. CHALLENGE --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-challenge"
+    aria-labelledby="project-challenge-title"
+    class="relative overflow-hidden px-4 pb-12 pt-8 text-dark sm:px-8 sm:pb-16 sm:pt-10 lg:px-10 lg:pb-20 lg:pt-10"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="content-column flex flex-col">
+        <h2 id="project-challenge-title" class="h2-brown">
+          Construire une offre data capable de se différencier.
+        </h2>
+
+        <p class="top-paragraph">
+          Orange Max Data est un cas pratique réalisé en formation autour du marché des télécommunications en RDC. L’exercice consistait à sélectionner un opérateur et à imaginer une nouvelle offre capable de répondre aux besoins de segments précis du marché.
+        </p>
+
+        <p class="next-paragraph">
+          Avec notre agence fictive Yambo Digital, nous avons choisi Orange RDC et travaillé sur une stratégie de lancement sur six mois, avec un budget simulé de 20 000 $. Notre objectif était de proposer une offre data plus accessible, plus flexible et mieux adaptée aux usages des consommateurs congolais.
+        </p>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 2. ANALYSE DU MARCHÉ --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-research"
+    aria-labelledby="project-research-title"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="content-column flex flex-col">
+        <h2 id="project-research-title" class="h2-brown">
+          Comprendre pourquoi les utilisateurs changent d’opérateur.
+        </h2>
+
+        <p class="top-paragraph">
+          L’étude du marché a mis en évidence plusieurs frustrations récurrentes : prix élevés, durée de validité parfois trop courte, manque de clarté des offres, instabilité du réseau et difficulté à obtenir une assistance rapide.
+        </p>
+
+        <p class="next-paragraph">
+          J’ai notamment contribué au benchmark concurrentiel afin de comparer le positionnement d’Orange avec Vodacom, Airtel et Africell sur le prix, la stabilité du réseau, la flexibilité des forfaits et les bonus. Cette analyse nous a aidés à identifier les espaces de différenciation possibles.
+        </p>
+      </div>
+      {{-- Insights principaux --}}
+      <div class="mx-auto mt-12 grid w-full max-w-4xl gap-8 sm:mt-14 sm:grid-cols-3">
+        <article class="method-item">
+          <span class="card-highlight" aria-hidden="true">01</span>
+
+          <h3 class="method-title">Prix</h3>
+
+          <p class="card-description">
+            Les consommateurs restent très sensibles au rapport entre prix, volume de data et durée de validité.
+          </p>
+        </article>
+
+        <article class="method-item">
+          <span class="card-highlight" aria-hidden="true">02</span>
+
+          <h3 class="method-title">Fiabilité</h3>
+
+          <p class="card-description">
+            La stabilité du réseau constitue un élément déterminant dans le choix d’un opérateur.
+          </p>
+        </article>
+
+        <article class="method-item">
+          <span class="card-highlight" aria-hidden="true">03</span>
+
+          <h3 class="method-title">Flexibilité</h3>
+
+          <p class="card-description">
+            Bonus, simplicité des offres et durées adaptées peuvent favoriser la fidélisation.
+          </p>
+        </article>
+      </div>
+      {{-- Personas --}}
+      <div class="mx-auto mt-16 w-full max-w-4xl">
+        <h3 class="project-subtitle text-center">
+          Trois personas pour représenter les segments prioritaires.
+        </h3>
+
+        <div class="mt-12 grid gap-10 sm:mt-14 sm:grid-cols-3 sm:gap-8">
+          {{-- Grâce --}}
+          <article class="flex flex-col items-center px-4 text-center sm:px-2 lg:px-6">
+            <img
+              src="/images/projects/orange-max-data/grace-persona.webp"
+              alt="Persona Grâce, étudiante connectée"
+              width="180"
+              height="180"
+              class="size-30 rounded-full object-cover shadow-sm sm:size-36"
+              loading="lazy"
+            />
+
+            <h4 class="mt-5 font-heading text-xl font-semibold text-dark">Grâce</h4>
+
+            <p
+              class="mt-2 max-w-xs font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-6"
+            >
+              Étudiante connectée recherchant des forfaits économiques, des bonus immédiats et davantage de flexibilité.
+            </p>
+          </article>
+          {{-- Papa Didi --}}
+          <article class="flex flex-col items-center px-4 text-center sm:px-2 lg:px-6">
+            <img
+              src="/images/projects/orange-max-data/papa-didi-persona.webp"
+              alt="Persona Papa Didi, commerçant urbain"
+              width="180"
+              height="180"
+              class="size-30 rounded-full object-cover shadow-sm sm:size-36"
+              loading="lazy"
+            />
+
+            <h4 class="mt-5 font-heading text-xl font-semibold text-dark">Papa Didi</h4>
+
+            <p
+              class="mt-2 max-w-xs font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-6"
+            >
+              Commerçant urbain privilégiant des offres simples, fiables et adaptées à son activité quotidienne.
+            </p>
+          </article>
+          {{-- Maman Carine --}}
+          <article class="flex flex-col items-center px-4 text-center sm:px-2 lg:px-6">
+            <img
+              src="/images/projects/orange-max-data/maman-carine-persona.webp"
+              alt="Persona Maman Carine, maman connectée"
+              width="180"
+              height="180"
+              class="size-30 rounded-full object-cover shadow-sm sm:size-36"
+              loading="lazy"
+            />
+
+            <h4 class="mt-5 font-heading text-xl font-semibold text-dark">Maman Carine</h4>
+
+            <p
+              class="mt-2 max-w-xs font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-6"
+            >
+              Mère et entrepreneure recherchant un forfait stable, durable et suffisamment généreux pour les usages de sa famille.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 3. RÉPONSE STRATÉGIQUE --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-strategy"
+    aria-labelledby="project-strategy-title"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div class="content-column flex flex-col">
+        <h2 id="project-strategy-title" class="h2-brown">
+          Transformer les insights en une offre plus simple et plus flexible.
+        </h2>
+
+        <p class="top-paragraph">
+          De cette analyse est née Orange Max Data, une proposition pensée pour positionner Orange comme une alternative simple, généreuse et fiable sur le marché de la data mobile. L’objectif était de proposer des offres accessibles à différents niveaux de budget, tout en apportant davantage de clarté sur les volumes, les durées de validité et les avantages associés.
+        </p>
+
+        <p class="next-paragraph">
+          Le concept repose ainsi sur une gamme de forfaits adaptée aux différents usages du quotidien : journée, week-end, semaine, nuit, famille ou activité professionnelle. Des bonus et avantages liés au renouvellement venaient compléter l’offre afin d’encourager la fidélisation et d’apporter davantage de valeur aux utilisateurs réguliers.
+        </p>
+      </div>
+      {{-- Identité Orange Max Data --}}
+      <figure
+        class="project-media mx-auto mt-10 w-full max-w-md border-4 border-brown shadow-lg sm:mt-12"
+      >
+        <img
+          src="/images/projects/orange-max-data/orange-max-data-logo.webp"
+          alt="Identité visuelle du concept Orange Max Data"
+          class="h-auto w-full object-contain"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 4. PLAN D'ACTION --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-plan"
+    aria-labelledby="project-plan-title"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      {{-- Introduction --}}
+      <div class="content-column flex flex-col">
+        <h2 id="project-plan-title" class="h2-brown">
+          Donner à la stratégie un plan, des objectifs et des indicateurs.
+        </h2>
+
+        <p class="top-paragraph">
+          La stratégie a ensuite été structurée avec la méthode SOSTAC afin de relier l’analyse du marché, les objectifs, le ciblage, les tactiques, le calendrier d’actions et la mesure de la performance.
+        </p>
+
+        <p class="next-paragraph">
+          Les chiffres présentés ci-dessous correspondent aux objectifs définis dans le cadre de l’exercice. Leur suivi reposait sur des KPI d’acquisition, d’engagement, de fidélisation et de rentabilité, notamment le CTR, l’ARPU et le ROI marketing. La campagne n’a toutefois pas été déployée dans des conditions réelles.
+        </p>
+      </div>
+      {{-- Objectifs principaux --}}
+      <div class="mx-auto mt-12 grid w-full max-w-4xl gap-6 sm:mt-14 sm:grid-cols-3 sm:gap-8">
+        <article class="info-card">
+          <p class="card-highlight">+3 %</p>
+
+          <p class="card-description">
+            objectif théorique d’évolution de la part de marché sur les segments ciblés.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <p class="card-highlight">2 M</p>
+
+          <p class="card-description">
+            objectif de personnes à toucher grâce aux différents leviers digitaux.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <p class="card-highlight">≥ 75 %</p>
+
+          <p class="card-description">objectif de satisfaction défini pour les nouvelles offres.</p>
+        </article>
+      </div>
+      {{-- Roadmap --}}
+      <div class="mx-auto mt-16 w-full max-w-[560px] px-2 sm:px-0 lg:max-w-3xl lg:px-6">
+        <h3 class="project-subtitle">Une roadmap construite sur six mois.</h3>
+
+        <div class="mt-10 divide-y divide-light-gray/70">
+          {{-- M1 --}}
+          <div class="grid gap-2 py-6 sm:grid-cols-[72px_1fr] sm:gap-5">
+            <span class="font-heading text-xl font-semibold text-brown">M1</span>
+
+            <div>
+              <h4 class="font-heading text-lg font-semibold text-dark">
+                Lancement & sensibilisation
+              </h4>
+
+              <p class="mt-2 font-body text-lg leading-7 text-dark-gray sm:text-base">
+                Développer la visibilité et l’acquisition via les contenus sociaux et les campagnes digitales.
+              </p>
+            </div>
+          </div>
+          {{-- M2 --}}
+          <div class="grid gap-2 py-6 sm:grid-cols-[72px_1fr] sm:gap-5">
+            <span class="font-heading text-xl font-semibold text-brown">M2</span>
+
+            <div>
+              <h4 class="font-heading text-lg font-semibold text-dark">Activation</h4>
+
+              <p class="mt-2 font-body text-lg leading-7 text-dark-gray sm:text-base">
+                Mettre en avant les usages des offres et accompagner les utilisateurs dans leur activation.
+              </p>
+            </div>
+          </div>
+          {{-- M3 --}}
+          <div class="grid gap-2 py-6 sm:grid-cols-[72px_1fr] sm:gap-5">
+            <span class="font-heading text-xl font-semibold text-brown">M3</span>
+
+            <div>
+              <h4 class="font-heading text-lg font-semibold text-dark">Approche famille</h4>
+
+              <p class="mt-2 font-body text-lg leading-7 text-dark-gray sm:text-base">
+                Déployer des contenus et des offres adaptés aux usages familiaux et partagés.
+              </p>
+            </div>
+          </div>
+          {{-- M4 --}}
+          <div class="grid gap-2 py-6 sm:grid-cols-[72px_1fr] sm:gap-5">
+            <span class="font-heading text-xl font-semibold text-brown">M4</span>
+
+            <div>
+              <h4 class="font-heading text-lg font-semibold text-dark">Fidélisation</h4>
+
+              <p class="mt-2 font-body text-lg leading-7 text-dark-gray sm:text-base">
+                Encourager le renouvellement à travers le parrainage et l’influence locale.
+              </p>
+            </div>
+          </div>
+          {{-- M5 --}}
+          <div class="grid gap-2 py-6 sm:grid-cols-[72px_1fr] sm:gap-5">
+            <span class="font-heading text-xl font-semibold text-brown">M5</span>
+
+            <div>
+              <h4 class="font-heading text-lg font-semibold text-dark">Engagement communautaire</h4>
+
+              <p class="mt-2 font-body text-lg leading-7 text-dark-gray sm:text-base">
+                Stimuler la participation grâce aux contenus UGC, concours et activations communautaires.
+              </p>
+            </div>
+          </div>
+          {{-- M6 --}}
+          <div class="grid gap-2 py-6 sm:grid-cols-[72px_1fr] sm:gap-5">
+            <span class="font-heading text-xl font-semibold text-brown">M6</span>
+
+            <div>
+              <h4 class="font-heading text-lg font-semibold text-dark">Conversion finale</h4>
+
+              <p class="mt-2 font-body text-lg leading-7 text-dark-gray sm:text-base">
+                Relancer les audiences et valoriser les offres à plus forte valeur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{-- Répartition du budget --}}
+      <div class="mx-auto mt-16 w-full max-w-[560px] px-2 sm:px-0 lg:max-w-3xl lg:px-6">
+        <h3 class="project-subtitle">Répartir 20 000 $ entre acquisition, contenu et pilotage.</h3>
+
+        <p class="mt-4 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-8">
+          Le budget simulé a été réparti entre les principaux leviers nécessaires au lancement, tout en conservant une réserve stratégique pour ajuster les actions au cours des six mois.
+        </p>
+
+        <div class="mt-10 divide-y divide-light-gray/70">
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">Publicité digitale</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">5 500 $</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">Influenceurs & micro-créateurs</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">3 000 $</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">Production de contenus</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">3 000 $</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">WhatsApp Business & diffusion</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">1 500 $</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">Analytics & suivi</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">1 500 $</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">Jeux concours & incentives</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">2 000 $</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-6 py-5">
+            <span class="font-body font-medium text-dark">Réserve stratégique</span>
+            <span class="shrink-0 font-heading text-lg font-semibold text-brown">3 500 $</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 5. MON RÔLE & PILOTAGE --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-role"
+    aria-labelledby="project-role-title"
+    class="relative overflow-hidden px-4 py-12 text-dark sm:px-8 sm:py-16 lg:px-10 lg:py-20"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      {{-- Introduction --}}
+      <div class="content-column flex flex-col">
+        <h2 id="project-role-title" class="h2-brown">
+          Faire avancer le projet, même quand le temps commence à manquer.
+        </h2>
+
+        <p class="top-paragraph">
+          En tant que chef de projet, mon rôle était de garder une vision d’ensemble, suivre l’avancement et faciliter la coordination entre les différents membres de l’équipe.
+        </p>
+
+        <p class="next-paragraph">
+          Une grande partie du travail s’est déroulée à distance, ce qui demandait d’organiser les échanges, de suivre les différents blocs de travail et de maintenir l’équipe alignée jusqu’au livrable final.
+        </p>
+      </div>
+      {{-- Responsabilités --}}
+      <div class="mx-auto mt-12 w-full max-w-4xl sm:mt-14">
+        <div class="grid gap-6 sm:grid-cols-2 sm:gap-8">
+          <article class="info-card">
+            <h3 class="project-feature-title">Coordonner</h3>
+
+            <p class="card-description">
+              Suivre l’avancement des différentes parties et maintenir une vision d’ensemble du projet.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="project-feature-title">Aligner l’équipe</h3>
+
+            <p class="card-description">
+              Organiser les échanges, clarifier les priorités et faciliter la circulation des informations.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="project-feature-title">Collaborer à distance</h3>
+
+            <p class="card-description">
+              Maintenir la synchronisation d’une équipe travaillant majoritairement en télétravail.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="project-feature-title">Réagir sous pression</h3>
+
+            <p class="card-description">
+              Face au retard accumulé en fin de projet, épauler le responsable de la présentation afin de finaliser les slides du pitch.
+            </p>
+          </article>
+        </div>
+      </div>
+      {{-- Résultat --}}
+      <div class="content-column mt-12 sm:mt-14">
+        <p class="top-paragraph mt-0 sm:mt-0">
+          Après plusieurs semaines d’analyse, de conception et de coordination, nous avons finalisé une recommandation complète comprenant l’étude de marché, le benchmark, la segmentation, les personas, l’offre Orange Max Data, le plan SOSTAC, la roadmap, le budget et les KPI.
+        </p>
+
+        <p class="next-paragraph">
+          Malgré le retard accumulé en fin de projet, nous avons réussi à finaliser le support et à défendre notre stratégie lors du pitch. Le travail présenté a reçu un retour positif du coach, qui a notamment apprécié la qualité et la cohérence globale de notre proposition.
+        </p>
+      </div>
+    </div>
+  </section>
+  {{-- ========================================================= --}}
+  {{-- 6. CONCLUSION / APPRENTISSAGES --}}
+  {{-- ========================================================= --}}
+  <section
+    id="project-learnings"
+    aria-labelledby="project-learnings-title"
+    class="relative overflow-hidden px-4 text-dark sm:px-8"
+  >
+    <div class="mx-auto w-full max-w-5xl">
+      <div
+        class="mx-auto flex w-full max-w-[560px] flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
+      >
+        <h2 id="project-learnings-title" class="h2-cta-brown">Ce que ce projet m’a appris</h2>
+
+        <p class="cta-paragraph">
+          Orange Max Data m’a permis de relier analyse de marché, stratégie digitale et gestion de projet dans un même exercice. Cette expérience m’a surtout appris à coordonner une équipe, garder une vision d’ensemble et adapter mon rôle lorsque le projet l’exige.
+        </p>
+
+        <a
+          href="#"
+          class="btn btn-responsive btn-primary mt-12 w-full px-9 sm:mt-8 sm:w-auto sm:px-6"
+        >
+          Voir le livrable
+        </a>
+      </div>
+    </div>
+  </section>
+@end

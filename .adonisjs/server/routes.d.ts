@@ -8,6 +8,7 @@ export type ScannedRoutes = {
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
+    'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
     'contact.submit': { paramsTuple?: []; params?: {} }
@@ -17,6 +18,7 @@ export type ScannedRoutes = {
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
+    'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
   }
@@ -25,6 +27,7 @@ export type ScannedRoutes = {
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
+    'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
   }

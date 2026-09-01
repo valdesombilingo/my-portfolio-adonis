@@ -25,4 +25,8 @@ export default class PagesController {
   async kingMayo({ view }: HttpContext) {
     return view.render('pages/projects/king-mayo')
   }
+
+  async orangeMaxData({ view }: HttpContext) {
+    return view.render('pages/projects/orange-max-data')
+  }
 }
