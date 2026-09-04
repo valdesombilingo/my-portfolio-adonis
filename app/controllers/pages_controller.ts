@@ -29,4 +29,8 @@ export default class PagesController {
   async orangeMaxData({ view }: HttpContext) {
     return view.render('pages/projects/orange-max-data')
   }
+
+  async cabaneUgcAgency({ view }: HttpContext) {
+    return view.render('pages/projects/cabane-ugc-agency')
+  }
 }

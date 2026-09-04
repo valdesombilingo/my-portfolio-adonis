@@ -5,7 +5,7 @@ import '../css/app.css'
 
 import { initHeaderNav } from './header-nav.js'
 import { initBackNav } from './back-nav.js'
-import { initKadeaVideo } from './kadea-video.js'
+import { initYoutubeVideos } from './youtube-videos.js'
 import { initContactTextarea } from './contact-textarea.js'
 
 import Alpine from 'alpinejs'
@@ -30,5 +30,5 @@ Alpine.start()
 
 initBackNav()
 initHeaderNav()
-initKadeaVideo()
 initContactTextarea()
+initYoutubeVideos()

@@ -21,6 +21,9 @@ router.group(() => {
   router
     .get('/projets/orange-max-data', [PagesController, 'orangeMaxData'])
     .as('projects.orangeMaxData')
+  router
+    .get('/projets/cabane-ugc-agency', [PagesController, 'cabaneUgcAgency'])
+    .as('projects.cabaneUgcAgency')
 
   router.get('/contact', [PagesController, 'contact']).as('contact')
   router.get('/confidentialite', [PagesController, 'privacy']).as('privacy')

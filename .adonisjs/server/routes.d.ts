@@ -9,6 +9,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
+    'projects.cabaneUgcAgency': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
     'contact.submit': { paramsTuple?: []; params?: {} }
@@ -19,6 +20,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
+    'projects.cabaneUgcAgency': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
   }
@@ -28,6 +30,7 @@ export type ScannedRoutes = {
     'projects': { paramsTuple?: []; params?: {} }
     'projects.king_mayo': { paramsTuple?: []; params?: {} }
     'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
+    'projects.cabaneUgcAgency': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
   }
