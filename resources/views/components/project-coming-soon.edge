@@ -1,0 +1,13 @@
+@let(text = $props.get('text') || 'Le contenu de ce projet sera bientôt disponible.')
+
+<section class="relative overflow-hidden px-4 py-16 text-dark sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+  <div class="mx-auto w-full max-w-5xl">
+    <div class="content-column flex justify-center">
+      <p
+        class="text-center font-body text-lg font-medium leading-7 text-dark-gray sm:text-base sm:leading-8"
+      >
+        {{ text }}
+      </p>
+    </div>
+  </div>
+</section>

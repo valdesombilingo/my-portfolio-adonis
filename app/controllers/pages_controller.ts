@@ -33,4 +33,7 @@ export default class PagesController {
   async cabaneUgcAgency({ view }: HttpContext) {
     return view.render('pages/projects/cabane-ugc-agency')
   }
+  async xClone({ view }: HttpContext) {
+    return view.render('pages/projects/x-clone')
+  }
 }

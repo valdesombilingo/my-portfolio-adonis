@@ -1,0 +1,34 @@
+@projectLayout()
+  {{-- RETOUR AUX PROJETS --}}
+  @!backNav()
+  {{-- ========================================================= --}}
+  {{-- HERO PROJET --}}
+  {{-- ========================================================= --}}
+  @!projectHero({
+    title: 'X Clone',
+    year: '2025',
+    type: 'Projet chef-d’œuvre',
+    role: 'Développeur web fullstack junior',
+
+    image: '/images/projects/x-clone/x-clone-background-project.webp',
+    imageAlt: 'Présentation de l’application X Clone',
+
+    projectUrl: 'https://github.com/valdesombilingo/clone_x_adonis',
+    ctaProject: 'Voir sur GitHub',
+
+    participants: [
+      {
+        name: 'Valdes Ombilingo',
+        image: '/images/projects/participants/valdes-ombilingo-avatar.webp',
+      },
+    ],
+
+    skills: ['AdonisJS 6', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
+  })
+  {{-- ========================================================= --}}
+  {{-- CONTENU À VENIR --}}
+  {{-- ========================================================= --}}
+  @!projectComingSoon({
+    text: 'Le contenu détaillé de ce projet sera bientôt disponible.',
+  })
+@end
