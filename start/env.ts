@@ -13,6 +13,7 @@ import { Env } from '@adonisjs/core/env'
 
 export default await Env.create(new URL('../', import.meta.url), {
   // Node
+  TZ: Env.schema.string(),
   NODE_ENV: Env.schema.enum(['development', 'production', 'test'] as const),
   PORT: Env.schema.number(),
   HOST: Env.schema.string({ format: 'host' }),
@@ -33,7 +34,7 @@ export default await Env.create(new URL('../', import.meta.url), {
 
   MAIL_MAILER: Env.schema.enum(['smtp'] as const),
   MAIL_FROM_NAME: Env.schema.string(),
-  MAIL_FROM_ADDRESS: Env.schema.string(),
+  MAIL_FROM_ADDRESS: Env.schema.string({ format: 'email' }),
 
   SMTP_HOST: Env.schema.string(),
   SMTP_PORT: Env.schema.number(),
