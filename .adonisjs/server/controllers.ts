@@ -7,5 +7,4 @@ export const controllers = {
   Contact: () => import('#controllers/contact_controller'),
   NewAccount: () => import('#controllers/new_account_controller'),
   Pages: () => import('#controllers/pages_controller'),
-  Session: () => import('#controllers/session_controller'),
 }
