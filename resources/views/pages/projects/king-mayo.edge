@@ -1,4 +1,15 @@
-@projectLayout()
+@let(title = 'King Mayo | Stratégie digitale - Valdes Ombilingo')
+@let(description =
+  'Découvrez King Mayo, un projet de marketing digital autour du poulet mayo à Kinshasa, de l’étude de marché à la stratégie digitale et aux premiers résultats.')
+@let(ogImage = 'https://valdesombilingo.com/images/meta/king-mayo-og.jpg')
+@let(ogImageAlt = 'Présentation du projet King Mayo par Valdes Ombilingo')
+@projectLayout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/projets/king-mayo',
+  ogImage,
+  ogImageAlt,
+})
   {{-- RETOUR AUX PROJETS --}}
   @!backNav()
   {{-- ========================================================= --}}
@@ -72,6 +83,14 @@
 
         <p class="top-paragraph">
           J’ai mené une étude auprès de 53 consommateurs à Kinshasa afin de comprendre leurs habitudes, leurs attentes et les principaux freins liés à la consommation de poulet mayo.
+          <a
+            href="https://docs.google.com/forms/d/1TGKa6VozZ0OKMdUT8eDUH6-6Am6U6kHrAGSyvnI0nV8/viewanalytics"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-brown underline-offset-2 lg:hover:underline"
+          >
+            Consulter les résultats du sondage
+          </a>.
         </p>
 
         <p class="next-paragraph">
@@ -179,11 +198,11 @@
     <div class="mx-auto flex w-full max-w-5xl flex-col gap-12 sm:gap-14 lg:gap-16">
       <div class="content-column flex flex-col">
         <h2 id="project-strategy-title" class="h2-brown">
-          Garder le goût de la rue, apporter la confiance d’une vraie marque.
+          Garder le goût du poulet mayo, rendre l’expérience plus rassurante.
         </h2>
 
         <p class="top-paragraph">
-          La recherche a révélé un espace clair entre le plaisir associé au poulet mayo et les frustrations liées à l’expérience informelle. La stratégie de King Mayo s’est donc construite autour de trois priorités.
+          les réponses recueillies suggèrent un écart entre le plaisir associé au poulet mayo et les frustrations liées à l’expérience informelle. La stratégie de King Mayo s’est donc construite autour de trois priorités.
         </p>
       </div>
 
@@ -242,7 +261,7 @@
           « Le vrai goût du poulet mayo, préparé vite, servi proprement. »
         </p>
 
-        <p class="next-paragraph">
+        <p class="top-paragraph">
           La hiérarchie typographique combine des caractères forts pour les titres et une typographie plus sobre pour les textes afin de préserver impact et lisibilité.
         </p>
       </div>
@@ -329,7 +348,7 @@
         </h2>
 
         <p class="top-paragraph">
-          Le site WordPress et WooCommerce est devenu le point central de l’écosystème King Mayo. L’expérience a été pensée mobile-first avec un menu restaurant dynamique, un panier interactif et un parcours de commande conçu pour limiter les frictions et faciliter le passage de la découverte du produit à la commande.
+          Le site WordPress et WooCommerce est devenu le point central de l’écosystème King Mayo. Pensée mobile-first, l’expérience s’appuie sur l’extension Orderable pour proposer un menu dynamique, un panier interactif et un parcours de commande simple, de la découverte du produit jusqu’à la commande.
         </p>
       </div>
       {{-- Écosystème digital --}}
@@ -355,7 +374,7 @@
             <h3 class="project-feature-title">Tracking</h3>
 
             <p class="card-description">
-              GA4 et Meta Pixel ont été intégrés pour mesurer le trafic, les comportements et les conversions.
+              GA4 et Meta Pixel ont été intégrés avec un suivi des pages vues afin d’observer le trafic et la navigation sur le site.
             </p>
           </article>
 
@@ -375,7 +394,7 @@
         </p>
 
         <p class="next-paragraph">
-          J’ai aussi structuré un dispositif publicitaire associant Meta Ads et Google Ads Display : campagnes géolocalisées, créatives orientées offre et conversion, budgets définis et KPI de pilotage. L’objectif était de générer du trafic qualifié vers la page Menu et d’accompagner progressivement les utilisateurs jusqu’à la commande.
+          J’ai également préparé un plan publicitaire associant Meta Ads et Google Ads Display : ciblage géographique, visuels, budgets prévisionnels et indicateurs de suivi. Ces campagnes n’ont pas été activées pendant la période présentée ci-dessous.
         </p>
       </div>
     </div>
@@ -431,7 +450,7 @@
           </p>
 
           <p class="next-paragraph">
-            Ces commandes constituent une première validation concrète du parcours imaginé : des visiteurs ont découvert l’offre, consulté le menu puis sont allés jusqu’à passer commande, sans campagne publicitaire active.
+            Ces premières commandes montrent que des visiteurs sont allés jusqu’au bout du parcours de commande. Elles constituent un premier signe d’intérêt pour l’offre, sans suffire à confirmer sa viabilité commerciale.
           </p>
         </div>
         {{-- Capture commandes --}}
@@ -507,7 +526,12 @@
           >
             Découvrir le site King Mayo
           </a>
-          <a href="#" class="btn btn-responsive btn-secondary w-full sm:w-auto">
+          <a
+            href="https://drive.google.com/drive/folders/1cUcb7DOzG14vwcmrNZtvKNLhe0PnXYr4?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-responsive btn-secondary w-full sm:w-auto"
+          >
             Voir les livrables
           </a>
         </div>

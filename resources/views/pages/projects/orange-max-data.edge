@@ -1,4 +1,15 @@
-@projectLayout()
+@let(title = 'Orange Max Data | Stratégie digitale - Valdes Ombilingo')
+@let(description =
+  'Découvrez Orange Max Data, un cas pratique de stratégie digitale autour d’Orange RDC, associant étude de marché, plan de lancement et coordination d’équipe.')
+@let(ogImage = 'https://valdesombilingo.com/images/meta/orange-max-data-og.jpg')
+@let(ogImageAlt = 'Présentation du projet Orange Max Data par Valdes Ombilingo')
+@projectLayout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/projets/orange-max-data',
+  ogImage,
+  ogImageAlt,
+})
   {{-- RETOUR AUX PROJETS --}}
   @!backNav()
   {{-- ========================================================= --}}
@@ -13,8 +24,9 @@
     image: '/images/projects/orange-max-data/orange-max-data-project.webp',
     imageAlt: 'Présentation du projet Orange Max Data',
 
-    projectUrl: 'https://canva.link/orange-max-data',
-    ctaProject: 'Voir le livrable',
+    projectUrl:
+      'https://drive.google.com/drive/folders/1XF29ksiI966T7oJvCLjWKNvcRxboDkyJ?usp=sharing',
+    ctaProject: 'Voir les livrables',
 
     participants: [
       {
@@ -67,7 +79,7 @@
         </p>
 
         <p class="next-paragraph">
-          Avec notre agence fictive Yambo Digital, nous avons choisi Orange RDC et travaillé sur une stratégie de lancement sur six mois, avec un budget simulé de 20 000 $. Notre objectif était de proposer une offre data plus accessible, plus flexible et mieux adaptée aux usages des consommateurs congolais.
+          Avec notre agence fictive Yambo Digital, nous avons choisi Orange RDC et imaginé le lancement d’une nouvelle offre data sur six mois, avec un budget simulé de 20 000 $. J’ai coordonné le travail de l’équipe et contribué au benchmark concurrentiel, puis à la finalisation du support de présentation.
         </p>
       </div>
     </div>
@@ -83,7 +95,7 @@
     <div class="mx-auto w-full max-w-5xl">
       <div class="content-column flex flex-col">
         <h2 id="project-research-title" class="h2-brown">
-          Comprendre pourquoi les utilisateurs changent d’opérateur.
+          Comprendre ce qui compte dans le choix d’une offre mobile.
         </h2>
 
         <p class="top-paragraph">
@@ -205,15 +217,15 @@
     <div class="mx-auto w-full max-w-5xl">
       <div class="content-column flex flex-col">
         <h2 id="project-strategy-title" class="h2-brown">
-          Transformer les insights en une offre plus simple et plus flexible.
+          Concevoir des forfaits adaptés aux usages du quotidien.
         </h2>
 
         <p class="top-paragraph">
-          De cette analyse est née Orange Max Data, une proposition pensée pour positionner Orange comme une alternative simple, généreuse et fiable sur le marché de la data mobile. L’objectif était de proposer des offres accessibles à différents niveaux de budget, tout en apportant davantage de clarté sur les volumes, les durées de validité et les avantages associés.
+          Nous avons imaginé Orange Max Data autour de deux priorités : rendre les offres plus faciles à comprendre et proposer des forfaits adaptés à différents budgets. Chaque formule devait préciser le volume de data, la durée de validité et les avantages inclus.
         </p>
 
         <p class="next-paragraph">
-          Le concept repose ainsi sur une gamme de forfaits adaptée aux différents usages du quotidien : journée, week-end, semaine, nuit, famille ou activité professionnelle. Des bonus et avantages liés au renouvellement venaient compléter l’offre afin d’encourager la fidélisation et d’apporter davantage de valeur aux utilisateurs réguliers.
+          La gamme proposée couvrait plusieurs usages : se connecter pour une journée, profiter d’un forfait le week-end ou répondre aux besoins d’une famille ou d’une activité professionnelle. Des bonus liés au renouvellement complétaient le concept pour encourager les utilisateurs à conserver leur forfait.
         </p>
       </div>
       {{-- Identité Orange Max Data --}}
@@ -249,7 +261,7 @@
         </p>
 
         <p class="next-paragraph">
-          Les chiffres présentés ci-dessous correspondent aux objectifs définis dans le cadre de l’exercice. Leur suivi reposait sur des KPI d’acquisition, d’engagement, de fidélisation et de rentabilité, notamment le CTR, l’ARPU et le ROI marketing. La campagne n’a toutefois pas été déployée dans des conditions réelles.
+          Les chiffres ci-dessous correspondent aux objectifs fixés pour les six mois du lancement. Nous avions prévu de suivre notamment le taux de clics (CTR), le revenu moyen par utilisateur (ARPU) et le retour sur investissement marketing. La campagne n’ayant pas été déployée, ces objectifs n’ont pas été confrontés à des résultats réels.
         </p>
       </div>
       {{-- Objectifs principaux --}}
@@ -277,7 +289,7 @@
         </article>
       </div>
       {{-- Roadmap --}}
-      <div class="mx-auto mt-16 w-full max-w-[560px] px-2 sm:px-0 lg:max-w-3xl lg:px-6">
+      <div class="mx-auto mt-16 w-full max-w-140 px-2 sm:px-0 lg:max-w-3xl lg:px-6">
         <h3 class="project-subtitle">Une roadmap construite sur six mois.</h3>
 
         <div class="mt-10 divide-y divide-light-gray/70">
@@ -358,7 +370,7 @@
         </div>
       </div>
       {{-- Répartition du budget --}}
-      <div class="mx-auto mt-16 w-full max-w-[560px] px-2 sm:px-0 lg:max-w-3xl lg:px-6">
+      <div class="mx-auto mt-16 w-full max-w-140 px-2 sm:px-0 lg:max-w-3xl lg:px-6">
         <h3 class="project-subtitle">Répartir 20 000 $ entre acquisition, contenu et pilotage.</h3>
 
         <p class="mt-4 font-body text-lg leading-7 text-dark-gray sm:text-base sm:leading-8">
@@ -470,7 +482,7 @@
         </p>
 
         <p class="next-paragraph">
-          Malgré le retard accumulé en fin de projet, nous avons réussi à finaliser le support et à défendre notre stratégie lors du pitch. Le travail présenté a reçu un retour positif du coach, qui a notamment apprécié la qualité et la cohérence globale de notre proposition.
+          À l’approche du pitch, le support de présentation restait à finaliser. J’ai épaulé le membre de l’équipe chargé de cette partie pour terminer les slides et présenter notre stratégie. Le coach a notamment salué la qualité et la cohérence de notre proposition.
         </p>
       </div>
     </div>
@@ -485,7 +497,7 @@
   >
     <div class="mx-auto w-full max-w-5xl">
       <div
-        class="mx-auto flex w-full max-w-[560px] flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
+        class="mx-auto flex w-full max-w-140 flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
       >
         <h2 id="project-learnings-title" class="h2-cta-brown">Ce que ce projet m’a appris</h2>
 
@@ -494,10 +506,12 @@
         </p>
 
         <a
-          href="#"
+          href="https://drive.google.com/drive/folders/1XF29ksiI966T7oJvCLjWKNvcRxboDkyJ?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
           class="btn btn-responsive btn-primary mt-12 w-full px-9 sm:mt-8 sm:w-auto sm:px-6"
         >
-          Voir le livrable
+          Voir les livrables
         </a>
       </div>
     </div>

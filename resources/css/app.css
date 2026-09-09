@@ -1,44 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=M+PLUS+1+Code:wght@100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker+Sans:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&family=Unbounded:wght@200..900&display=swap');
 @import 'tailwindcss';
+
+/* =========================================================
+   POLICES LOCALES
+   ========================================================= */
+
+@font-face {
+  font-family: 'Syne';
+  src: url('/fonts/syne/Syne-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('/fonts/caveat/Caveat-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+/* =========================================================
+   THÈME
+   ========================================================= */
 
 @theme {
   /* Polices de caractères */
   --font-heading: 'Syne', sans-serif;
   --font-body: 'Syne', sans-serif;
   --font-quote: 'Caveat', cursive;
-  --font-code: 'M PLUS Code', monospace;
+  /* --font-code: 'M PLUS Code', monospace; */
 
-  /* Couleurs personnalisées (Mode Clair) */
+  /* Couleurs personnalisées */
   --color-white-custom: #fdfbf7;
   --color-light-beige: #f5efeb;
-  /* f8f3ee */
-  /* --color-light-blue: #cfe2e8;
-  --color-ligth-brown: #e8ddcf; */
 
-  /* Couleurs Neutres */
+  /* Couleurs neutres */
   --color-very-light-gray: #f0eae1;
   --color-light-gray: #d7cfc4;
   --color-gray-custom: #76726c;
   --color-dark-gray: #5a5753;
   --color-dark: #2c2b29;
 
-  /* Couleurs de Marque (Brand) */
+  /* Couleurs de marque */
   --color-brown: #c3a882;
-  /* bb9d72 */
-  /* c3a882 */
   --color-green-custom: #33a370;
-  /* 278e5d */
   --color-dark-green: #309a6a;
   --color-blue-custom: #4d8ca0;
 
-  /* Typographie et Breakpoints */
-  /* --text-base: 0.9375rem; */
+  /* Breakpoints */
   --breakpoint-xs: 480px;
 }
+
+/* =========================================================
+   UNPOLY
+   ========================================================= */
 
 up-progress-bar {
   @apply bg-green-custom;
@@ -77,11 +93,11 @@ up-progress-bar {
    ========================================================= */
 
 .content-column {
-  @apply mx-auto w-full max-w-[560px] px-4 sm:px-0 lg:max-w-3xl lg:px-6;
+  @apply mx-auto w-full max-w-140 px-4 sm:px-0 lg:max-w-3xl lg:px-6;
 }
 
 .hero-copy {
-  @apply mx-auto flex w-full max-w-[560px] flex-col px-4 sm:px-0 lg:mx-0;
+  @apply mx-auto flex w-full max-w-140 flex-col px-4 sm:px-0 lg:mx-0;
 }
 
 /* =========================================================
@@ -125,7 +141,7 @@ up-progress-bar {
    ========================================================= */
 
 .project-card {
-  @apply relative flex h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-[440px] sm:p-10 lg:h-[500px] lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20 active:scale-[0.98] md:active:scale-100;
+  @apply relative flex h-95 flex-col justify-between overflow-hidden rounded-3xl p-6 transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown sm:h-110 sm:p-10 lg:h-125 lg:hover:-translate-y-1 lg:hover:shadow-2xl lg:hover:shadow-black/20 active:scale-[0.98] md:active:scale-100;
 }
 
 .project-card-image {

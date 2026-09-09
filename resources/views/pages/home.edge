@@ -1,4 +1,4 @@
-@layout()
+@layout({ canonical: 'https://valdesombilingo.com/' })
   {{--
     =====================================================
     SECTION HERO
@@ -54,34 +54,36 @@
         </div>
         {{-- Partie texte --}}
         <div class="hero-copy">
-          <h2 class="h2-brown">Développeur web et spécialiste en marketing digital.</h2>
+          <h2 class="h2-brown">Développeur web et marketeur digital.</h2>
 
           <h3
             class="mt-2 font-heading text-xl font-medium leading-7 text-dark sm:text-lg sm:leading-8"
           >
-            Basé à Kinshasa (RDC), la ville la plus animée d'Afrique.
+            Basé à Kinshasa, en République démocratique du Congo.
           </h3>
 
           <p class="top-paragraph">
-            Je transforme les idées en solutions digitales utiles grâce au développement web et au marketing digital. À travers des projets concrets, je conçois des sites web et des applications web performants et responsives, en associant stratégie digitale et compréhension des besoins réels des utilisateurs.
+            Je conçois des sites et des applications web et construis des stratégies digitales en reliant les besoins des utilisateurs, les objectifs du projet et sa visibilité en ligne. J’interviens ainsi de la conception de la solution à sa mise en valeur digitale.
           </p>
           {{-- Disponibilité --}}
           <p class="next-paragraph">
-            Disponible pour un stage, une expérience professionnelle ou de nouvelles opportunités dans le développement web et le marketing digital.
+            Disponible pour un stage, une première expérience professionnelle ou de nouvelles opportunités en développement web et marketing digital.
           </p>
           {{-- Boutons --}}
           <div class="mt-12 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:gap-3">
             <a
-              href="{{ route('experience') }}"
+              href="{{ route('projects') }}"
+              up-follow
               class="btn btn-responsive btn-primary w-full sm:w-auto"
             >
-              Découvrir mon parcours
+              Découvrir mes projets
             </a>
             <a
-              href="{{ route('projects') }}"
+              href="{{ route('experience') }}"
+              up-follow
               class="btn btn-responsive btn-secondary w-full sm:w-auto"
             >
-              Mes projets
+              Mon parcours
             </a>
           </div>
         </div>
@@ -100,16 +102,14 @@
     <div class="flex flex-col gap-12 sm:gap-14 lg:gap-16">
       {{-- Texte --}}
       <div class="content-column flex flex-col">
-        <h2 class="h2-brown">
-          Du concept à l’écran, j'interviens sur plusieurs dimensions d’un projet digital.
-        </h2>
+        <h2 class="h2-brown">Du concept à l’écran.</h2>
 
         <p class="top-paragraph">
-          Chaque projet commence par une question simple : quel problème résoudre, pour qui, et comment y apporter une solution adaptée ?
+          Chaque projet commence par trois questions : quel problème résoudre, pour qui et comment y apporter une solution adaptée ?
         </p>
 
         <p class="next-paragraph">
-          Mes projets reflètent cette approche entre développement web et marketing digital. Je peux créer des sites et applications web fullstack, de l’interface à la base de données, mais aussi construire une stratégie digitale, travailler la visibilité en ligne, gérer des campagnes digitales et analyser les performances pour améliorer les résultats.
+          Mes projets illustrent cette approche à travers deux domaines complémentaires : le marketing digital et le développement web.
         </p>
       </div>
       {{-- Cards projets --}}
@@ -117,7 +117,12 @@
         class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-12"
       >
         {{-- Projet 1 --}}
-        <a href="#" aria-label="Voir le projet X Clone" class="project-card group">
+        <a
+          href="{{ route('projects.xClone') }}"
+          up-follow
+          aria-label="Voir le projet X Clone"
+          class="project-card group"
+        >
           <img
             src="/images/projects/x-clone/x-background.webp"
             alt="Aperçu mobile (Iphone 14 Pro Max) de l'interface utilisateur du réseau social X Clone avec le fil d'actualité en mode sombre"
@@ -138,7 +143,7 @@
         </a>
         {{-- Projet 2 --}}
         <a
-          href="{{ route('projects.king_mayo') }}"
+          href="{{ route('projects.kingMayo') }}"
           up-follow
           aria-label="Voir le projet King Mayo"
           class="project-card group"
@@ -157,7 +162,7 @@
             <h3 class="project-card-title">King Mayo</h3>
 
             <p class="project-card-description">
-              Fast-food à Kinshasa spécialisé dans le poulet mayo.
+              Stratégie digitale pour un restaurant de poulet mayo à Kinshasa.
             </p>
           </div>
         </a>
@@ -179,7 +184,7 @@
         <h2 class="h2-brown">Des compétences pour construire des solutions utiles.</h2>
 
         <p class="top-paragraph">
-          Je ne crée pas seulement des interfaces jolies ou des beaux visuels. Je cherche à construire des solutions qui ont du sens. Chaque compétence intervient à une étape différente : comprendre le besoin, transformer les idées en livrables, développer une solution, la rendre visible, puis l’améliorer avec méthode.
+          Je ne cherche pas seulement à créer de belles interfaces ou de bons visuels. J’utilise mes compétences pour comprendre un besoin, concevoir une solution, la rendre visible et l’améliorer avec méthode.
         </p>
       </div>
       {{-- Grande card compétences --}}
@@ -194,7 +199,7 @@
             <h3 class="skill-title">Développement web</h3>
 
             <p class="skill-description">
-              Je conçois des sites web et applications web responsives, de l’interface à la base de données. J’utilise HTML, CSS, JavaScript, TypeScript, AdonisJS, Tailwind CSS et PostgreSQL pour créer des interfaces claires, ergonomiques et agréables à utiliser. J’utilise aussi Git et GitHub pour organiser les projets, versionner le code et collaborer.
+              Je développe des sites et des applications web, de l’interface à la base de données, avec une attention à la clarté de la navigation et à l’adaptation aux différents écrans. J’utilise HTML, CSS, JavaScript et Tailwind CSS pour les interfaces, puis TypeScript, AdonisJS et PostgreSQL pour la logique serveur et les données. Git et GitHub me permettent de suivre les modifications et de collaborer.
             </p>
           </div>
           {{-- Compétence 2 --}}
@@ -204,7 +209,7 @@
             <h3 class="skill-title">Marketing digital</h3>
 
             <p class="skill-description">
-              J’aide les projets à atteindre leurs objectifs digitaux et à améliorer leurs résultats. J'interviens de l'étude de marché au déploiement opérationnel : SEO, SEA, création de contenu et campagnes digitales. Je travaille avec WordPress, les outils Google (Analytics, Search Console, Ads, etc.), Meta Ads, Mailchimp, ainsi que Canva et CapCut pour les réseaux sociaux.
+              Je construis des stratégies digitales à partir d’une étude de marché, en tenant compte des publics visés et des objectifs du projet. Je travaille sur la création de contenu, le référencement naturel et l’analyse des performances. J’utilise également WordPress pour mettre en œuvre certains projets et je prépare des campagnes publicitaires avec Google Ads et Meta Ads.
             </p>
           </div>
           {{-- Compétence 3 --}}
@@ -214,7 +219,7 @@
             <h3 class="skill-title">Gestion de projet</h3>
 
             <p class="skill-description">
-              J’apprends à m'organiser avec une méthodologie agile pour mieux cadrer les besoins, suivre l’avancement et prioriser les actions. Je peux collaborer avec une équipe, présenter mes idées clairement. J'utilise Notion, Trello, Canva, Slack, Google Docs et Gmail pour structurer mes livrables, fluidifier la communication et travailler plus efficacement.
+              Dans mes projets, je contribue à cadrer les besoins, répartir les tâches et suivre leur avancement. Le travail en équipe me permet de confronter mes idées, présenter mes choix et intégrer les retours. J’utilise Trello, Slack, Google Docs et Google Drive pour organiser le travail, collaborer et centraliser les livrables.
             </p>
           </div>
         </div>
@@ -234,7 +239,7 @@
         <h2 class="h2-cta-brown">Et si nous construisions quelque chose ensemble ?</h2>
 
         <p class="cta-paragraph">
-          Que ce soit pour un stage, une expérience professionnelle, une opportunité ou un projet digital, je suis ouvert à de nouveaux défis. Parlons-en.
+          Que ce soit pour un stage, une expérience professionnelle ou un projet digital, je suis ouvert à de nouvelles opportunités. Parlons-en.
         </p>
 
         <a

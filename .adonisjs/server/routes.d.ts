@@ -7,10 +7,10 @@ export type ScannedRoutes = {
     'home': { paramsTuple?: []; params?: {} }
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
-    'projects.king_mayo': { paramsTuple?: []; params?: {} }
+    'projects.xClone': { paramsTuple?: []; params?: {} }
+    'projects.kingMayo': { paramsTuple?: []; params?: {} }
     'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
     'projects.cabaneUgcAgency': { paramsTuple?: []; params?: {} }
-    'projects.xClone': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
     'contact.submit': { paramsTuple?: []; params?: {} }
@@ -19,10 +19,10 @@ export type ScannedRoutes = {
     'home': { paramsTuple?: []; params?: {} }
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
-    'projects.king_mayo': { paramsTuple?: []; params?: {} }
+    'projects.xClone': { paramsTuple?: []; params?: {} }
+    'projects.kingMayo': { paramsTuple?: []; params?: {} }
     'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
     'projects.cabaneUgcAgency': { paramsTuple?: []; params?: {} }
-    'projects.xClone': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
   }
@@ -30,10 +30,10 @@ export type ScannedRoutes = {
     'home': { paramsTuple?: []; params?: {} }
     'experience': { paramsTuple?: []; params?: {} }
     'projects': { paramsTuple?: []; params?: {} }
-    'projects.king_mayo': { paramsTuple?: []; params?: {} }
+    'projects.xClone': { paramsTuple?: []; params?: {} }
+    'projects.kingMayo': { paramsTuple?: []; params?: {} }
     'projects.orangeMaxData': { paramsTuple?: []; params?: {} }
     'projects.cabaneUgcAgency': { paramsTuple?: []; params?: {} }
-    'projects.xClone': { paramsTuple?: []; params?: {} }
     'contact': { paramsTuple?: []; params?: {} }
     'privacy': { paramsTuple?: []; params?: {} }
   }

@@ -1,7 +1,11 @@
-@let(title = 'Mon Parcours | Valdes OMBILINGO, Développeur Web & Marketing Digital')
+@let(title = 'Mon parcours | Valdes Ombilingo')
 @let(description =
-  'Découvrez le parcours de Valdes OMBILINGO à Kinshasa, du studio à la Kadea Academy, un profil hybride mêlant Développement Web, Marketing digital & Gestion de projet.')
-@layout()
+  'Du studio à la Kadea Academy, découvrez le parcours de Valdes Ombilingo à Kinshasa et ses formations en développement web et marketing digital.')
+@layout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/parcours',
+})
   {{--
     =====================================================
     HERO PARCOURS
@@ -35,7 +39,7 @@
       {{-- Introduction --}}
       <div class="content-column flex flex-col">
         <h2 id="experience-story-title" class="h2-brown">
-          Les étapes qui ont construit mon profil et forgé mon caractère.
+          Les étapes qui ont construit mon profil.
         </h2>
 
         <p class="top-paragraph">
@@ -50,7 +54,7 @@
 
           <div>
             <p class="top-paragraph">
-              Bien avant de taper ma première ligne de code ou de penser stratégie digitale à la Kadea Academy, mon quotidien se passait en studio. Passionnés de musique, mon meilleur ami et moi avions monté notre propre studio d’enregistrement. Autodidacte passionné, j’ai passé plusieurs années sur FL Studio à apprendre le mixage, le mastering et la création sonore.
+              Bien avant de taper ma première ligne de code ou de penser stratégie digitale à la Kadea Academy, mon quotidien se passait en studio. Passionnés de musique, mon meilleur ami et moi avions monté notre propre studio d’enregistrement. En autodidacte, j’ai passé plusieurs années sur FL Studio à apprendre le mixage, le mastering et la création sonore.
             </p>
 
             <p class="next-paragraph">
@@ -97,13 +101,13 @@
             </p>
 
             <p class="next-paragraph">
-              Mais très vite, je ressens les limites des solutions clés en main. Je ne voulais pas seulement assembler des pages. Je voulais comprendre comment un site fonctionne, comment une interface se construit et comment une idée devient une application web.
+              Cette découverte m'a donné envie d’aller plus loin. Je ne voulais pas seulement assembler des pages. Je voulais comprendre comment un site fonctionne, comment une interface se construit et comment une idée devient une application web.
             </p>
 
             <p class="next-paragraph">
               À l’issue d’un processus de sélection, je rejoins la
               <a
-                href="URL_OFFICIELLE_KADEA"
+                href="https://www.kadea.academy"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-semibold text-brown underline-offset-2 transition-colors duration-200 lg:hover:underline"
@@ -112,7 +116,7 @@
               </a>
               en janvier 2025 pour suivre une formation en développement web, dans un parcours conçu avec
               <a
-                href="URL_OFFICIELLE_SIMPLON"
+                href="https://www.simplon.co/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-semibold text-brown underline-offset-2 transition-colors duration-200 lg:hover:underline"
@@ -129,7 +133,7 @@
         {{-- Marketing digital --}}
         <section aria-labelledby="marketing-title">
           <h3 id="marketing-title" class="experience-step-title">
-            L’alignement : relier le produit au marché
+            Le marketing digital : relier le produit à son public
           </h3>
 
           <div>
@@ -140,7 +144,7 @@
             <p class="next-paragraph">
               En juillet 2025, grâce à une bourse
               <a
-                href="URL_OFFICIELLE_DIGITAL_AFRICA"
+                href="https://digital-africa.co/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-semibold text-brown underline-offset-2 transition-colors duration-200 lg:hover:underline"
@@ -162,7 +166,7 @@
 
           <div>
             <p class="top-paragraph">
-              L’année 2025 a été intense. J’ai mené deux formations exigeantes en parallèle, tout en traversant des épreuves personnelles importantes. Cette période m’a appris la discipline, la patience et la résilience.
+              Entre 2025 et 2026, j’ai mené deux formations exigeantes en parallèle, tout en traversant des épreuves personnelles importantes. Cette période m’a appris la discipline, la patience et la résilience.
             </p>
 
             <p class="next-paragraph">
@@ -195,7 +199,7 @@
         </h2>
 
         <p class="top-paragraph">
-          Cette cérémonie d’accueil de la cohorte 2026 et de remise des certificats de la cohorte 2025 a réuni les apprenants, les équipes de Kadea Academy ainsi que plusieurs partenaires tels que la Rawbank, Vodacom, GIZ ansi que le Ministère de la Formation Professionnelle. Elle marque l’aboutissement d’une étape importante pour moi.
+          Cette cérémonie a réuni les apprenants de la cohorte 2025, la nouvelle cohorte 2026 et les équipes de Kadea Academy autour de la remise des certificats. Elle marque une étape importante de mon parcours.
         </p>
       </div>
       {{-- Vidéo --}}
@@ -322,14 +326,24 @@
         <h2 class="h2-cta-brown">La suite de mon histoire reste à écrire.</h2>
 
         <p class="cta-paragraph">
-          Je souhaite continuer à apprendre sur le terrain, contribuer à des projets concrets et évoluer progressivement vers un profil de chef de projet digital.
+          Je souhaite contribuer à des projets concrets et évoluer vers un rôle de chef de projet digital. Retrouvez mes réalisations et les étapes de mon parcours dans mes projets et mon CV.
         </p>
 
         <div class="mt-12 flex w-full flex-col gap-4 sm:mt-8 sm:w-auto sm:flex-row sm:gap-3">
-          <a href="{{ route('projects') }}" class="btn btn-responsive btn-primary w-full sm:w-auto">
+          <a
+            href="{{ route('projects') }}"
+            up-follow
+            class="btn btn-responsive btn-primary w-full sm:w-auto"
+          >
             Découvrir mes projets
           </a>
-          <a href="#" download="#" class="btn btn-responsive btn-secondary w-full sm:w-auto">
+          {{-- ------------------ todo : ajouter le cv--------------------- --}}
+          <a
+            href="https://cvdesignr.com/p/kRaKE94Op2LMy9Q"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-responsive btn-secondary w-full sm:w-auto"
+          >
             Mon CV
           </a>
         </div>

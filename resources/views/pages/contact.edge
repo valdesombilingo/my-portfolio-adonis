@@ -1,4 +1,11 @@
-@layout()
+@let(title = 'Me contacter | Valdes Ombilingo')
+@let(description =
+  'Contactez Valdes Ombilingo, développeur web et marketeur digital à Kinshasa. Discutez de vos projets et opportunités.')
+@layout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/contact',
+})
   {{--
     =========================================================
     HERO CONTACT
@@ -40,15 +47,15 @@
         </h2>
 
         <p class="top-paragraph">
-          Vous pouvez me contacter directement via le formulaire ci-dessous ou me laisser un message sur
+          Pour une proposition de stage, une opportunité professionnelle ou un projet, écrivez-moi via le formulaire ci-dessous ou sur
           <a
-            href="https://www.linkedin.com/in/ton-profil"
+            href="https://www.linkedin.com/in/valdes-ombilingo-b94a72359"
             target="_blank"
             rel="noopener noreferrer"
-            class="font-semibold text-brown underline-offset-2 transition-colors duration-200 lg:hover:underline"
+            class="font-semibold text-brown underline underline-offset-2"
           >
             LinkedIn
-          </a>. Je vous répondrai dans les meilleurs délais. Au plaisir de vous lire et d’échanger avec vous.
+          </a>. Au plaisir de vous lire.
         </p>
       </div>
       {{--

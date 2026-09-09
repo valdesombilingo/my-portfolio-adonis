@@ -1,4 +1,11 @@
-@layout()
+@let(title = 'Mes projets | Valdes Ombilingo')
+@let(description =
+  'Découvrez les projets de Valdes Ombilingo en développement web, marketing digital et stratégie de marque, réalisés à Kinshasa.')
+@layout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/projets',
+})
   {{--
     =====================================================
     HERO PROJETS
@@ -87,7 +94,7 @@
         --}}
         <article class="project-list-card group">
           <a
-            href="{{ route('projects.king_mayo') }}"
+            href="{{ route('projects.kingMayo') }}"
             up-follow
             aria-label="Découvrir le projet King Mayo"
             class="project-list-link focus-visible:outline-brown"
@@ -115,7 +122,7 @@
               </div>
 
               <p class="project-list-description">
-                Stratégie digitale globale conçue autour d’un concept de restauration rapide à Kinshasa, spécialisé dans le poulet mayo.
+                Stratégie digitale conçue autour d’un concept de restauration rapide à Kinshasa, spécialisé dans le poulet mayo.
               </p>
 
               <div class="project-tags">
@@ -166,9 +173,9 @@
               </p>
 
               <div class="project-tags">
-                <span class="project-tag bg-brown/10">Chef de projet</span>
+                <span class="project-tag bg-brown/10">Gestion de projet</span>
                 <span class="project-tag bg-brown/10">Étude de marché</span>
-                <span class="project-tag bg-brown/10">Stratégie</span>
+                <span class="project-tag bg-brown/10">Stratégie digitale</span>
                 <span class="project-tag bg-brown/10">Budget & KPI</span>
               </div>
             </div>
@@ -209,14 +216,14 @@
               </div>
 
               <p class="project-list-description">
-                Création de l'identité visuelle de Cabane UGC Agency, accompagnée d’une stratégie de contenu et de supports de communication.
+                Création de l’identité d’une agence UGC, avec positionnement, storytelling et stratégie de contenu.
               </p>
 
               <div class="project-tags">
                 <span class="project-tag bg-brown/10">Branding</span>
-                <span class="project-tag bg-brown/10">Identité visuelle</span>
+                <span class="project-tag bg-brown/10">Positionnement</span>
+                <span class="project-tag bg-brown/10">Marketing de contenu</span>
                 <span class="project-tag bg-brown/10">IA</span>
-                <span class="project-tag bg-brown/10">Contenu</span>
               </div>
             </div>
           </a>

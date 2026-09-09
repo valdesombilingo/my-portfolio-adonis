@@ -1,4 +1,17 @@
-@projectLayout()
+@let(title = 'X Clone | Application web fullstack - Valdes Ombilingo')
+@let(description =
+  'Découvrez X Clone, une application web fullstack inspirée du réseau social X, développée avec AdonisJS 6, TypeScript, PostgreSQL et Tailwind CSS.')
+@let(ogImage = 'https://valdesombilingo.com/images/meta/x-clone-og.jpg')
+@let(ogImageAlt = 'Présentation du projet X Clone développé par Valdes Ombilingo')
+@let(robots = 'noindex, follow')
+@projectLayout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/projets/x-clone',
+  ogImage,
+  ogImageAlt,
+  robots,
+})
   {{-- RETOUR AUX PROJETS --}}
   @!backNav()
   {{-- ========================================================= --}}

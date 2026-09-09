@@ -1,4 +1,11 @@
-@projectLayout()
+@let(title = 'Politique de confidentialité | Valdes Ombilingo')
+@let(description =
+  'Consultez la politique de confidentialité de valdesombilingo.com et découvrez comment vos données personnelles sont collectées, utilisées et protégées.')
+@projectLayout({
+  title,
+  description,
+  canonical: 'https://valdesombilingo.com/confidentialite',
+})
   @!backNav()
   {{--
     =========================================================
@@ -39,11 +46,11 @@
         <h2 class="h2-brown">À propos de cette politique</h2>
 
         <p class="top-paragraph">
-          La présente politique de confidentialité explique comment les données personnelles transmises par les visiteurs du site valdesombilingo.com sont collectées et utilisées.
+          Cette politique explique quelles données personnelles sont traitées lors de votre navigation sur valdesombilingo.com ou de vos échanges via le formulaire de contact, pourquoi elles sont utilisées et comment exercer vos droits.
         </p>
 
         <p class="next-paragraph">
-          Ce site est un portfolio personnel exploité depuis la République démocratique du Congo. La protection des données est prise en compte conformément au cadre légal congolais applicable et aux bonnes pratiques internationales en matière de protection de la vie privée.
+          Ce portfolio personnel est édité par Valdes Ombilingo, basé à Kinshasa, en République démocratique du Congo.
         </p>
       </div>
       {{--
@@ -130,7 +137,7 @@
         <h2 class="project-subtitle">5. Destinataires des données</h2>
 
         <p class="top-paragraph">
-          Les messages reçus via le formulaire sont destinés à Valdes Ombilingo.
+          Les messages reçus via le formulaire sont destinés à Valdes Ombilingo. Les prestataires chargés de l’hébergement et de la messagerie peuvent également traiter les données nécessaires à la fourniture de leurs services.
         </p>
 
         <p class="next-paragraph">
@@ -225,6 +232,18 @@
 
         <p class="next-paragraph">
           Si des outils de mesure d’audience, de publicité, de suivi ou d’autres services nécessitant des traitements supplémentaires sont ajoutés ultérieurement, cette politique sera mise à jour en conséquence.
+        </p>
+
+        <p class="next-paragraph">
+          Certaines pages proposent des vidéos intégrées depuis YouTube. Le chargement du lecteur et la lecture des vidéos peuvent entraîner le traitement de données techniques par Google, fournisseur du service. Pour en savoir plus, consultez
+          <a
+            href="https://policies.google.com/privacy?hl=fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-brown underline-offset-2 lg:hover:underline"
+          >
+            la politique de confidentialité de Google
+          </a>.
         </p>
       </div>
       {{--

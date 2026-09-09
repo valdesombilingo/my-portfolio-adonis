@@ -14,19 +14,27 @@ import router from '@adonisjs/core/services/router'
 
 router.group(() => {
   router.get('/', [PagesController, 'home']).as('home')
-  router.get('/experience', [PagesController, 'experience']).as('experience')
-  // ---------------------------------
-  router.get('/projects', [PagesController, 'projects']).as('projects')
-  router.get('/projects/king-mayo', [PagesController, 'kingMayo']).as('projects.king_mayo')
+
+  router.get('/parcours', [PagesController, 'experience']).as('experience')
+
+  // -----------------------------------------------------------------
+  router.get('/projets', [PagesController, 'projects']).as('projects')
+
+  router.get('/projets/x-clone', [PagesController, 'xClone']).as('projects.xClone')
+
+  router.get('/projets/king-mayo', [PagesController, 'kingMayo']).as('projects.kingMayo')
+
   router
     .get('/projets/orange-max-data', [PagesController, 'orangeMaxData'])
     .as('projects.orangeMaxData')
+
   router
     .get('/projets/cabane-ugc-agency', [PagesController, 'cabaneUgcAgency'])
     .as('projects.cabaneUgcAgency')
-  router.get('/projets/x-clone', [PagesController, 'xClone']).as('projects.xClone')
-  // ---------------------------------
+
+  // -----------------------------------------------------------------
   router.get('/contact', [PagesController, 'contact']).as('contact')
+
   router.get('/confidentialite', [PagesController, 'privacy']).as('privacy')
 })
 
