@@ -21,7 +21,7 @@
       >
         {{-- Partie image --}}
         <div class="flex w-full justify-center px-4 sm:px-0">
-          <div class="relative w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[500px]">
+          <div class="relative w-full max-w-105 sm:max-w-115 lg:max-w-125">
             {{-- Décoration derrière l’image --}}
             <div
               aria-hidden="true"
@@ -36,7 +36,7 @@
                 alt="Portrait de Valdes Ombilingo sur un fond bleu clair, portant une chemise blanche"
                 width="560"
                 height="700"
-                class="aspect-[4/5] w-full object-cover object-top"
+                class="aspect-4/5 w-full object-cover object-top"
                 fetchpriority="high"
               />
 
@@ -74,6 +74,7 @@
             <a
               href="{{ route('projects') }}"
               up-follow
+              up-preload
               class="btn btn-responsive btn-primary w-full sm:w-auto"
             >
               Découvrir mes projets
@@ -81,6 +82,7 @@
             <a
               href="{{ route('experience') }}"
               up-follow
+              up-preload
               class="btn btn-responsive btn-secondary w-full sm:w-auto"
             >
               Mon parcours
@@ -120,6 +122,7 @@
         <a
           href="{{ route('projects.xClone') }}"
           up-follow
+          up-preload
           aria-label="Voir le projet X Clone"
           class="project-card group"
         >
@@ -145,6 +148,7 @@
         <a
           href="{{ route('projects.kingMayo') }}"
           up-follow
+          up-preload
           aria-label="Voir le projet King Mayo"
           class="project-card group"
         >
@@ -234,7 +238,7 @@
   <section id="home-contact" class="relative overflow-hidden px-4 text-dark sm:px-8">
     <div class="mx-auto w-full max-w-5xl">
       <div
-        class="mx-auto flex w-full max-w-[560px] flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
+        class="mx-auto flex w-full max-w-140 flex-col items-center px-2 py-16 text-center sm:px-0 sm:py-20 lg:max-w-4xl lg:px-16 lg:py-24"
       >
         <h2 class="h2-cta-brown">Et si nous construisions quelque chose ensemble ?</h2>
 
@@ -245,6 +249,7 @@
         <a
           href="{{ route('contact') }} "
           up-follow
+          up-preload
           class="btn btn-responsive btn-primary mt-12 w-full px-9 sm:mt-8 sm:w-auto sm:px-6"
         >
           Me contacter

@@ -1,9 +1,10 @@
-<div class="sticky top-4 z-40 px-4 sm:px-8 lg:px-10">
+<div class="sticky top-4 z-50 px-4 sm:px-8 lg:px-10">
   <div class="mx-auto w-full max-w-5xl">
     <a
       id="back-nav-container"
       href="{{ href || route('projects') }}"
       up-back
+      up-preload
       class="group inline-flex h-11 w-11 items-center justify-center font-body text-sm font-medium text-dark transition-[background-color,backdrop-filter,border-radius,color] duration-300 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-gray active:scale-90 sm:h-auto sm:w-auto sm:gap-2 sm:px-5 sm:py-3 md:active:scale-100 lg:hover:text-dark"
       aria-label="{{ label || 'Retour' }}"
     >
