@@ -45,13 +45,16 @@
         NAVIGATION TABLETTE / DESKTOP
         =====================================================
       --}}
-      <nav class="hidden flex-1 md:block" aria-label="Navigation principale">
-        <ul class="flex items-center justify-center gap-2 lg:gap-4">
+      <nav class="nav-capsule hidden flex-1 md:block" aria-label="Navigation principale">
+        <span class="nav-capsule-background" aria-hidden="true"></span>
+
+        <ul class="relative flex items-center justify-center gap-2 lg:gap-4">
           @each(link in navLinks)
             <li>
               @!link({
                 route: link.route,
                 text: link.label,
+                class: 'relative inline-flex rounded-full',
               })
             </li>
           @end
@@ -113,6 +116,7 @@
     --}}
     <div
       id="mobile-menu"
+      inert
       class="grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden"
     >
       <div class="w-full overflow-hidden">

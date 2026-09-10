@@ -84,6 +84,8 @@
   </head>
 
   <body class="bg-light-beige">
-    <div id="page" up-main>{{{ await $slots.main() }}}</div>
+    <div id="page" up-main>
+      <div data-page-reveal>{{{ await $slots.main() }}}</div>
+    </div>
   </body>
 </html>

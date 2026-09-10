@@ -25,17 +25,14 @@ export function initHeaderNav() {
     function updateHeaderAppearance() {
       const hasScrolled = window.scrollY > 0
 
-      // Scroll normal
-      container.classList.toggle('bg-white/85', hasScrolled && !isOpen)
+      // Fond et flou défilement, Menu fermé
+      container.classList.toggle('header-scrolled', hasScrolled && !isOpen)
 
-      container.classList.toggle('backdrop-blur-sm', hasScrolled && !isOpen)
-
-      // Menu ouvert
+      // Fond et flou, Menu mobile est ouvert
       container.classList.toggle('bg-white/95', isOpen)
-
       container.classList.toggle('backdrop-blur-md', isOpen)
 
-      // Arrondi
+      // Arrondi header
       container.classList.toggle('rounded-[2rem]', hasScrolled || isOpen)
     }
 
@@ -47,6 +44,7 @@ export function initHeaderNav() {
 
     function setMenuState(open) {
       isOpen = open
+      menu.inert = !isOpen
 
       button.setAttribute('aria-expanded', String(isOpen))
 

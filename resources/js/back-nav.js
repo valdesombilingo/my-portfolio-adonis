@@ -5,8 +5,7 @@ export function initBackNav() {
     function updateBackNavAppearance() {
       const hasScrolled = window.scrollY > 0
 
-      backContainer.classList.toggle('bg-white/85', hasScrolled)
-      backContainer.classList.toggle('backdrop-blur-sm', hasScrolled)
+      backContainer.classList.toggle('header-scrolled', hasScrolled)
       backContainer.classList.toggle('rounded-full', hasScrolled)
     }
 

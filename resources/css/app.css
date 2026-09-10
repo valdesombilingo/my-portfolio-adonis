@@ -33,6 +33,7 @@
 
   /* Couleurs personnalisées */
   --color-white-custom: #fdfbf7;
+  --color-white-nav: #faf6ee;
   --color-light-beige: #f5efeb;
 
   /* Couleurs neutres */
@@ -58,6 +59,36 @@
 
 up-progress-bar {
   @apply bg-green-custom;
+}
+
+/* =========================================================
+    HEADER SCROLL
+   ========================================================= */
+.header-scrolled {
+  background-color: rgb(255 255 255 / 85%);
+  backdrop-filter: blur(20px) saturate(1.7);
+}
+
+/* =========================================================
+   CAPSULE DE NAVIGATION
+   ========================================================= */
+
+.nav-capsule {
+  position: relative;
+  isolation: isolate;
+}
+
+.nav-capsule-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @apply pointer-events-none rounded-full bg-white/60 opacity-0;
+  @apply transition-colors duration-300 motion-reduce:transition-none;
+}
+
+.header-scrolled .nav-capsule-background {
+  @apply bg-white;
 }
 
 /* =========================================================

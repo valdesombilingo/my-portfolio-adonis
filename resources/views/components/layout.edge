@@ -87,8 +87,11 @@
   <body class="bg-light-beige">
     <div id="page" up-main>
       @include('partials/header')
-      {{{ await $slots.main() }}}
-      @include('partials/footer')
+
+      <div data-page-reveal>
+        {{{ await $slots.main() }}}
+        @include('partials/footer')
+      </div>
     </div>
   </body>
 </html>
