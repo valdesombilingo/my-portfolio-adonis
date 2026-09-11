@@ -6,7 +6,10 @@
   description,
   canonical: 'https://valdesombilingo.com/confidentialite',
 })
-  @!backNav()
+  {{-- RETOUR À LA PAGE PRÉCÉDENTE, OU À L’ACCUEIL --}}
+  @!backNav({
+    href: route('home'),
+  })
   {{--
     =========================================================
     HERO
