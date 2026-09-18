@@ -5,6 +5,7 @@ export function initAudioPlayer() {
     const toggle = player.querySelector('.audio-toggle')
     const label = player.querySelector('.audio-label')
     const playIcon = player.querySelector('.audio-play')
+    const loadingIcon = player.querySelector('.audio-loading')
     const pauseIcon = player.querySelector('.audio-pause')
     const details = player.querySelector('.audio-details')
     const wave = player.querySelector('.audio-wave')
@@ -16,8 +17,10 @@ export function initAudioPlayer() {
 
     let wavesurfer
     let ready = false
+    let loading = false
     let destroyed = false
     let loadingPromise = null
+    let handlingClick = false
 
     function formatTime(seconds) {
       const value = Number.isFinite(seconds) ? Math.max(0, Math.floor(seconds)) : 0
@@ -33,14 +36,31 @@ export function initAudioPlayer() {
     function updateControls() {
       const playing = wavesurfer?.isPlaying() ?? false
 
-      playIcon.toggleAttribute('hidden', playing)
-      pauseIcon.toggleAttribute('hidden', !playing)
+      playIcon.toggleAttribute('hidden', loading || playing)
+      pauseIcon.toggleAttribute('hidden', loading || !playing)
+      loadingIcon.toggleAttribute('hidden', !loading)
 
-      toggle.setAttribute('aria-label', playing ? 'Mettre le morceau en pause' : 'Écouter Hadn')
+      toggle.setAttribute(
+        'aria-label',
+        loading ? 'Chargement du morceau' : playing ? 'Mettre le morceau en pause' : 'Écouter Hadn'
+      )
+    }
+
+    function setLoading(isLoading) {
+      loading = isLoading
+      toggle.disabled = isLoading
+
+      if (isLoading) {
+        toggle.setAttribute('aria-busy', 'true')
+      } else {
+        toggle.removeAttribute('aria-busy')
+      }
+
+      updateControls()
     }
 
     function updateProgress() {
-      if (!wavesurfer) return
+      if (!wavesurfer || destroyed) return
 
       const duration = wavesurfer.getDuration()
       const currentTime = wavesurfer.getCurrentTime()
@@ -51,7 +71,6 @@ export function initAudioPlayer() {
       wave.setAttribute('aria-disabled', String(!ready || !hasDuration))
       wave.setAttribute('aria-valuemax', String(hasDuration ? duration : 0))
       wave.setAttribute('aria-valuenow', String(hasDuration ? currentTime : 0))
-
       wave.setAttribute(
         'aria-valuetext',
         hasDuration ? `${formatTime(currentTime)} sur ${formatTime(duration)}` : 'Durée inconnue'
@@ -87,27 +106,20 @@ export function initAudioPlayer() {
 
         ready = false
         wave.setAttribute('aria-disabled', 'true')
-
         wavesurfer.pause()
 
-        updateControls()
-
-        setStatus('Lecture indisponible. Réessayez avec le bouton lecture.')
+        if (player.classList.contains('is-expanded')) {
+          setStatus('Lecture indisponible. Réessayez avec le bouton lecture.')
+        }
       })
     }
 
     function loadAudio() {
-      if (ready) {
-        return Promise.resolve()
-      }
+      if (destroyed || ready) return Promise.resolve()
 
-      if (loadingPromise) {
-        return loadingPromise
-      }
+      if (loadingPromise) return loadingPromise
 
-      if (!wavesurfer) {
-        createPlayer()
-      }
+      createPlayer()
 
       loadingPromise = wavesurfer
         .load(player.dataset.audioSrc)
@@ -125,7 +137,10 @@ export function initAudioPlayer() {
     }
 
     async function togglePlayback() {
-      if (toggle.disabled) return
+      if (handlingClick || destroyed) return
+
+      handlingClick = true
+      observer.disconnect()
 
       player.classList.add('is-expanded')
       label.hidden = true
@@ -133,23 +148,15 @@ export function initAudioPlayer() {
 
       try {
         if (!ready) {
-          toggle.disabled = true
-          toggle.setAttribute('aria-busy', 'true')
-
+          setLoading(true)
           setStatus('Chargement du morceau…')
 
-          try {
-            await loadAudio()
-          } finally {
-            if (!destroyed) {
-              toggle.disabled = false
-              toggle.removeAttribute('aria-busy')
-            }
-          }
+          await loadAudio()
         }
 
         if (destroyed || !wavesurfer) return
 
+        setLoading(false)
         setStatus()
 
         if (wavesurfer.isPlaying()) {
@@ -166,9 +173,9 @@ export function initAudioPlayer() {
             : 'Lecture indisponible. Réessayez avec le bouton lecture.'
         )
       } finally {
-        if (!destroyed) {
-          updateControls()
-        }
+        handlingClick = false
+
+        if (!destroyed) setLoading(false)
       }
     }
 
@@ -206,25 +213,23 @@ export function initAudioPlayer() {
       }
 
       event.preventDefault()
-
       wavesurfer.setTime(Math.max(0, Math.min(duration, position)))
-
       updateProgress()
     }
 
+    // Prépare le morceau à proximité de l’écran, sans lancer la lecture.
     const observer = new IntersectionObserver(
       (entries) => {
-        const entry = entries[0]
-
-        if (!entry?.isIntersecting) return
-
-        loadAudio().catch(() => {})
+        if (destroyed || !entries.some((entry) => entry.isIntersecting)) {
+          return
+        }
 
         observer.disconnect()
+
+        // En cas d’échec, le clic permettra une nouvelle tentative.
+        loadAudio().catch(() => {})
       },
-      {
-        rootMargin: '300px 0px',
-      }
+      { rootMargin: '500px 0px' }
     )
 
     observer.observe(player)
@@ -232,9 +237,9 @@ export function initAudioPlayer() {
     toggle.addEventListener('click', togglePlayback, options)
     wave.addEventListener('keydown', seekWithKeyboard, options)
 
+    // Arrête et détruit le lecteur lorsqu’Unpoly retire la page.
     return () => {
       destroyed = true
-
       observer.disconnect()
       controller.abort()
 
