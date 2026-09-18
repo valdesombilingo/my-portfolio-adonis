@@ -54,23 +54,15 @@
         </div>
         {{-- Partie texte --}}
         <div class="hero-copy">
-          <h2 class="h2-brown">Développeur web et marketeur digital.</h2>
+          <h2 class="order-1 h2-brown">Développeur web et marketeur digital.</h2>
 
           <h3
-            class="mt-2 font-heading text-xl font-medium leading-7 text-dark sm:text-lg sm:leading-8"
+            class="order-2 mt-2 font-heading text-xl font-medium leading-7 text-dark sm:text-lg sm:leading-8"
           >
             Basé à Kinshasa, en République démocratique du Congo.
           </h3>
-
-          <p class="top-paragraph">
-            Je conçois des sites et des applications web et construis des stratégies digitales en reliant les besoins des utilisateurs, les objectifs du projet et sa visibilité en ligne. J’interviens ainsi de la conception de la solution à sa mise en valeur digitale.
-          </p>
-          {{-- Disponibilité --}}
-          <p class="next-paragraph">
-            Disponible pour un stage, une première expérience professionnelle ou de nouvelles opportunités en développement web et marketing digital.
-          </p>
           {{-- Boutons --}}
-          <div class="mt-12 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:gap-3">
+          <div class="order-3 mt-8 flex flex-col gap-4 sm:order-5 sm:mt-8 sm:flex-row sm:gap-3">
             <a
               href="{{ route('projects') }}"
               up-follow
@@ -88,6 +80,14 @@
               Mon parcours
             </a>
           </div>
+          {{-- Présentation --}}
+          <p class="top-paragraph hero-paragraph-mobile order-4 sm:order-3">
+            Je conçois des sites et des applications web et construis des stratégies digitales en reliant les besoins des utilisateurs, les objectifs du projet et sa visibilité en ligne. J’interviens ainsi de la conception de la solution à sa mise en valeur digitale.
+          </p>
+          {{-- Disponibilité --}}
+          <p class="next-paragraph order-5 sm:order-4">
+            Disponible pour un stage, une première expérience professionnelle ou de nouvelles opportunités en développement web et marketing digital.
+          </p>
         </div>
       </div>
     </div>

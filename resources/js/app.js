@@ -6,6 +6,7 @@ import '../css/app.css'
 import { initHeaderNav } from './header-nav.js'
 import { initNavCapsule } from './nav-capsule.js'
 import { initBackNav } from './back-nav.js'
+import { initAudioPlayer } from './audio-player.js'
 import { initYoutubeVideos } from './youtube-videos.js'
 import { initContactTextarea } from './contact-textarea.js'
 
@@ -50,4 +51,5 @@ initBackNav()
 initHeaderNav()
 initNavCapsule()
 initContactTextarea()
+initAudioPlayer()
 initYoutubeVideos()

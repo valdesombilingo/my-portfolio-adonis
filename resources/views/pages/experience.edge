@@ -80,7 +80,7 @@
               loading="lazy"
             />
 
-            <figcaption class="border-t border-very-light-gray px-5 py-5 sm:px-8 sm:py-6">
+            <figcaption class="border-t border-very-light-gray px-5 py-5 sm:block sm:px-8 sm:py-6">
               <p class="font-quote text-xl leading-snug text-dark">
                 Avec Herjus Matutezulua, alias Hadn, mon frère, ami et associé, disparu en 2025.
               </p>
@@ -88,13 +88,92 @@
               <p class="mt-3 font-body text-sm text-gray-custom">— Là où tout a commencé</p>
             </figcaption>
           </figure>
+          {{-- Lecteur audio Hadn --}}
+          <div
+            class="audio-player mt-8 flex w-full flex-col items-center sm:mt-10"
+            data-audio-src="/audios/travailler-hadn.mp3"
+          >
+            <div class="audio-capsule">
+              <button type="button" class="audio-toggle" aria-label="Écouter Hadn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  class="audio-play size-3.5"
+                >
+                  <path
+                    d="M91.2 36.9c-12.4-6.8-27.4-6.5-39.6 .7S32 57.9 32 72l0 368c0 14.1 7.5 27.2 19.6 34.4s27.2 7.5 39.6 .7l336-184c12.8-7 20.8-20.5 20.8-35.1s-8-28.1-20.8-35.1l-336-184z"
+                  />
+                </svg>
+
+                <svg
+                  class="audio-pause size-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  hidden
+                >
+                  <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+                </svg>
+
+                <span class="audio-label">Écouter Hadn</span>
+              </button>
+
+              <div class="audio-details" hidden>
+                <div class="audio-header">
+                  <p class="truncate text-sm font-semibold">Hadn — Travailler</p>
+
+                  <a
+                    href="/audios/travailler-hadn.mp3"
+                    download="Travailler (Prod. By Hadn & Smilo).mp3"
+                    class="audio-download group relative"
+                    aria-label="Télécharger le son Hadn - Travailler"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                      fill="currentColor"
+                      aria-hidden="true"
+                      class="size-3.5"
+                    >
+                      <path
+                        d="M144 480c-79.5 0-144-64.5-144-144 0-63.4 41-117.2 97.9-136.5-1.3-7.7-1.9-15.5-1.9-23.5 0-79.5 64.5-144 144-144 55.4 0 103.5 31.3 127.6 77.1 14.2-8.3 30.8-13.1 48.4-13.1 53 0 96 43 96 96 0 15.7-3.8 30.6-10.5 43.7 44 20.3 74.5 64.7 74.5 116.3 0 70.7-57.3 128-128 128l-304 0zM377 313c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-31 31 0-102.1c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 102.1-31-31c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c9.4 9.4 24.6 9.4 33.9 0l72-72z"
+                      />
+                    </svg>
+                    <span class="audio-download-tooltip">Télécharger le son</span>
+                  </a>
+                </div>
+
+                <div
+                  class="audio-wave"
+                  role="slider"
+                  tabindex="0"
+                  aria-label="Position dans le morceau"
+                  aria-valuemin="0"
+                  aria-valuemax="0"
+                  aria-valuenow="0"
+                  aria-valuetext="Chargement"
+                  aria-disabled="true"
+                ></div>
+
+                <p class="audio-time tabular-nums">0:00 / —</p>
+              </div>
+            </div>
+
+            <p
+              class="audio-status mt-2 max-w-sm text-center font-body text-sm text-dark-gray"
+              role="status"
+              hidden
+            ></p>
+          </div>
         </section>
         {{--
           =====================================================
           DÉVELOPPEMENT WEB
           =====================================================
         --}}
-        <section aria-labelledby="web-title">
+        <section aria-labelledby="web-title" class="pt-2.5">
           <h3 id="web-title" class="experience-step-title">
             Le déclic : comprendre comment le web fonctionne
           </h3>
@@ -289,7 +368,7 @@
             <h3 class="learning-title">Garder une vision d’ensemble</h3>
 
             <p class="learning-description">
-              Relier la technique, la stratégie et la performance pour maintenir une direction cohérente.
+              Relier la technique, la stratégie et les objectifs pour garder une direction cohérente.
             </p>
           </li>
           {{-- Adaptation --}}
@@ -297,7 +376,7 @@
             <h3 class="learning-title">Apprendre en s’adaptant</h3>
 
             <p class="learning-description">
-              Rester curieux, progresser avec autonomie et s’adapter aux nouveaux outils, aux contraintes et aux imprévus.
+              Rester curieux, progresser avec autonomie et s’adapter aux contraintes et imprévus.
             </p>
           </li>
           {{-- Collaboration --}}
@@ -305,7 +384,7 @@
             <h3 class="learning-title">Collaborer et communiquer</h3>
 
             <p class="learning-description">
-              Partager ses idées, prendre en compte les retours et contribuer efficacement au travail d’équipe.
+              Partager ses idées, intégrer les retours et contribuer efficacement au travail d’équipe.
             </p>
           </li>
         </ul>
