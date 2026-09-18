@@ -2,7 +2,6 @@ import WaveSurfer from 'wavesurfer.js'
 
 export function initAudioPlayer() {
   up.compiler('.audio-player', (player) => {
-    const capsule = player.querySelector('.audio-capsule')
     const toggle = player.querySelector('.audio-toggle')
     const label = player.querySelector('.audio-label')
     const playIcon = player.querySelector('.audio-play')
@@ -18,6 +17,7 @@ export function initAudioPlayer() {
     let wavesurfer
     let ready = false
     let destroyed = false
+    let loadingPromise = null
 
     function formatTime(seconds) {
       const value = Number.isFinite(seconds) ? Math.max(0, Math.floor(seconds)) : 0
@@ -40,6 +40,8 @@ export function initAudioPlayer() {
     }
 
     function updateProgress() {
+      if (!wavesurfer) return
+
       const duration = wavesurfer.getDuration()
       const currentTime = wavesurfer.getCurrentTime()
       const hasDuration = Number.isFinite(duration) && duration > 0
@@ -49,6 +51,7 @@ export function initAudioPlayer() {
       wave.setAttribute('aria-disabled', String(!ready || !hasDuration))
       wave.setAttribute('aria-valuemax', String(hasDuration ? duration : 0))
       wave.setAttribute('aria-valuenow', String(hasDuration ? currentTime : 0))
+
       wave.setAttribute(
         'aria-valuetext',
         hasDuration ? `${formatTime(currentTime)} sur ${formatTime(duration)}` : 'Durée inconnue'
@@ -56,8 +59,7 @@ export function initAudioPlayer() {
     }
 
     function createPlayer() {
-      const colors = getComputedStyle(capsule)
-      const dark = colors.getPropertyValue('--color-dark').trim()
+      if (wavesurfer) return
 
       wavesurfer = WaveSurfer.create({
         container: wave,
@@ -85,10 +87,41 @@ export function initAudioPlayer() {
 
         ready = false
         wave.setAttribute('aria-disabled', 'true')
+
         wavesurfer.pause()
+
         updateControls()
+
         setStatus('Lecture indisponible. Réessayez avec le bouton lecture.')
       })
+    }
+
+    function loadAudio() {
+      if (ready) {
+        return Promise.resolve()
+      }
+
+      if (loadingPromise) {
+        return loadingPromise
+      }
+
+      if (!wavesurfer) {
+        createPlayer()
+      }
+
+      loadingPromise = wavesurfer
+        .load(player.dataset.audioSrc)
+        .then(() => {
+          if (destroyed) return
+
+          ready = true
+          updateProgress()
+        })
+        .finally(() => {
+          loadingPromise = null
+        })
+
+      return loadingPromise
     }
 
     async function togglePlayback() {
@@ -99,20 +132,14 @@ export function initAudioPlayer() {
       details.hidden = false
 
       try {
-        if (!wavesurfer) createPlayer()
-
         if (!ready) {
           toggle.disabled = true
           toggle.setAttribute('aria-busy', 'true')
+
           setStatus('Chargement du morceau…')
 
           try {
-            await wavesurfer.load(player.dataset.audioSrc)
-
-            if (destroyed) return
-
-            ready = true
-            updateProgress()
+            await loadAudio()
           } finally {
             if (!destroyed) {
               toggle.disabled = false
@@ -121,7 +148,7 @@ export function initAudioPlayer() {
           }
         }
 
-        if (destroyed) return
+        if (destroyed || !wavesurfer) return
 
         setStatus()
 
@@ -139,12 +166,14 @@ export function initAudioPlayer() {
             : 'Lecture indisponible. Réessayez avec le bouton lecture.'
         )
       } finally {
-        if (!destroyed) updateControls()
+        if (!destroyed) {
+          updateControls()
+        }
       }
     }
 
     function seekWithKeyboard(event) {
-      if (!ready) return
+      if (!ready || !wavesurfer) return
 
       const duration = wavesurfer.getDuration()
       const currentTime = wavesurfer.getCurrentTime()
@@ -177,15 +206,36 @@ export function initAudioPlayer() {
       }
 
       event.preventDefault()
+
       wavesurfer.setTime(Math.max(0, Math.min(duration, position)))
+
       updateProgress()
     }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0]
+
+        if (!entry?.isIntersecting) return
+
+        loadAudio().catch(() => {})
+
+        observer.disconnect()
+      },
+      {
+        rootMargin: '300px 0px',
+      }
+    )
+
+    observer.observe(player)
 
     toggle.addEventListener('click', togglePlayback, options)
     wave.addEventListener('keydown', seekWithKeyboard, options)
 
     return () => {
       destroyed = true
+
+      observer.disconnect()
       controller.abort()
 
       if (wavesurfer) {
