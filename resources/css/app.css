@@ -305,7 +305,8 @@ up-progress-bar {
 
 .audio-download {
   @apply flex size-6 shrink-0 items-center justify-center text-dark lg:text-[#615542]/70;
-  @apply transition-colors duration-200 lg:hover:text-dark;
+  @apply transition-[color,transform] duration-200 lg:hover:text-dark;
+  @apply active:scale-105 md:active:scale-105;
   @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark;
 }
 
