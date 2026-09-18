@@ -74,7 +74,8 @@
     "reflect-metadata": "^0.2.2",
     "tailwindcss": "^4.3.0",
     "typed.js": "^3.0.0",
-    "unpoly": "^3.14.3"
+    "unpoly": "^3.14.3",
+    "wavesurfer.js": "^7.12.12"
   },
   "hotHook": {
     "boundaries": [

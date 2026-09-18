@@ -1,5 +1,3 @@
-// Ajoute un fond au bouton de retour lorsque l'utilisateur fait défiler une page de projet.
-
 export function initBackNav() {
   up.compiler('#back-nav-container', function (backContainer) {
     function updateBackNavAppearance() {
@@ -9,9 +7,28 @@ export function initBackNav() {
       backContainer.classList.toggle('rounded-full', hasScrolled)
     }
 
+    async function handleBack(event) {
+      event.preventDefault()
+
+      const previousLocation = up.history.previousLocation
+
+      if (previousLocation) {
+        window.history.back()
+        return
+      }
+
+      await up.navigate({
+        url: backContainer.href,
+        target: 'body',
+        history: true,
+      })
+    }
+
     function handleScroll() {
       updateBackNavAppearance()
     }
+
+    backContainer.addEventListener('click', handleBack)
 
     window.addEventListener('scroll', handleScroll, {
       passive: true,
@@ -20,6 +37,7 @@ export function initBackNav() {
     updateBackNavAppearance()
 
     return () => {
+      backContainer.removeEventListener('click', handleBack)
       window.removeEventListener('scroll', handleScroll)
     }
   })
