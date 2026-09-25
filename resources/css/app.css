@@ -172,6 +172,111 @@ up-progress-bar {
 }
 
 /* =========================================================
+   CONSENTEMENT — MESURE D’AUDIENCE
+   ========================================================= */
+
+.cookie-consent {
+  /* z-index : 49 */
+  @apply fixed inset-x-4 z-49 overflow-y-auto;
+  @apply rounded-2xl bg-white p-4;
+  @apply sm:right-auto sm:w-98;
+
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  max-height: calc(100dvh - 3rem);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 6%);
+}
+
+.cookie-topbar {
+  @apply absolute right-2 top-2;
+}
+
+.cookie-heading {
+  @apply mt-4 flex min-w-0 items-center gap-2 pr-8;
+}
+
+.cookie-close {
+  @apply flex size-10 shrink-0 cursor-pointer items-center justify-center;
+  @apply rounded-full border-0 bg-transparent text-gray-custom;
+  @apply transition-colors duration-200;
+  @apply lg:pointer-fine:hover:bg-brown/10 lg:pointer-fine:hover:text-dark;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2;
+  @apply focus-visible:outline-dark motion-reduce:transition-none;
+}
+
+.cookie-title {
+  @apply font-body text-sm font-semibold leading-6 text-dark;
+}
+
+.cookie-description {
+  @apply mt-2 font-body text-sm leading-6 text-dark-gray;
+}
+
+.cookie-link {
+  @apply mt-2 inline-block font-body text-sm leading-6 text-dark;
+  @apply underline underline-offset-2;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2;
+  @apply focus-visible:outline-dark;
+}
+
+.cookie-actions {
+  @apply mt-4 flex gap-2;
+}
+
+.cookie-choice {
+  @apply flex min-h-11 flex-1 cursor-pointer items-center justify-center;
+  @apply rounded-full border px-4 py-2;
+  @apply font-body text-sm font-semibold text-dark;
+  @apply transition-colors duration-200;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2;
+  @apply focus-visible:outline-dark motion-reduce:transition-none;
+}
+
+.cookie-choice[data-analytics-choice='granted'] {
+  @apply border-transparent bg-brown;
+  @apply lg:pointer-fine:hover:bg-brown/90;
+}
+
+.cookie-choice[data-analytics-choice='denied'] {
+  @apply border-brown/90 bg-transparent;
+  @apply lg:pointer-fine:hover:bg-brown/15;
+}
+
+.cookie-settings {
+  @apply cursor-pointer border-0 bg-transparent p-0;
+  @apply font-semibold text-brown underline-offset-2;
+  @apply lg:pointer-fine:hover:underline;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2;
+  @apply focus-visible:outline-dark;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.cookie-consent[hidden],
+.cookie-settings[hidden] {
+  display: none;
+}
+
+.cookie-consent:not([hidden]) {
+  animation: cookie-consent-reveal 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @apply motion-reduce:animate-none;
+}
+
+@keyframes cookie-consent-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
    PROJETS HOME
    ========================================================= */
 

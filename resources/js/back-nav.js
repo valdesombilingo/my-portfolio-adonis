@@ -19,7 +19,7 @@ export function initBackNav() {
 
       await up.navigate({
         url: backContainer.href,
-        target: 'body',
+        target: '#page',
         history: true,
       })
     }

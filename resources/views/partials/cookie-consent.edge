@@ -1,0 +1,49 @@
+{{-- CONSENTEMENT À LA MESURE D’AUDIENCE --}}
+<aside id="cookie-consent" class="cookie-consent" aria-labelledby="cookie-consent-title" hidden>
+  {{-- Fermeture sur une ligne indépendante --}}
+  <div class="cookie-topbar">
+    <button
+      type="button"
+      data-cookie-dismiss
+      class="cookie-close"
+      aria-label="Fermer sans modifier mon choix de cookies"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"
+        fill="currentColor"
+        aria-hidden="true"
+        class="size-4.5 lg:size-3.5"
+      >
+        <path
+          d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+        />
+      </svg>
+    </button>
+  </div>
+  {{-- Illustration et titre --}}
+  <div class="cookie-heading">
+    <img
+      src="/cookie-icon.svg"
+      alt=""
+      width="40"
+      height="40"
+      class="size-3.5 shrink-0 object-contain"
+    />
+
+    <h2 id="cookie-consent-title" class="cookie-title">Un mot sur les cookies</h2>
+  </div>
+
+  <p class="cookie-description">
+    Avec votre accord, Google Analytics m’aide à comprendre les visites et à améliorer ce portfolio. Vous pouvez modifier votre choix depuis la politique de confidentialité.
+  </p>
+
+  <a href="{{ route('privacy') }}#cookies" up-follow class="cookie-link">En savoir plus</a>
+
+  <div class="cookie-actions">
+    <button type="button" data-analytics-choice="denied" class="cookie-choice">Tout refuser</button>
+    <button type="button" data-analytics-choice="granted" class="cookie-choice">
+      Tout accepter
+    </button>
+  </div>
+</aside>
