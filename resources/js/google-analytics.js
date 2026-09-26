@@ -63,6 +63,17 @@ export function initGoogleAnalytics(consentManager) {
     })
   }
 
+  up.compiler('[data-ga-generate-lead]', (element) => {
+    if (element.dataset.gaTracked === 'true') return
+    if (!canTrack()) return
+
+    trackEvent('generate_lead', {
+      method: 'contact_form',
+    })
+
+    element.dataset.gaTracked = 'true'
+  })
+
   function trackPage() {
     if (!canTrack()) return
 
