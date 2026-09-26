@@ -9,8 +9,12 @@ import { initBackNav } from './back-nav.js'
 import { initAudioPlayer } from './audio-player.js'
 import { initYoutubeVideos } from './youtube-videos.js'
 import { initContactTextarea } from './contact-textarea.js'
+import { initCookieConsent } from './cookie-consent.js'
+import { initGoogleAnalytics } from './google-analytics.js'
 
 import Alpine from 'alpinejs'
+
+up.history.config.restoreTargets = ['#page']
 
 up.compiler('[data-page-reveal]', (element) => {
   element.style.opacity = '0'
@@ -53,3 +57,6 @@ initNavCapsule()
 initContactTextarea()
 initAudioPlayer()
 initYoutubeVideos()
+
+const consentManager = initCookieConsent()
+initGoogleAnalytics(consentManager)
